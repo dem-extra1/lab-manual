@@ -144,7 +144,7 @@
     "href": "communication.html#conference-room-booking",
     "title": "3  Communication and coordination",
     "section": "3.7 Conference Room Booking",
-    "text": "3.7 Conference Room Booking\nThe MS1C Conference Room can be booked through its Outlook calendar.\nTo book the room:\n\nCreate a new event in Outlook Calendar\nAdd the conference room as an attendee by typing “ms1c” or the full email address: ms1cconfroom@ou.ad3.ucdavis.edu\nSelect “MS1C Conference Room” from the results\nSend the meeting invitation\n\nThe room will automatically accept or decline based on its availability.\nTo view the room’s calendar:\n\nIn Outlook Calendar, click “Add Calendar”\nSelect “Add Shared Calendar…” or use “Open Calendar…”\nSearch for “ms1c” or enter ms1cconfroom@ou.ad3.ucdavis.edu\nSelect “MS1C Conference Room” to add it to your calendar view\n\nThis allows you to check the room’s availability before scheduling.",
+    "text": "3.7 Conference Room Booking\nThe MS1C Conference Room can be booked through its Outlook calendar.\nTo book the room:\n\nCreate a new event in Outlook Calendar\nAdd the conference room as an attendee by typing “ms1c”\nSelect “MS1C Conference Room” from the results\nSend the meeting invitation\n\nThe room will automatically accept or decline based on its availability.\nTo view the room’s calendar:\n\nIn Outlook Calendar, click “Add Calendar”\nSelect “Add Shared Calendar…” or use “Open Calendar…”\nSearch for “ms1c”\nSelect “MS1C Conference Room” to add it to your calendar view\n\nThis allows you to check the room’s availability before scheduling.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Communication and coordination</span>"
     ]
@@ -1911,7 +1911,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 3d81209\nFull commit hash: 3d81209dfbfa4cf28e002276403b0133a772bbba\nCommit date: 2026-02-01 18:45:58 -0800\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 7dd3146\nFull commit hash: 7dd3146c871b4ce42321b62272b88a1a7a6a1ecf\nCommit date: 2026-02-02 02:51:10 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"
