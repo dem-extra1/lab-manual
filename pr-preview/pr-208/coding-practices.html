@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>6&nbsp; R Coding Practices – UCD-SeRG Lab Manual</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -59,7 +62,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -89,19 +91,18 @@ div.csl-indent {
 <link href="./code-repositories.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e34ecb6a0e7991f0346b0751d4a7c3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4e061325f75ba7fba053004d9d2e9411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -131,7 +132,7 @@ div.csl-indent {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -394,25 +395,25 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./culture-and-conduct.html" class="sidebar-item-text sidebar-link">
+  <a href="./culture-and-conduct.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Culture and conduct</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./communication.html" class="sidebar-item-text sidebar-link">
+  <a href="./communication.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Communication and coordination</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link">
+  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code-repositories.html" class="sidebar-item-text sidebar-link">
+  <a href="./code-repositories.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Code repositories</span></span></a>
   </div>
 </li>
@@ -424,7 +425,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./continuous-integration.html" class="sidebar-item-text sidebar-link">
+  <a href="./continuous-integration.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Integration</span></span></a>
   </div>
 </li>
@@ -436,97 +437,97 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./big-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./big-data.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Big data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-masking.html" class="sidebar-item-text sidebar-link">
+  <a href="./data-masking.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data masking</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="./quarto.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github.html" class="sidebar-item-text sidebar-link">
+  <a href="./github.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Github</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unix.html" class="sidebar-item-text sidebar-link">
+  <a href="./unix.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Unix</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reproducible-environments.html" class="sidebar-item-text sidebar-link">
+  <a href="./reproducible-environments.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Reproducible Environments</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="./code-publication.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Code Publication</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="./data-publication.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Data Publication</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slurm.html" class="sidebar-item-text sidebar-link">
+  <a href="./slurm.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">High-performance computing (HPC)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai-tools.html" class="sidebar-item-text sidebar-link">
+  <a href="./ai-tools.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Working with AI</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./checklists.html" class="sidebar-item-text sidebar-link">
+  <a href="./checklists.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Checklists</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+  <a href="./resources.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Resources</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./professional-development.html" class="sidebar-item-text sidebar-link">
+  <a href="./professional-development.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Professional Development</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writing.html" class="sidebar-item-text sidebar-link">
+  <a href="./writing.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Writing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./manuscript-preparation.html" class="sidebar-item-text sidebar-link">
+  <a href="./manuscript-preparation.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Manuscript Preparation and Publication</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./references.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -541,13 +542,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-copilot-instructions.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix-copilot-instructions.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text">Copilot Instructions File</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-copilot-setup-steps.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix-copilot-setup-steps.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text">Copilot Setup Steps File</span></a>
   </div>
 </li>
@@ -709,7 +710,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="coding-style.html">8. &nbsp; <span class="chapter-title">R Code Style</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>, <a href="coding-practices.html">6. &nbsp; <span class="chapter-title">R Coding Practices</span></span></a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="culture-and-conduct.html">2. &nbsp; <span class="chapter-title">Culture and conduct</span></a>, <a href="data-publication.html">16. &nbsp; <span class="chapter-title">Data Publication</span></a>, <a href="continuous-integration.html">7. &nbsp; <span class="chapter-title">Continuous Integration</span></span></a>, <a href="appendix-copilot-instructions.html">appendix-copilot-instructions</a>, <a href="reproducible-environments.html">14. &nbsp; <span class="chapter-title">Reproducible Environments</span></a>, <a href="code-repositories.html">5. &nbsp; <span class="chapter-title">Code repositories</span></a>, <a href="reproducibility.html">4. &nbsp; <span class="chapter-title">Reproducibility</span></a>, <a href="coding-practices.html">6. &nbsp; <span class="chapter-title">R Coding Practices</span></span></a>, <a href="communication.html">3. &nbsp; <span class="chapter-title">Communication and coordination</span></a>, <a href="github.html">12. &nbsp; <span class="chapter-title">Github</span></span></a>, <a href="quarto.html">11. &nbsp; <span class="chapter-title">Quarto</span></span></a>, <a href="ai-tools.html">18. &nbsp; <span class="chapter-title">Working with AI</span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>, <a href="data-masking.html">10. &nbsp; <span class="chapter-title">Data masking</span></a>, <a href="writing.html">22. &nbsp; <span class="chapter-title">Writing</span></span></a>, <a href="big-data.html">9. &nbsp; <span class="chapter-title">Big data</span></a>, <a href="manuscript-preparation.html">23. &nbsp; <span class="chapter-title">Manuscript Preparation and Publication</span></a>, <a href="unix.html">13. &nbsp; <span class="chapter-title">Unix</span></span></a>, <a href="references.html">references</a>, <a href="appendix-copilot-setup-steps.html">appendix-copilot-setup-steps</a>, <a href="code-publication.html">15. &nbsp; <span class="chapter-title">Code Publication</span></a>, <a href="slurm.html">17. &nbsp; <span class="chapter-title">High-performance computing (HPC)</span></span></a>, <a href="checklists.html">19. &nbsp; <span class="chapter-title">Checklists</span></a>, <a href="coding-style.html">8. &nbsp; <span class="chapter-title">R Code Style</span></span></a>, <a href="professional-development.html">21. &nbsp; <span class="chapter-title">Professional Development</span></a>, <a href="resources.html">20. &nbsp; <span class="chapter-title">Resources</span></a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -1497,7 +1498,7 @@ Note
 <li><strong>Baseline storage</strong>: Commit baseline results or use GitHub Actions artifacts</li>
 <li><strong>Selective running</strong>: Only benchmark on specific branches or when performance-critical files change</li>
 <li><strong>Manual triggers</strong>: Use <code>workflow_dispatch</code> for on-demand benchmarking</li>
-<li><strong>Security</strong>: For production workflows, consider pinning action versions to commit SHAs instead of tags (see <a href="ai-tools.html#sec-ai-best-practices" class="quarto-xref"><span>Section 18.5.8</span></a>)</li>
+<li><strong>Security</strong>: For production workflows, consider pinning action versions to commit SHAs instead of tags (see <a href="ai-tools.html#sec-ai-best-practices" class="quarto-xref" preview-toc-changed><span>Section 18.5.8</span></a>)</li>
 </ul>
 <p><strong>Alternative: Comment benchmark results on PRs:</strong></p>
 <p>Use the <a href="https://github.com/lorenzwalthert/touchstone"><code>{touchstone}</code></a> package for more sophisticated CI benchmarking with automated PR comments.</p>
@@ -1820,7 +1821,7 @@ Note
 <li>Style guide violations</li>
 </ul>
 <p>You can customize linting rules by creating a <code>.lintr</code> file in your project root.</p>
-<p>See also <a href="coding-style.html#sec-style-auto-style" class="quarto-xref" preview-toc-changed><span>Section <mark class="preview-text-changed">8.12</mark></span></a><mark class="preview-text-changed">.</mark></p>
+<p>See also <a href="coding-style.html#sec-style-auto-style" class="quarto-xref" preview-toc-changed><span>Section 8.11</span></a>.</p>
 </section>
 </section>
 <section id="sec-documenting-code" class="level2" data-number="6.12">
@@ -1979,7 +1980,7 @@ Note
 <h3 data-number="6.12.6" class="anchored" data-anchor-id="comments-in-the-body-of-your-code"><span class="header-section-number">6.12.6</span> Comments in the body of your code</h3>
 <p>Commenting your code is an important part of reproducibility and helps document your code for the future. When things change or break, you’ll be thankful for comments. There’s no need to comment excessively or unnecessarily, but a comment describing what a large or complex chunk of code does is always helpful. See <a href="https://github.com/kmishra9/Flu-Absenteeism/blob/master/Master's%20Thesis%20-%20Spatial%20Epidemiology%20of%20Influenza/1b%20-%20Map-Management.R">this file</a> for an example of how to comment your code and notice that comments are always in the form of:</p>
 <pre><code># This is a comment -- first letter is capitalized and spaced away from the pound sign</code></pre>
-<p><em>See also <a href="coding-style.html#sec-function-docs" class="quarto-xref" preview-toc-changed><span>Section 8.3</span></a> for function documentation style guidelines.</em></p>
+<p><em>See also <a href="coding-style.html#sec-function-docs" class="quarto-xref" preview-toc-changed><span>Section 8.2</span></a> for function documentation style guidelines.</em></p>
 </section>
 </section>
 <section id="object-naming" class="level2" data-number="6.13">
@@ -2019,7 +2020,7 @@ Note
 <p>Again, it’s also worth noting there’s nothing inherently wrong with using <code>.</code> in variable names, just that it goes against style best practices that are cropping up in data science, so it’s worth getting rid of these bad habits now.</p>
 </div>
 </div>
-<p>See also <a href="coding-style.html#sec-object-naming" class="quarto-xref" preview-toc-changed><span>Section <mark class="preview-text-changed">8.11</mark></span></a><mark class="preview-text-changed">.</mark></p>
+<p>See also <a href="coding-style.html#sec-object-naming" class="quarto-xref" preview-toc-changed><span>Section 8.10</span></a>.</p>
 </section>
 <section id="function-calls" class="level2" data-number="6.14">
 <h2 data-number="6.14" class="anchored" data-anchor-id="function-calls"><span class="header-section-number">6.14</span> Function calls</h2>
@@ -2036,7 +2037,7 @@ Note
 <section id="sec-here-package-practices" class="level2" data-number="6.15">
 <h2 data-number="6.15" class="anchored" data-anchor-id="sec-here-package-practices"><span class="header-section-number">6.15</span> The here package</h2>
 <p>The <code>here</code> package is one great R package that helps multiple collaborators deal with the mess that is working directories within an R project structure. Let’s say we have an R project at the path <code>/home/oski/Some-R-Project</code>. My collaborator might clone the repository and work with it at some other path, such as <code>/home/bear/R-Code/Some-R-Project</code>. Dealing with working directories and paths explicitly can be a very large pain, and as you might imagine, setting up a Config with paths requires those paths to flexibly work for all contributors to a project. This is where the <code>here</code> package comes in and this a <a href="https://github.com/jennybc/here_here">great vignette describing it</a>.</p>
-<p><em>See also <a href="coding-style.html#sec-here-package-style" class="quarto-xref" preview-toc-changed><span>Section <mark class="preview-text-changed">8.10</mark></span></a> for code style guidelines on using the here package.</em></p>
+<p><em>See also <a href="coding-style.html#sec-here-package-style" class="quarto-xref" preview-toc-changed><span>Section 8.9</span></a> for code style guidelines on using the here package.</em></p>
 </section>
 <section id="readingsaving-data" class="level2" data-number="6.16">
 <h2 data-number="6.16" class="anchored" data-anchor-id="readingsaving-data"><span class="header-section-number">6.16</span> Reading/Saving Data</h2>
@@ -2091,7 +2092,7 @@ drop_auth(rdstoken = "/path/to/tokenfile.RDS")
 <section id="sec-tidyverse" class="level2" data-number="6.18">
 <h2 data-number="6.18" class="anchored" data-anchor-id="sec-tidyverse"><span class="header-section-number">6.18</span> Tidyverse</h2>
 <p>Throughout this document there have been references to the Tidyverse, but this section is to explicitly show you how to transform your Base R tendencies to Tidyverse (or Data.Table, Tidyverse’s performance-optimized competitor). For most of our work that does not utilize very large datasets, we recommend that you code in Tidyverse rather than Base R. Tidyverse is quickly becoming <a href="https://rviews.rstudio.com/2017/06/08/what-is-the-tidyverse/">the gold standard</a> in R data analysis and modern data science packages and code should use Tidyverse style and packages unless there’s a significant reason not to (i.e.&nbsp;big data pipelines that would benefit from Data.Table’s performance optimizations). Note that <a href="https://dtplyr.tidyverse.org/"><code>{dtplyr}</code></a> provides a data.table backend for dplyr, enabling you to use most of dplyr’s tidy syntax with data.table’s performance optimizations.</p>
-<p>The package author has published R for Data Science <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span>, which leans heavily on many Tidyverse packages and may be worth checking out.</p>
+<p>The package author has published R for Data Science <span class="citation" data-cites="wickham2023r4ds"><mark class="preview-text-changed">(</mark><a href="references.html#ref-wickham2023r4ds" role="doc-biblioref"><mark class="preview-text-changed">Wickham</mark> <mark class="preview-text-changed">et</mark> <mark class="preview-text-changed">al.</mark> 2023</a>)</span>, which leans heavily on many Tidyverse packages and may be worth checking out.</p>
 </section>
 <section id="core-tidyverse-packages" class="level2" data-number="6.19">
 <h2 data-number="6.19" class="anchored" data-anchor-id="core-tidyverse-packages"><span class="header-section-number">6.19</span> Core Tidyverse Packages</h2>
@@ -2269,7 +2270,7 @@ drop_auth(rdstoken = "/path/to/tokenfile.RDS")
 <li><a href="https://www.brodrigues.co/blog/2016-07-18-data-frame-columns-as-arguments-to-dplyr-functions/">Data Frame Columns as Arguments to Dplyr Functions</a> (blog)</li>
 <li><a href="https://stackoverflow.com/questions/28125816/r-standard-evaluation-for-join-dplyr">Standard Evaluation for *_join</a> (stackoverflow)</li>
 </ul>
-<p>See also <a href="coding-style.html#sec-tidyverse-replacements" class="quarto-xref" preview-toc-changed><span>Section <mark class="preview-text-changed">8.9</mark></span></a></p>
+<p>See also <a href="coding-style.html#sec-tidyverse-replacements" class="quarto-xref" preview-toc-changed><span>Section 8.8</span></a></p>
 </section>
 <section id="coding-with-r-and-python" class="level2" data-number="6.22">
 <h2 data-number="6.22" class="anchored" data-anchor-id="coding-with-r-and-python"><span class="header-section-number">6.22</span> Coding with R and Python</h2>
@@ -2591,7 +2592,7 @@ Describe how this change has been tested.
 <p><strong>Resources:</strong></p>
 <ul>
 <li><a href="https://reprex.tidyverse.org/"><code>{reprex}</code></a> package: Automates creation of reproducible examples</li>
-<li><a href="https://r4ds.hadley.nz/workflow-help.html#making-a-reprex">R for Data Science: Making a reprex</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span>: Step-by-step guide to creating effective reproducible examples</li>
+<li><a href="https://r4ds.hadley.nz/workflow-help.html#making-a-reprex">R for Data Science: Making a reprex</a> <span class="citation" data-cites="wickham2023r4ds"><mark class="preview-text-changed">(</mark><a href="references.html#ref-wickham2023r4ds" role="doc-biblioref"><mark class="preview-text-changed">Wickham</mark> <mark class="preview-text-changed">et</mark> <mark class="preview-text-changed">al.</mark> 2023</a>)</span>: Step-by-step guide to creating effective reproducible examples</li>
 </ul>
 </section>
 <section id="sec-r-resources" class="level2" data-number="6.29">
@@ -2610,7 +2611,7 @@ Describe how this change has been tested.
 <section id="general-r-programming" class="level3" data-number="6.29.2">
 <h3 data-number="6.29.2" class="anchored" data-anchor-id="general-r-programming"><span class="header-section-number">6.29.2</span> General R Programming</h3>
 <ul>
-<li>R for Data Science <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> - learn data science with the tidyverse</li>
+<li>R for Data Science <span class="citation" data-cites="wickham2023r4ds"><mark class="preview-text-changed">(</mark><a href="references.html#ref-wickham2023r4ds" role="doc-biblioref"><mark class="preview-text-changed">Wickham</mark> <mark class="preview-text-changed">et</mark> <mark class="preview-text-changed">al.</mark> 2023</a>)</span> - learn data science with the tidyverse</li>
 <li>Advanced R <span class="citation" data-cites="wickham2019advr">(<a href="references.html#ref-wickham2019advr" role="doc-biblioref">Wickham 2019</a>)</span> - deep dive into R programming and internals</li>
 </ul>
 </section>
@@ -2629,7 +2630,7 @@ Describe how this change has been tested.
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-bryan2023happygit" class="csl-entry" role="listitem">
 Bryan, Jennifer. 2023. <em>Happy Git and GitHub for the useR</em>. <a href="https://happygitwithr.com/">https://happygitwithr.com/</a>.
 </div>
@@ -2646,10 +2647,10 @@ Tidyverse Team. 2023. <em>Tidyverse Code Review Principles</em>. <a href="https:
 Wickham, Hadley. 2019. <em>Advanced r</em>. 2nd ed. Chapman; Hall/CRC. <a href="https://adv-r.hadley.nz/">https://adv-r.hadley.nz/</a>.
 </div>
 <div id="ref-wickham2021shiny" class="csl-entry" role="listitem">
-———. 2021. <em>Mastering Shiny</em>. O’Reilly Media. <a href="https://mastering-shiny.org/">https://mastering-shiny.org/</a>.
+Wickham, Hadley. 2021. <em>Mastering Shiny</em>. O’Reilly Media. <a href="https://mastering-shiny.org/">https://mastering-shiny.org/</a>.
 </div>
 <div id="ref-wickham2023tidydesign" class="csl-entry" role="listitem">
-———. 2023. <em>Tidyverse Design Guide</em>. <a href="https://design.tidyverse.org/">https://design.tidyverse.org/</a>.
+Wickham, Hadley. 2023. <em>Tidyverse Design Guide</em>. <a href="https://design.tidyverse.org/">https://design.tidyverse.org/</a>.
 </div>
 <div id="ref-wickham2023rpkgs" class="csl-entry" role="listitem">
 Wickham, Hadley, and Jennifer Bryan. 2023. <em>R Packages</em>. 2nd ed. O’Reilly Media. <a href="https://r-pkgs.org/">https://r-pkgs.org/</a>.
@@ -3080,12 +3081,12 @@ Wickham, Hadley, Peter Danenberg, Gábor Csárdi, and Manuel Eugster. 2024. <em>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./code-repositories.html" class="pagination-link" aria-label="Code repositories">
+      <a href="./code-repositories.html" class="pagination-link" preview-toc-changed aria-label="Code repositories">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Code repositories</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./continuous-integration.html" class="pagination-link" aria-label="Continuous Integration">
+      <a href="./continuous-integration.html" class="pagination-link" preview-toc-changed aria-label="Continuous Integration">
         <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Integration</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>8&nbsp; R Code Style – UCD-SeRG Lab Manual</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -59,7 +62,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -89,19 +91,18 @@ div.csl-indent {
 <link href="./continuous-integration.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e34ecb6a0e7991f0346b0751d4a7c3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4e061325f75ba7fba053004d9d2e9411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -365,25 +366,25 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./culture-and-conduct.html" class="sidebar-item-text sidebar-link">
+  <a href="./culture-and-conduct.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Culture and conduct</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./communication.html" class="sidebar-item-text sidebar-link">
+  <a href="./communication.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Communication and coordination</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link">
+  <a href="./reproducibility.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code-repositories.html" class="sidebar-item-text sidebar-link">
+  <a href="./code-repositories.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Code repositories</span></span></a>
   </div>
 </li>
@@ -395,7 +396,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./continuous-integration.html" class="sidebar-item-text sidebar-link">
+  <a href="./continuous-integration.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Integration</span></span></a>
   </div>
 </li>
@@ -407,97 +408,97 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./big-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./big-data.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Big data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-masking.html" class="sidebar-item-text sidebar-link">
+  <a href="./data-masking.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Data masking</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="./quarto.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github.html" class="sidebar-item-text sidebar-link">
+  <a href="./github.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Github</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unix.html" class="sidebar-item-text sidebar-link">
+  <a href="./unix.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Unix</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reproducible-environments.html" class="sidebar-item-text sidebar-link">
+  <a href="./reproducible-environments.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Reproducible Environments</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="./code-publication.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Code Publication</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="./data-publication.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Data Publication</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slurm.html" class="sidebar-item-text sidebar-link">
+  <a href="./slurm.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">High-performance computing (HPC)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai-tools.html" class="sidebar-item-text sidebar-link">
+  <a href="./ai-tools.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Working with AI</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./checklists.html" class="sidebar-item-text sidebar-link">
+  <a href="./checklists.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Checklists</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+  <a href="./resources.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Resources</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./professional-development.html" class="sidebar-item-text sidebar-link">
+  <a href="./professional-development.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Professional Development</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writing.html" class="sidebar-item-text sidebar-link">
+  <a href="./writing.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Writing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./manuscript-preparation.html" class="sidebar-item-text sidebar-link">
+  <a href="./manuscript-preparation.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Manuscript Preparation and Publication</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./references.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -512,13 +513,13 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-copilot-instructions.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix-copilot-instructions.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text">Copilot Instructions File</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-copilot-setup-steps.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix-copilot-setup-steps.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
  <span class="menu-text">Copilot Setup Steps File</span></a>
   </div>
 </li>
@@ -540,30 +541,29 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-lab-style-guide" id="toc-sec-lab-style-guide" class="nav-link active" data-scroll-target="#sec-lab-style-guide"><span class="header-section-number">8.1</span> Lab Style Guide</a>
+  <li><a href="#general-principles" id="toc-general-principles" class="nav-link active" data-scroll-target="#general-principles"><span class="header-section-number">8.1</span> General Principles</a></li>
+  <li><a href="#sec-function-docs" id="toc-sec-function-docs" class="nav-link" data-scroll-target="#sec-function-docs"><span class="header-section-number">8.2</span> Function Structure and Documentation</a>
   <ul class="collapse">
-  <li><a href="#style-guide-foundations" id="toc-style-guide-foundations" class="nav-link" data-scroll-target="#style-guide-foundations"><span class="header-section-number">8.1.1</span> Style Guide Foundations</a></li>
-  <li><a href="#automated-style-enforcement" id="toc-automated-style-enforcement" class="nav-link" data-scroll-target="#automated-style-enforcement"><span class="header-section-number">8.1.2</span> Automated Style Enforcement</a></li>
-  <li><a href="#running-the-linter" id="toc-running-the-linter" class="nav-link" data-scroll-target="#running-the-linter"><span class="header-section-number">8.1.3</span> Running the Linter</a></li>
+  <li><a href="#explicit-return-statements" id="toc-explicit-return-statements" class="nav-link" data-scroll-target="#explicit-return-statements"><span class="header-section-number">8.2.1</span> Explicit Return Statements</a></li>
   </ul></li>
-  <li><a href="#general-principles" id="toc-general-principles" class="nav-link" data-scroll-target="#general-principles"><span class="header-section-number">8.2</span> General Principles</a></li>
-  <li><a href="#sec-function-docs" id="toc-sec-function-docs" class="nav-link" data-scroll-target="#sec-function-docs"><span class="header-section-number">8.3</span> Function Structure and Documentation</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments"><span class="header-section-number">8.4</span> Comments</a></li>
-  <li><a href="#line-breaks-and-formatting" id="toc-line-breaks-and-formatting" class="nav-link" data-scroll-target="#line-breaks-and-formatting"><span class="header-section-number">8.5</span> Line Breaks and Formatting</a></li>
-  <li><a href="#markdown-and-quarto-formatting" id="toc-markdown-and-quarto-formatting" class="nav-link" data-scroll-target="#markdown-and-quarto-formatting"><span class="header-section-number">8.6</span> Markdown and Quarto Formatting</a>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments"><span class="header-section-number">8.3</span> Comments</a></li>
+  <li><a href="#line-breaks-and-formatting" id="toc-line-breaks-and-formatting" class="nav-link" data-scroll-target="#line-breaks-and-formatting"><span class="header-section-number">8.4</span> Line Breaks and Formatting</a></li>
+  <li><a href="#markdown-and-quarto-formatting" id="toc-markdown-and-quarto-formatting" class="nav-link" data-scroll-target="#markdown-and-quarto-formatting"><span class="header-section-number">8.5</span> Markdown and Quarto Formatting</a>
   <ul class="collapse">
-  <li><a href="#writing-about-code-in-quarto-documents" id="toc-writing-about-code-in-quarto-documents" class="nav-link" data-scroll-target="#writing-about-code-in-quarto-documents"><span class="header-section-number">8.6.1</span> Writing about code in Quarto documents</a></li>
+  <li><a href="#writing-about-code-in-quarto-documents" id="toc-writing-about-code-in-quarto-documents" class="nav-link" data-scroll-target="#writing-about-code-in-quarto-documents"><span class="header-section-number">8.5.1</span> Writing about code in Quarto documents</a></li>
   </ul></li>
-  <li><a href="#messaging-and-user-communication" id="toc-messaging-and-user-communication" class="nav-link" data-scroll-target="#messaging-and-user-communication"><span class="header-section-number">8.7</span> Messaging and User Communication</a></li>
-  <li><a href="#package-code-practices" id="toc-package-code-practices" class="nav-link" data-scroll-target="#package-code-practices"><span class="header-section-number">8.8</span> Package Code Practices</a></li>
-  <li><a href="#sec-tidyverse-replacements" id="toc-sec-tidyverse-replacements" class="nav-link" data-scroll-target="#sec-tidyverse-replacements"><span class="header-section-number">8.9</span> Tidyverse Replacements</a></li>
-  <li><a href="#sec-here-package-style" id="toc-sec-here-package-style" class="nav-link" data-scroll-target="#sec-here-package-style"><span class="header-section-number">8.10</span> The here Package</a></li>
-  <li><a href="#sec-object-naming" id="toc-sec-object-naming" class="nav-link" data-scroll-target="#sec-object-naming"><span class="header-section-number">8.11</span> Object Naming</a></li>
-  <li><a href="#sec-style-auto-style" id="toc-sec-style-auto-style" class="nav-link" data-scroll-target="#sec-style-auto-style"><span class="header-section-number">8.12</span> Automated Tools for Style and Project Workflow</a>
+  <li><a href="#messaging-and-user-communication" id="toc-messaging-and-user-communication" class="nav-link" data-scroll-target="#messaging-and-user-communication"><span class="header-section-number">8.6</span> Messaging and User Communication</a></li>
+  <li><a href="#package-code-practices" id="toc-package-code-practices" class="nav-link" data-scroll-target="#package-code-practices"><span class="header-section-number">8.7</span> Package Code Practices</a></li>
+  <li><a href="#sec-tidyverse-replacements" id="toc-sec-tidyverse-replacements" class="nav-link" data-scroll-target="#sec-tidyverse-replacements"><span class="header-section-number">8.8</span> Tidyverse Replacements</a></li>
+  <li><a href="#sec-here-package-style" id="toc-sec-here-package-style" class="nav-link" data-scroll-target="#sec-here-package-style"><span class="header-section-number">8.9</span> The here Package</a></li>
+  <li><a href="#sec-object-naming" id="toc-sec-object-naming" class="nav-link" data-scroll-target="#sec-object-naming"><span class="header-section-number">8.10</span> Object Naming</a></li>
+  <li><a href="#sec-style-auto-style" id="toc-sec-style-auto-style" class="nav-link" data-scroll-target="#sec-style-auto-style"><span class="header-section-number">8.11</span> Automated Tools for Style and Project Workflow</a>
   <ul class="collapse">
-  <li><a href="#styling" id="toc-styling" class="nav-link" data-scroll-target="#styling"><span class="header-section-number">8.12.1</span> Styling</a></li>
+  <li><a href="#styling" id="toc-styling" class="nav-link" data-scroll-target="#styling"><span class="header-section-number">8.11.1</span> Styling</a></li>
+  <li><a href="#using-lintr" id="toc-using-lintr" class="nav-link" data-scroll-target="#using-lintr"><span class="header-section-number">8.11.2</span> Using Lintr</a></li>
+  <li><a href="#our-labs-lintr-configuration" id="toc-our-labs-lintr-configuration" class="nav-link" data-scroll-target="#our-labs-lintr-configuration"><span class="header-section-number">8.11.3</span> Our Lab’s Lintr Configuration</a></li>
   </ul></li>
-  <li><a href="#sec-r-resources-style" id="toc-sec-r-resources-style" class="nav-link" data-scroll-target="#sec-r-resources-style"><span class="header-section-number">8.13</span> Additional Resources</a></li>
+  <li><a href="#sec-r-resources-style" id="toc-sec-r-resources-style" class="nav-link" data-scroll-target="#sec-r-resources-style"><span class="header-section-number">8.12</span> Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UCD-SERG/lab-manual/edit/main/coding-style.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/blob/main/coding-style.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -571,7 +571,7 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="coding-style.html">8. &nbsp; <span class="chapter-title">R Code Style</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>, <a href="coding-practices.html">6. &nbsp; <span class="chapter-title">R Coding Practices</span></span></a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="culture-and-conduct.html">2. &nbsp; <span class="chapter-title">Culture and conduct</span></a>, <a href="data-publication.html">16. &nbsp; <span class="chapter-title">Data Publication</span></a>, <a href="continuous-integration.html">7. &nbsp; <span class="chapter-title">Continuous Integration</span></span></a>, <a href="appendix-copilot-instructions.html">appendix-copilot-instructions</a>, <a href="reproducible-environments.html">14. &nbsp; <span class="chapter-title">Reproducible Environments</span></a>, <a href="code-repositories.html">5. &nbsp; <span class="chapter-title">Code repositories</span></a>, <a href="reproducibility.html">4. &nbsp; <span class="chapter-title">Reproducibility</span></a>, <a href="coding-practices.html">6. &nbsp; <span class="chapter-title">R Coding Practices</span></span></a>, <a href="communication.html">3. &nbsp; <span class="chapter-title">Communication and coordination</span></a>, <a href="github.html">12. &nbsp; <span class="chapter-title">Github</span></span></a>, <a href="quarto.html">11. &nbsp; <span class="chapter-title">Quarto</span></span></a>, <a href="ai-tools.html">18. &nbsp; <span class="chapter-title">Working with AI</span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>, <a href="data-masking.html">10. &nbsp; <span class="chapter-title">Data masking</span></a>, <a href="writing.html">22. &nbsp; <span class="chapter-title">Writing</span></span></a>, <a href="big-data.html">9. &nbsp; <span class="chapter-title">Big data</span></a>, <a href="manuscript-preparation.html">23. &nbsp; <span class="chapter-title">Manuscript Preparation and Publication</span></a>, <a href="unix.html">13. &nbsp; <span class="chapter-title">Unix</span></span></a>, <a href="references.html">references</a>, <a href="appendix-copilot-setup-steps.html">appendix-copilot-setup-steps</a>, <a href="code-publication.html">15. &nbsp; <span class="chapter-title">Code Publication</span></a>, <a href="slurm.html">17. &nbsp; <span class="chapter-title">High-performance computing (HPC)</span></span></a>, <a href="checklists.html">19. &nbsp; <span class="chapter-title">Checklists</span></a>, <a href="coding-style.html">8. &nbsp; <span class="chapter-title">R Code Style</span></span></a>, <a href="professional-development.html">21. &nbsp; <span class="chapter-title">Professional Development</span></a>, <a href="resources.html">20. &nbsp; <span class="chapter-title">Resources</span></a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -603,7 +603,7 @@ div.csl-indent {
 
 <div class="preview-combined-banner">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~10% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~11% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
@@ -614,149 +614,75 @@ div.csl-indent {
 
 <p>Adapted by UCD-SeRG team from <a href="https://jadebc.github.io/lab-manual/coding-style.html">original by Kunal Mishra, Jade Benjamin-Chung, and Stephanie Djajadi</a></p>
 <p>Follow these code style guidelines for all R code:</p>
-<section id="sec-lab-style-guide" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-lab-style-guide"><span class="header-section-number"><mark class="preview-text-changed">8.1</mark></span> <mark class="preview-text-changed">Lab Style Guide</mark></h2>
-<p><mark class="preview-element-added">Our lab follows the <a href="https://google.github.io/styleguide/Rguide.html">Google R Style Guide</a>, which in turn mostly follows the <a href="https://style.tidyverse.org/">tidyverse style guide</a>. This section documents our specific style preferences and the rules enforced through our <a href="https://github.com/UCD-SERG/lab-manual/blob/main/.lintr.R"><code>.lintr.R</code></a> configuration file.</mark></p>
-<section id="style-guide-foundations" class="level3" data-number="8.1.1">
-<h3 data-number="8.1.1" class="anchored" data-anchor-id="style-guide-foundations"><span class="header-section-number"><mark class="preview-text-added">8.1.1</mark></span><mark class="preview-text-added"> </mark>Style <mark class="preview-text-changed">Guide</mark> <mark class="preview-text-changed">Foundations</mark></h3>
-<p><mark class="preview-element-added">We adopt the Google R Style Guide with the following key principles:</mark></p>
+<section id="general-principles" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="general-principles"><span class="header-section-number">8.1</span> General Principles</h2>
+<p><mark class="preview-element-added">Our lab follows the <a href="https://google.github.io/styleguide/Rguide.html">Google R Style Guide</a>, which in turn mostly follows the <a href="https://style.tidyverse.org/">tidyverse style guide</a> <span class="citation" data-cites="wickham2023tidyverse">(<a href="references.html#ref-wickham2023tidyverse" role="doc-biblioref">Wickham 2023</a>)</span>. The following principles apply to all R code:</mark></p>
 <ul>
-<li><mark class="preview-element-added"><strong>Follow tidyverse conventions</strong>: Our style is built on the tidyverse style guide, which provides comprehensive guidance on naming, syntax, pipes, functions, and more <span class="citation" data-cites="wickham2023tidyverse">(<a href="references.html#ref-wickham2023tidyverse" role="doc-biblioref">Wickham 2023</a>)</span></mark></li>
-<li><mark class="preview-element-added"><strong>Use explicit return values</strong>: Following the <a href="https://google.github.io/styleguide/Rguide.html#use-explicit-returns">Google R Style Guide’s recommendation</a>, always use explicit <code>return()</code> statements in functions, even when R’s implicit return would work. This makes the function’s intent clear and improves readability.</mark></li>
+<li><mark class="preview-element-added"><p><strong>Follow tidyverse conventions</strong>: Our style is built on the tidyverse style guide, which provides comprehensive guidance on naming, syntax, pipes, functions, and more</mark></p></li>
+<li><p><strong>Naming</strong>: Use <code>snake_case</code> for functions and variables; acronyms may be uppercase (e.g., <code>prep_IDs_data</code>)</p></li>
+<li><p><strong>Write tidy code</strong>: Keep code clean, readable, and well-organized</p></li>
+<li><p><strong>Avoid redundant logical comparisons</strong>: Use logical variables directly in conditional statements (e.g., <code>if (x)</code> instead of <code>if (x == TRUE)</code> or <code>if (x == 1)</code>)</p></li>
+<li><p><strong>Use pipes to emphasize primary inputs</strong>: When writing functions and code, use the pipe operator to clearly show transformations on a primary object. The primary input should flow as the first argument to each function in the chain. Design functions so the most important argument (usually data) comes first, enabling natural pipeline composition. See the <a href="https://design.tidyverse.org/important-args-first.html">tidyverse design principles</a> for more details.</p></li>
+<li><p><strong>Use native pipe</strong>: <code>|&gt;</code> not <code>%&gt;%</code> (available in<mark class="preview-text-changed"> R &gt;= 4.1.0). This is enforced by our </mark><code><mark class="preview-text-changed">.lintr.R</mark></code><mark class="preview-text-changed"> configuration via </mark><code><mark class="preview-text-changed">pipe_consistency_linter(pip</mark>e = "|&gt;")</code></p></li>
 </ul>
-<p><mark class="preview-element-added"><strong>Example of explicit returns:</strong></mark></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good: Explicit return</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>calculate_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  result <span class="ot">&lt;-</span> <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(result)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Less clear: Implicit return (avoid)</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>calculate_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><mark class="preview-element-added">Many of these rules are automatically enforced through our <a href="https://github.com/UCD-SERG/lab-manual/blob/main/.lintr.R"><code>.lintr.R</code></a> configuration file. See <a href="#sec-style-auto-style" class="quarto-xref"><span>Section 8.11</span></a> for details on automated style checking.</mark></p>
 </section>
-<section id="automated-style-enforcement" class="level3" data-number="8.1.2">
-<h3 data-number="8.1.2" class="anchored" data-anchor-id="automated-style-enforcement"><span class="header-section-number">8.1.2</span> Automated Style Enforcement</mark></h3>
-<p><mark class="preview-element-added">Our lab uses <a href="https://lintr.r-lib.org/"><code>{lintr}</code></a> to automatically check code style. The <code>.lintr.R</code> configuration file in each repository defines our style rules. You can view the lab-manual’s configuration at <a href="https://github.com/UCD-SERG/lab-manual/blob/main/.lintr.R" class="uri">https://github.com/UCD-SERG/lab-manual/blob/main/.lintr.R</a>.</mark></p>
-<section id="key-lintr-rules" class="level4" data-number="8.1.2.1">
-<h4 data-number="8.1.2.1" class="anchored" data-anchor-id="key-lintr-rules"><mark class="preview-element-added"><span class="header-section-number">8.1.2.1</span> Key Lintr Rules</mark></h4>
-<p><mark class="preview-element-added">Our <code>.lintr.R</code> configuration enforces the following rules:</mark></p>
-<p><mark class="preview-element-added"><strong>Naming conventions:</strong></mark></p>
-<ul>
-<li>Use <code>snake_case</code> for functions and <mark class="preview-text-changed">variables</mark></li>
-<li><mark class="preview-element-added">Uppercase acronyms are allowed (e.g., <code>prep_IDs_data</code>, <code>calculate_BMI_score</code>)</mark></li>
-<li><mark class="preview-element-added">This is implemented via a custom <code>object_name_linter</code> using a regex pattern</mark></li>
-</ul>
-<p><mark class="preview-element-added"><strong>Pipe operator:</strong></mark></p>
-<ul>
-<li><mark class="preview-element-added"><strong>Always use the native pipe</strong> <code>|&gt;</code> instead of the magrittr pipe <code>%&gt;%</code></mark></li>
-<li><mark class="preview-element-added">Enforced by <code>pipe_consistency_linter(pipe = "|&gt;")</code></mark></li>
-<li><mark class="preview-element-added">Requires R &gt;= 4.1.0</mark></li>
-</ul>
-<p><strong>Messaging and <mark class="preview-text-changed">error</mark> <mark class="preview-text-changed">handling:</mark></strong></p>
-<ul>
-<li><strong>Use <a href="https://cli.r-lib.org/"><code><mark class="preview-text-changed">{cli}</mark></code></a> package functions</strong> for all <mark class="preview-text-changed">user</mark> <mark class="preview-text-changed">communication:
-</mark><ul>
-<li><mark class="preview-text-changed">Use</mark> <code><mark class="preview-text-changed">cli::cli_inform()</mark></code> <mark class="preview-text-changed">instead</mark> <mark class="preview-text-changed">of </mark><code><mark class="preview-text-changed">message()</mark></code><mark class="preview-text-changed">, </mark><code><mark class="preview-text-changed">inform()</mark></code><mark class="preview-text-changed">, or older </mark><code><mark class="preview-text-changed">cli_alert_*()</mark></code><mark class="preview-text-changed"> functions</mark></li>
-<li><mark class="preview-element-added">Use <code>cli::cli_warn()</code> instead of <code>warning()</code> or <code>warn()</code></mark></li>
-<li><mark class="preview-element-added">Use <code>cli::cli_abort()</code> instead of <code>stop()</code> or <code>abort()</code></mark></li>
-</ul></li>
-<li><mark class="preview-element-added">This provides better formatting, color support, and consistent messaging across our packages</mark></li>
-<li><mark class="preview-element-added">Enforced by <code>undesirable_function_linter()</code></mark></li>
-</ul>
-<p><mark class="preview-element-added"><strong>Package loading:</strong></mark></p>
-<ul>
-<li><mark class="preview-element-added"><strong>Avoid <code>library()</code> calls</strong> in package code</mark></li>
-<li><mark class="preview-element-added">Instead, use one of these approaches:
-<ul>
-<li><code>::</code> for explicit namespace references (e.g., <code>dplyr::mutate()</code>)</mark></li>
-<li><mark class="preview-element-added"><code>usethis::use_import_from()</code> to declare imports in <code>NAMESPACE</code></mark></li>
-<li><mark class="preview-element-added"><code>withr::local_package()</code> for temporary package loading in tests</mark></li>
-</ul></li>
-<li><mark class="preview-element-added">This keeps the global search path clean and makes dependencies explicit</mark></li>
-<li><mark class="preview-element-added">See <a href="https://r-pkgs.org/code.html#sec-code-r-landscape">R Packages - The R landscape</a> for more details</mark></li>
-<li><mark class="preview-element-added">Enforced by <code>undesirable_function_linter()</code></mark></li>
-</ul>
-<p><mark class="preview-element-added"><strong>Other style rules:</strong></mark></p>
-<ul>
-<li><mark class="preview-element-added"><strong>Redundant equals</strong>: Don’t use <code>= TRUE</code> when <code>TRUE</code> is the default value</mark></li>
-<li><mark class="preview-element-added"><strong>Trailing whitespace</strong>: Linter disabled (handled by <code>styler</code> instead)</mark></li>
-<li><mark class="preview-element-added"><strong>Return statements</strong>: Linter disabled to allow flexibility, but <strong>we require explicit returns</strong> following the Google R Style Guide</mark></li>
-</ul>
-</section>
-<section id="exceptions-and-exclusions" class="level4" data-number="8.1.2.2">
-<h4 data-number="8.1.2.2" class="anchored" data-anchor-id="exceptions-and-exclusions"><span class="header-section-number"><mark class="preview-text-changed">8.1.2.2</mark></span> <mark class="preview-text-changed">Exceptions</mark> and <mark class="preview-text-changed">Exclusions</mark></h4>
-<p><mark class="preview-element-added">Our <code>.lintr.R</code> configuration allows exceptions for certain directories:</mark></p>
-<ul>
-<li><mark class="preview-element-added"><code>data-raw/</code>: Pipe consistency and undesirable function rules relaxed (exploratory scripts may use different conventions)</mark></li>
-<li><mark class="preview-element-added"><code>vignettes/</code>: Undesirable function and object naming rules relaxed (tutorial code may need <code>library()</code> calls for clarity)</mark></li>
-<li><mark class="preview-element-added"><code>inst/examples/</code>: Undesirable function rules relaxed</mark></li>
-<li><mark class="preview-element-added"><code>tests/testthat.R</code>: Undesirable function rules relaxed</mark></li>
-</ul>
-</section>
-</section>
-<section id="running-the-linter" class="level3" data-number="8.1.3">
-<h3 data-number="8.1.3" class="anchored" data-anchor-id="running-the-linter"><mark class="preview-element-added"><span class="header-section-number">8.1.3</span> Running the Linter</mark></h3>
-<p><mark class="preview-text-changed">Check</mark> <mark class="preview-text-changed">your</mark> code style <mark class="preview-text-changed">by</mark> <mark class="preview-text-changed">running:</mark></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lint the entire package</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint_package</span>()</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Lint a specific file</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint</span>(<span class="st">"R/my_function.R"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The linter <mark class="preview-text-changed">will</mark> <mark class="preview-text-changed">identify style violations and suggest corrections. Use </mark><a href="https://styler.r-lib.org/"><code><mark class="preview-text-changed">{styler}</mark></code></a><mark class="preview-text-changed"> to automatically fix many issues (see </mark><a href="#sec-style-auto-style" class="quarto-xref"><span><mark class="preview-text-changed">Section 8.12</mark></span></a><mark class="preview-text-changed">).</mark></p>
-</section>
-</section>
-<section id="general-principles" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="general-principles"><span class="header-section-number"><mark class="preview-text-changed">8.2</mark></span> General Principles</h2>
-<ul>
-<li><strong>Follow tidyverse style guide</strong>: https://style.tidyverse.org</li>
-<li><strong>Use native pipe</strong>: <code>|&gt;</code> not <code>%&gt;%</code> (available in R &gt;= 4.1.0)</li>
-<li><mark class="preview-element-added"><strong>Naming</strong>: Use <code>snake_case</code> for functions and variables; acronyms may be uppercase (e.g., <code>prep_IDs_data</code>)</mark></li>
-<li><strong>Write tidy code</strong>: Keep code clean, readable, and well-organized</li>
-<li><strong>Avoid redundant logical comparisons</strong>: Use logical variables directly in conditional statements (e.g., <code>if (x)</code> instead of <code>if (x == TRUE)</code> or <code>if (x == 1)</code>)</li>
-<li><strong>Use pipes to emphasize primary inputs</strong>: When writing functions and code, use the pipe operator to clearly show transformations on a primary object. The primary input should flow as the first argument to each function in the chain. Design functions so the most important argument (usually data) comes first, enabling natural pipeline composition. See the <a href="https://design.tidyverse.org/important-args-first.html">tidyverse design principles</a> for more details.</li>
-</ul>
-</section>
-<section id="sec-function-docs" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="sec-function-docs"><span class="header-section-number"><mark class="preview-text-changed">8.3</mark></span> <mark class="preview-text-changed">Function</mark> <mark class="preview-text-changed">Structure</mark> and <mark class="preview-text-changed">Documentation</mark></h2>
+<section id="sec-function-docs" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-function-docs"><span class="header-section-number">8.2</span> Function Structure and Documentation</h2>
 <p>Every function should follow this pattern:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Short Title (One Line)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' Longer description providing details about what the function does,</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' when to use it, and important considerations.</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param param1 Description of first parameter, including type and constraints</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param param2 Description of second parameter</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' @returns Description of return value, including type and structure</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#' @examples</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#' # Example usage</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#' result &lt;- my_function(param1 = "value", param2 = 10)</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#' @export</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(param1, param2) {</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Implementation</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Short Title (One Line)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' Longer description providing details about what the function does,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' when to use it, and important considerations.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param param1 Description of first parameter, including type and constraints</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param param2 Description of second parameter</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' @returns Description of return value, including type and structure</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#' @examples</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#' # Example usage</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#' result &lt;- my_function(param1 = "value", param2 = 10)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#' @export</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(param1, param2) {</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Implemen<mark class="preview-text-added">tation</mark></span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu"><mark class="preview-text-added">return</mark></span><mark class="preview-text-added">(r</mark>esult)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><em>See also <a href="coding-practices.html#sec-documenting-code" class="quarto-xref" preview-toc-changed><span>Section 6.12</span></a> for general code documentation practices.</em></p>
+<section id="explicit-return-statements" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="explicit-return-statements"><mark class="preview-element-added"><span class="header-section-number">8.2.1</span> Explicit Return Statements</mark></h3>
+<p><mark class="preview-element-added">Following the <a href="https://google.github.io/styleguide/Rguide.html#use-explicit-returns">Google R Style Guide’s recommendation</a>, always use explicit <code>return()</code> statements in functions, even when R’s implicit return would work. This makes the function’s intent clear and improves readability.</mark></p>
+<p><mark class="preview-element-added"><strong>Example:</strong></mark></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good: Explicit return</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>calculate_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  result <span class="ot">&lt;-</span> <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(result)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Less clear: Implicit return (avoid)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>calculate_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Note: Our <code>.lintr.R</code> configuration disables the <code>return_linter</code> to allow flexibility in code, but we still require explicit returns as a lab standard.</mark></p>
 </section>
-<section id="comments" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="comments"><span class="header-section-number"><mark class="preview-text-changed">8.4</mark></span> Comments</h2>
+</section>
+<section id="comments" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="comments"><span class="header-section-number">8.3</span> Comments</h2>
 <p>Use comments to explain <em>why</em>, not <em>what</em>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good: Explains reasoning</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use log scale because distribution is highly skewed</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log10</span>(income))) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad: States the obvious</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a histogram</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> income)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good: Explains reasoning</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use log scale because distribution is highly skewed</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log10</span>(income))) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad: States the obvious</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a histogram</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> income)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>File headers</strong> (for scripts in <code>data-raw/</code> or <code>inst/analyses/</code>):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># @Organization - Example Organization</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># @Project - Example Project</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># @Description - This file is responsible for [...]</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># @Organization - Example Organization</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># @Project - Example Project</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># @Description - This file is responsible for [...]</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>File Structure</strong> - Just as your data “flows” through your project, data should flow naturally through a script. Very generally, you want to</p>
 <ol type="1">
 <li>source your config =&gt;</li>
@@ -783,172 +709,187 @@ Note
 <p>In prose text chunks, Quarto ignores single line breaks, so you should also line-break your prose text in .qmd files to keep them under 80 characters.</p>
 <p>You can configure RStudio’s settings to display the 80-character margin.</p>
 </section>
-<section id="line-breaks-and-formatting" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="line-breaks-and-formatting"><span class="header-section-number">8.5</span> <mark class="preview-text-changed">Line Breaks</mark> and Formatting</h2>
+<section id="line-breaks-and-formatting" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="line-breaks-and-formatting"><span class="header-section-number">8.4</span> Line Breaks and Formatting</h2>
 <p><strong>Blank Lines Before Lists</strong></p>
 <p>Always include a blank line before starting a bullet list or numbered list in markdown/Quarto documents. This ensures proper rendering and readability.</p>
 <p><strong>Correct:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="an">Here are the requirements:</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First item</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Second item</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="an">Here are the requirements:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First item</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Second item</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Incorrect:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="an">Here are the requirements:</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First item</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Second item</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="an">Here are the requirements:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First item</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Second item</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here’s what happens if you don’t add the blank line:</p>
 <p>Here are the requirements: - First item - Second item</p>
 <p><strong>Line Breaks in Code</strong></p>
 <ul>
 <li>For <code>ggplot</code> calls and <code>dplyr</code> pipelines, do not crowd single lines. Here are some nontrivial examples of “beautiful” pipelines, where beauty is defined by coherence:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 1</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>school_names <span class="ot">=</span> <span class="fu">list</span>(</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">OUSD_school_names =</span> absentee_all <span class="sc">|&gt;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dist.n <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(school) <span class="sc">|&gt;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    unique <span class="sc">|&gt;</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    sort,</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">WCCSD_school_names =</span> absentee_all <span class="sc">|&gt;</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dist.n <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(school) <span class="sc">|&gt;</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    unique <span class="sc">|&gt;</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    sort</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 2</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>absentee_all <span class="ot">=</span> <span class="fu">fread</span>(<span class="at">file =</span> raw_data_path) <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">program =</span> <span class="fu">case_when</span>(schoolyr <span class="sc">%in%</span> pre_program_schoolyrs <span class="sc">~</span> <span class="dv">0</span>,</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                             schoolyr <span class="sc">%in%</span> program_schoolyrs <span class="sc">~</span> <span class="dv">1</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">period =</span> <span class="fu">case_when</span>(schoolyr <span class="sc">%in%</span> pre_program_schoolyrs <span class="sc">~</span> <span class="dv">0</span>,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>                            schoolyr <span class="sc">%in%</span> LAIV_schoolyrs <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>                            schoolyr <span class="sc">%in%</span> IIV_schoolyrs <span class="sc">~</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(schoolyr <span class="sc">!=</span> <span class="st">"2017-18"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 1</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>school_names <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">OUSD_school_names =</span> absentee_all <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dist.n <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(school) <span class="sc">|&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    unique <span class="sc">|&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    sort,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">WCCSD_school_names =</span> absentee_all <span class="sc">|&gt;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(dist.n <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(school) <span class="sc">|&gt;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    unique <span class="sc">|&gt;</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    sort</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 2</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>absentee_all <span class="ot">=</span> <span class="fu">fread</span>(<span class="at">file =</span> raw_data_path) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">program =</span> <span class="fu">case_when</span>(schoolyr <span class="sc">%in%</span> pre_program_schoolyrs <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                             schoolyr <span class="sc">%in%</span> program_schoolyrs <span class="sc">~</span> <span class="dv">1</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">period =</span> <span class="fu">case_when</span>(schoolyr <span class="sc">%in%</span> pre_program_schoolyrs <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                            schoolyr <span class="sc">%in%</span> LAIV_schoolyrs <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                            schoolyr <span class="sc">%in%</span> IIV_schoolyrs <span class="sc">~</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(schoolyr <span class="sc">!=</span> <span class="st">"2017-18"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And of a complex <code>ggplot</code> call:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 3</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>data) <span class="sc">+</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x=</span>.data[[<span class="st">"year"</span>]], <span class="at">y=</span>.data[[<span class="st">"rd"</span>]], <span class="at">group=</span>.data[[group]]) <span class="sc">+</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">col =</span> .data[[group]], <span class="at">shape =</span> .data[[group]]),</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">size=</span><span class="fl">2.5</span>) <span class="sc">+</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">ymin=</span>.data[[<span class="st">"lb"</span>]], <span class="at">ymax=</span> .data[[<span class="st">"ub"</span>]], <span class="at">col=</span> .data[[group]]),</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>             <span class="at">size=</span><span class="fl">2.5</span>) <span class="sc">+</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">ymin=</span>lb, <span class="at">ymax=</span>ub),</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span><span class="fl">0.1</span>) <span class="sc">+</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span>limits,</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>                     <span class="at">breaks=</span>breaks,</span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels=</span>breaks) <span class="sc">+</span></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(std_legend_title,<span class="at">values=</span>cols,<span class="at">labels=</span>legend_label) <span class="sc">+</span></span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(std_legend_title,<span class="at">values=</span>shapes, <span class="at">labels=</span>legend_label) <span class="sc">+</span></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Program year"</span>) <span class="sc">+</span></span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(yaxis_lab) <span class="sc">+</span></span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_complete_bw</span>() <span class="sc">+</span></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">strip.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)) <span class="sc">+</span></span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(title)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example 3</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>data) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x=</span>.data[[<span class="st">"year"</span>]], <span class="at">y=</span>.data[[<span class="st">"rd"</span>]], <span class="at">group=</span>.data[[group]]) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">col =</span> .data[[group]], <span class="at">shape =</span> .data[[group]]),</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">size=</span><span class="fl">2.5</span>) <span class="sc">+</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">ymin=</span>.data[[<span class="st">"lb"</span>]], <span class="at">ymax=</span> .data[[<span class="st">"ub"</span>]], <span class="at">col=</span> .data[[group]]),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>             <span class="at">size=</span><span class="fl">2.5</span>) <span class="sc">+</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">ymin=</span>lb, <span class="at">ymax=</span>ub),</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span><span class="fl">0.2</span>),</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">width=</span><span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span>limits,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>                     <span class="at">breaks=</span>breaks,</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels=</span>breaks) <span class="sc">+</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(std_legend_title,<span class="at">values=</span>cols,<span class="at">labels=</span>legend_label) <span class="sc">+</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(std_legend_title,<span class="at">values=</span>shapes, <span class="at">labels=</span>legend_label) <span class="sc">+</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Program year"</span>) <span class="sc">+</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(yaxis_lab) <span class="sc">+</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_complete_bw</span>() <span class="sc">+</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">strip.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)) <span class="sc">+</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(title)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Imagine (or perhaps mournfully recall) the mess that can occur when you don’t strictly style a complicated <code>ggplot</code> call. Trying to fix bugs and ensure your code is working can be a nightmare. Now imagine trying to do it with the same code 6 months after you’ve written it. Invest the time now and reap the rewards as the code practically explains itself, line by line.</p>
 </section>
-<section id="markdown-and-quarto-formatting" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="markdown-and-quarto-formatting"><mark class="preview-element-added"><span class="header-section-number">8.6</span> Markdown and Quarto Formatting</mark></h2>
-<section id="writing-about-code-in-quarto-documents" class="level3" data-number="8.6.1">
-<h3 data-number="8.6.1" class="anchored" data-anchor-id="writing-about-code-in-quarto-documents"><span class="header-section-number"><mark class="preview-text-changed">8.6.1</mark></span> Writing about code in Quarto documents</h3>
+<section id="markdown-and-quarto-formatting" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="markdown-and-quarto-formatting"><span class="header-section-number">8.5</span> Markdown and Quarto Formatting</h2>
+<section id="writing-about-code-in-quarto-documents" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="writing-about-code-in-quarto-documents"><span class="header-section-number">8.5.1</span> Writing about code in Quarto documents</h3>
 <p>When writing about code in prose sections of quarto documents, use backticks to apply a code style: for example, <code>dplyr::mutate()</code>. When talking about packages, use backticks and curly-braces with a hyperlink to the package website. For example: <a href="https://dplyr.tidyverse.org/"><code>{dplyr}</code></a>.</p>
 <p><strong>Important:</strong> Do not use raw HTML (<code>&lt;a href="..."&gt;</code>) in <code>.qmd</code> files. Always use Quarto/markdown link syntax instead.</p>
 </section>
 </section>
-<section id="messaging-and-user-communication" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="messaging-and-user-communication"><mark class="preview-element-added"><span class="header-section-number">8.7</span> Messaging and User Communication</mark></h2>
-<p><mark class="preview-element-added">Use <code>cli</code> package functions for all user-facing messages in package functions:</mark></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>cli<span class="sc">::</span><span class="fu">cli_inform</span>(<span class="st">"Analysis complete"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>cli<span class="sc">::</span><span class="fu">cli_warn</span>(<span class="st">"Missing data detected"</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>cli<span class="sc">::</span><span class="fu">cli_abort</span>(<span class="st">"Invalid input: {x}"</span>)</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad - don't use these in package code</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">message</span>(<span class="st">"Analysis complete"</span>)</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">warning</span>(<span class="st">"Missing data detected"</span>)</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">stop</span>(<span class="st">"Invalid input"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="package-code-practices" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="package-code-practices"><span class="header-section-number">8.8</span> Package Code Practices</h2>
+<section id="messaging-and-user-communication" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="messaging-and-user-communication"><span class="header-section-number">8.6</span> Messaging and User Communication</h2>
+<p>Use <a href="https://cli.r-lib.org/"><code><mark class="preview-text-changed">{cli}</mark></code></a> package functions for all user-facing messages in package <mark class="preview-text-changed">functions. This is enforced by our </mark><code><mark class="preview-text-changed">.lintr.R</mark></code><mark class="preview-text-changed"> configuration via </mark><code><mark class="preview-text-changed">undesirable_function_linter()</mark></code><mark class="preview-text-changed">.</mark></p>
+<p><strong><mark class="preview-text-changed">Required</mark> <mark class="preview-text-changed">messaging</mark> <mark class="preview-text-changed">functions:</mark></strong></p>
 <ul>
-<li><strong>No <code>library()</code> in package code</strong>: Use <code>::</code> notation or declare in DESCRIPTION Imports</li>
+<li><mark class="preview-element-added">Use <code>cli::cli_inform()</code> instead of <code>message()</code>, <code>inform()</code>, or older <code>cli_alert_*()</code> functions</mark></li>
+<li><mark class="preview-element-added">Use <code>cli::cli_warn()</code> instead of <code>warning()</code> or <code>warn()</code></mark></li>
+<li><mark class="preview-element-added">Use <code>cli::cli_abort()</code> instead of <code>stop()</code> or <code>abort()</code></mark></li>
+</ul>
+<p><mark class="preview-element-added">This provides better formatting, color support, and consistent messaging across our packages.</mark></p>
+<p><mark class="preview-element-added"><strong>Examples:</strong></mark></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>cli<span class="sc">::</span><span class="fu">cli_inform</span>(<span class="st">"Analysis complete"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>cli<span class="sc">::</span><span class="fu">cli_warn</span>(<span class="st">"Missing data detected"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>cli<span class="sc">::</span><span class="fu">cli_abort</span>(<span class="st">"Invalid input: <mark class="preview-text-changed">{.arg x} must be numeric"</mark></span><mark class="preview-text-changed">)</mark></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad - don't use these in package code</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">message</span>(<span class="st">"Analysis complete"</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">warning</span>(<span class="st">"Missing data detected"</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">stop</span>(<span class="st">"Invalid input"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="package-code-practices" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="package-code-practices"><span class="header-section-number">8.7</span> Package Code Practices</h2>
+<ul>
+<li><mark class="preview-element-added"><strong>No <code>library()</code> in package code</strong>: Use <code>::</code> notation or declare in DESCRIPTION Imports. This is enforced by our <code>.lintr.R</code> configuration via <code>undesirable_function_linter()</code>. Instead, use:
+<ul>
+<li><code>::</code> for explicit namespace references (e.g., <code>dplyr::mutate()</code>)</mark></li>
+<li><mark class="preview-element-added"><code>usethis::use_import_from()</code> to declare imports in <code>NAMESPACE</code></mark></li>
+<li><mark class="preview-element-added"><code>withr::local_package()</code> for temporary package loading in tests</mark></li>
+</ul></li>
+<li><mark class="preview-element-added">This keeps the global search path clean and makes dependencies explicit. See <a href="https://r-pkgs.org/code.html#sec-code-r-landscape">R Packages - The R landscape</a> for more details.</mark></li>
 <li><strong>Document all exports</strong>: Use roxygen2 (<code>@title</code>, <code>@description</code>, <code>@param</code>, <code>@returns</code>, <code>@examples</code>)</li>
 <li><strong>Avoid code duplication</strong>: Extract repeated logic into helper functions</li>
 </ul>
 </section>
-<section id="sec-tidyverse-replacements" class="level2" data-number="8.9">
-<h2 data-number="8.9" class="anchored" data-anchor-id="sec-tidyverse-replacements"><span class="header-section-number"><mark class="preview-text-changed">8.9</mark></span> Tidyverse Replacements</h2>
+<section id="sec-tidyverse-replacements" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="sec-tidyverse-replacements"><span class="header-section-number">8.8</span> Tidyverse Replacements</h2>
 <p>Use modern tidyverse/alternatives for base R functions:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data structures</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tibble</span>()           <span class="co"># instead of data.frame()</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tribble</span>()          <span class="co"># instead of manual data.frame creation</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># I/O</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>()          <span class="co"># instead of read.csv()</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">write_csv</span>()         <span class="co"># instead of write.csv()</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_rds</span>()          <span class="co"># instead of readRDS()</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">write_rds</span>()         <span class="co"># instead of saveRDS()</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Data manipulation</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">bind_rows</span>()         <span class="co"># instead of rbind()</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">bind_cols</span>()         <span class="co"># instead of cbind()</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co"># String operations</span></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>stringr<span class="sc">::</span><span class="fu">str_which</span>()       <span class="co"># instead of grep()</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>stringr<span class="sc">::</span><span class="fu">str_replace</span>()     <span class="co"># instead of gsub()</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Date/time operations</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span>NA_Date_        <span class="co"># instead of as.Date(NA)</span></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Session info</span></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>() <span class="co"># instead of sessionInfo()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data structures</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tibble</span>()           <span class="co"># instead of data.frame()</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tribble</span>()          <span class="co"># instead of manual data.frame creation</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># I/O</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>()          <span class="co"># instead of read.csv()</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">write_csv</span>()         <span class="co"># instead of write.csv()</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_rds</span>()          <span class="co"># instead of readRDS()</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">write_rds</span>()         <span class="co"># instead of saveRDS()</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Data manipulation</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">bind_rows</span>()         <span class="co"># instead of rbind()</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">bind_cols</span>()         <span class="co"># instead of cbind()</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># String operations</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>stringr<span class="sc">::</span><span class="fu">str_which</span>()       <span class="co"># instead of grep()</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>stringr<span class="sc">::</span><span class="fu">str_replace</span>()     <span class="co"># instead of gsub()</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Date/time operations</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span>NA_Date_        <span class="co"># instead of as.Date(NA)</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Session info</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>() <span class="co"># instead of sessionInfo()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>See also <a href="coding-practices.html#sec-tidyverse" class="quarto-xref" preview-toc-changed><span>Section 6.18</span></a>.</p>
 </section>
-<section id="sec-here-package-style" class="level2" data-number="8.10">
-<h2 data-number="8.10" class="anchored" data-anchor-id="sec-here-package-style"><span class="header-section-number"><mark class="preview-text-changed">8.10</mark></span> The here Package</h2>
+<section id="sec-here-package-style" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="sec-here-package-style"><span class="header-section-number">8.9</span> The here Package</h2>
 <p>The <code>here</code> package helps manage file paths in projects by automatically finding the project root and building paths relative to it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Automatically finds project root and builds paths</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data-raw"</span>, <span class="st">"survey.csv"</span>))</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(results, <span class="fu">here</span>(<span class="st">"inst"</span>, <span class="st">"analyses"</span>, <span class="st">"results.rds"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Automatically finds project root and builds paths</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data-raw"</span>, <span class="st">"survey.csv"</span>))</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(results, <span class="fu">here</span>(<span class="st">"inst"</span>, <span class="st">"analyses"</span>, <span class="st">"results.rds"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This solves the problem of different working directory paths across collaborators. For example, one person might have the project at <code>/home/oski/Some-R-Project</code> while another has it at <code>/home/bear/R-Code/Some-R-Project</code>. The <code>here</code> package handles this automatically.</p>
 <p>This works regardless of where collaborators clone the repository. For more details, see the <a href="https://github.com/jennybc/here_here">here package vignette</a>.</p>
 <p><em>See also <a href="coding-practices.html#sec-here-package-practices" class="quarto-xref" preview-toc-changed><span>Section 6.15</span></a> for detailed explanation of the here package.</em></p>
 </section>
-<section id="sec-object-naming" class="level2" data-number="8.11">
-<h2 data-number="8.11" class="anchored" data-anchor-id="sec-object-naming"><span class="header-section-number"><mark class="preview-text-changed">8.11</mark></span> Object Naming</h2>
+<section id="sec-object-naming" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="sec-object-naming"><span class="header-section-number">8.10</span> Object Naming</h2>
 <p>Use descriptive names that are both expressive and explicit. Being verbose is useful and easy in the age of autocompletion:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>vaccination_coverage_2017_18</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>absentee_flu_residuals</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Less good</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>vaxcov_1718</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>flu_res</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>vaccination_coverage_2017_18</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>absentee_flu_residuals</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Less good</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>vaxcov_1718</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>flu_res</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 <p>Prefer nouns for objects and verbs for functions:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>clean_data <span class="ot">&lt;-</span> <span class="fu">prep_study_data</span>(raw_data)  <span class="co"># verb for function, noun for object</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Less clear</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">process</span>(input)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>clean_data <span class="ot">&lt;-</span> <span class="fu">prep_study_data</span>(raw_data)  <span class="co"># verb for function, noun for object</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Less clear</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">process</span>(input)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Generally we recommend using nouns for objects and verbs for functions. This is because functions are performing actions, while objects are not.</p>
 <hr>
 <p>Use <code>snake_case</code> for all variable and function names. Avoid using <code>.</code> in names (as in base R’s <code>read.csv()</code>), as this goes against best practices in modern R and other languages. Modern packages like <code>readr::read_csv()</code> follow this convention.</p>
+<p><mark class="preview-element-added"><strong>Uppercase acronyms are allowed</strong> in <code>snake_case</code> names (e.g., <code>prep_IDs_data</code>, <code>calculate_BMI_score</code>). This is enforced via a custom <code>object_name_linter</code> regex pattern in our <code>.lintr.R</code> configuration.</mark></p>
 <p>Try to make your variable names both more expressive and more explicit. Being a bit more verbose is useful and easy in the age of autocompletion! For example, instead of naming a variable <code>vaxcov_1718</code>, try naming it <code>vaccination_coverage_2017_18</code>. Similarly, <code>flu_res</code> could be named <code>absentee_flu_residuals</code>, making your code more readable and explicit.</p>
 <p>Base R allows <code>.</code> in variable names and functions (such as <code>read.csv()</code>), but this goes against best practices for variable naming in many other coding languages. For consistency’s sake, <code>snake_case</code> has been adopted across languages, and modern packages and functions typically use it (i.e.&nbsp;<code>readr::read_csv()</code>). As a very general rule of thumb, if a package you’re using doesn’t use <code>snake_case</code>, there may be an updated version or more modern package that <em>does</em>, bringing with it the variety of performance improvements and bug fixes inherent in more mature and modern software.</p>
 <hr>
@@ -981,49 +922,49 @@ Note
 <hr>
 <p>For more help, check out <a href="https://spin.atomicobject.com/2017/11/01/good-variable-names/">Be Expressive: How to Give Your Variables Better Names</a></p>
 </section>
-<section id="sec-style-auto-style" class="level2" data-number="8.12">
-<h2 data-number="8.12" class="anchored" data-anchor-id="sec-style-auto-style"><span class="header-section-number"><mark class="preview-text-changed">8.12</mark></span> Automated Tools for Style and Project Workflow</h2>
-<section id="styling" class="level3" data-number="8.12.1">
-<h3 data-number="8.12.1" class="anchored" data-anchor-id="styling"><mark class="preview-element-added"><span class="header-section-number">8.12.1</span> Styling</mark></h3>
-<section id="rstudio-shortcuts" class="level4" data-number="8.12.1.1">
-<h4 data-number="8.12.1.1" class="anchored" data-anchor-id="rstudio-shortcuts"><span class="header-section-number"><mark class="preview-text-changed">8.12.1.1</mark></span> RStudio shortcuts</h4>
+<section id="sec-style-auto-style" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="sec-style-auto-style"><span class="header-section-number">8.11</span> Automated Tools for Style and Project Workflow</h2>
+<section id="styling" class="level3" data-number="8.11.1">
+<h3 data-number="8.11.1" class="anchored" data-anchor-id="styling"><span class="header-section-number">8.11.1</span> Styling</h3>
+<section id="rstudio-shortcuts" class="level4" data-number="8.11.1.1">
+<h4 data-number="8.11.1.1" class="anchored" data-anchor-id="rstudio-shortcuts"><span class="header-section-number">8.11.1.1</span> RStudio shortcuts</h4>
 <ol type="1">
 <li><p><strong>Code Autoformatting</strong> - RStudio includes a fantastic built-in utility (keyboard shortcut: <code>CMD-Shift-A</code> (Mac) or <code>Ctrl-Shift-A</code> (Windows/Linux)) for autoformatting highlighted chunks of code to fit many of the best practices listed here. It generally makes code more readable and fixes a lot of the small things you may not feel like fixing yourself. Try it out as a “first pass” on some code of yours that <em>doesn’t</em> follow many of these best practices!</p></li>
 <li><p><strong>Assignment Aligner</strong> - A <a href="https://www.r-bloggers.com/align-assign-rstudio-addin-to-align-assignment-operators/">cool R package</a> allows you to very powerfully format large chunks of assignment code to be much cleaner and much more readable. Follow the linked instructions and create a keyboard shortcut of your choosing (recommendation: <code>CMD-Shift-Z</code>). Here is an example of how assignment aligning can dramatically improve code readability:</p></li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>OUSD_not_found_aliases <span class="ot">=</span> <span class="fu">list</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Brookfield Village Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Brookfield"</span>),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Carl Munck Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Munck"</span>),</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Community United Elementary School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Community United"</span>),</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"East Oakland PRIDE Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"East Oakland Pride"</span>),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"EnCompass Academy"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"EnCompass"</span>),</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Global Family School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Global"</span>),</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"International Community School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"International Community"</span>),</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Madison Park Lower Campus"</span> <span class="ot">=</span> <span class="st">"Madison Park Academy TK-5"</span>,</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Manzanita Community School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Manzanita Community"</span>),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Martin Luther King Jr Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"King"</span>),</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PLACE @ Prescott"</span> <span class="ot">=</span> <span class="st">"Preparatory Literary Academy of Cultural Excellence"</span>,</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"RISE Community School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Rise Community"</span>)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># After</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>OUSD_not_found_aliases <span class="ot">=</span> <span class="fu">list</span>(</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Brookfield Village Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Brookfield"</span>),</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Carl Munck Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Munck"</span>),</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Brookfield Village Elementary"</span>      <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Brookfield"</span>),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Carl Munck Elementary"</span>              <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Munck"</span>),</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Community United Elementary School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Community United"</span>),</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"East Oakland PRIDE Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"East Oakland Pride"</span>),</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"EnCompass Academy"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"EnCompass"</span>),</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Global Family School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Global"</span>),</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"International Community School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"International Community"</span>),</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Madison Park Lower Campus"</span> <span class="ot">=</span> <span class="st">"Madison Park Academy TK-5"</span>,</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Manzanita Community School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Manzanita Community"</span>),</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Martin Luther King Jr Elementary"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"King"</span>),</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PLACE @ Prescott"</span> <span class="ot">=</span> <span class="st">"Preparatory Literary Academy of Cultural Excellence"</span>,</span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"RISE Community School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Rise Community"</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"East Oakland PRIDE Elementary"</span>      <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"East Oakland Pride"</span>),</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"EnCompass Academy"</span>                  <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"EnCompass"</span>),</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Global Family School"</span>               <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Global"</span>),</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"International Community School"</span>     <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"International Community"</span>),</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Madison Park Lower Campus"</span>          <span class="ot">=</span> <span class="st">"Madison Park Academy TK-5"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Manzanita Community School"</span>         <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Manzanita Community"</span>),</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Martin Luther King Jr Elementary"</span>   <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"King"</span>),</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PLACE @ Prescott"</span>                   <span class="ot">=</span> <span class="st">"Preparatory Literary Academy of Cultural Excellence"</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"RISE Community School"</span>              <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Rise Community"</span>)</span>
 <span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># After</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>OUSD_not_found_aliases <span class="ot">=</span> <span class="fu">list</span>(</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Brookfield Village Elementary"</span>      <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Brookfield"</span>),</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Carl Munck Elementary"</span>              <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Munck"</span>),</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Community United Elementary School"</span> <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Community United"</span>),</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"East Oakland PRIDE Elementary"</span>      <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"East Oakland Pride"</span>),</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"EnCompass Academy"</span>                  <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"EnCompass"</span>),</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Global Family School"</span>               <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Global"</span>),</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"International Community School"</span>     <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"International Community"</span>),</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Madison Park Lower Campus"</span>          <span class="ot">=</span> <span class="st">"Madison Park Academy TK-5"</span>,</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Manzanita Community School"</span>         <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Manzanita Community"</span>),</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Martin Luther King Jr Elementary"</span>   <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"King"</span>),</span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"PLACE @ Prescott"</span>                   <span class="ot">=</span> <span class="st">"Preparatory Literary Academy of Cultural Excellence"</span>,</span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"RISE Community School"</span>              <span class="ot">=</span> <span class="fu">str_subset</span>(<span class="at">string =</span> OUSD_school_shapes<span class="sc">$</span>schnam, <span class="at">pattern =</span> <span class="st">"Rise Community"</span>)</span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="styler" class="level4" data-number="8.12.1.2">
-<h4 data-number="8.12.1.2" class="anchored" data-anchor-id="styler"><span class="header-section-number">8.12.1.2</span> <a href="https://styler.r-lib.org/"><code>{styler}</code></a></h4>
+<section id="styler" class="level4" data-number="8.11.1.2">
+<h4 data-number="8.11.1.2" class="anchored" data-anchor-id="styler"><span class="header-section-number">8.11.1.2</span> <a href="https://styler.r-lib.org/"><code>{styler}</code></a></h4>
 <p><a href="https://styler.r-lib.org/"><code>{styler}</code></a> is another <a href="https://tidyverse.org/blog/2017/12/styler-1.0.0/">cool R package from the Tidyverse</a> that can be powerful and used as a first pass on entire projects that need refactoring. The most useful function of the package is the <code>style_dir</code> function, which will style all files within a given directory. See the <a href="https://www.rdocumentation.org/packages/styler/versions/1.1.0/topics/style_dir">function’s documentation</a> and the vignette linked above for more details.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1062,23 +1003,23 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>For automated styling of entire projects:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install styler</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Style all files in R/ directory</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>styler<span class="sc">::</span><span class="fu">style_dir</span>(<span class="st">"R/"</span>)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Style entire package</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>styler<span class="sc">::</span><span class="fu">style_pkg</span>()</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: styler modifies files in-place</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Always use with version control so you can review changes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install styler</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"styler"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Style all files in R/ directory</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>styler<span class="sc">::</span><span class="fu">style_dir</span>(<span class="st">"R/"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Style entire package</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>styler<span class="sc">::</span><span class="fu">style_pkg</span>()</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: styler modifies files in-place</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Always use with version control so you can review changes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
-<section id="lintr" class="level4" data-number="8.12.1.3">
-<h4 data-number="8.12.1.3" class="anchored" data-anchor-id="lintr"><span class="header-section-number">8.12.1.3</span> <a href="https://lintr.r-lib.org/"><code>{lintr}</code></a></h4>
-<p>Linters are programming tools that check adherence to a given style, syntax errors, and possible semantic issues. The R linter, called <code>lintr</code>, can be found in this <a href="https://www.rdocumentation.org/packages/lintr/versions/1.0.3">package</a>. It helps keep files consistent across different authors and even different organizations. For example, it notifies you if you have unused variables, global variables with no visible binding, not enough or superfluous whitespace, and improper use of parentheses or brackets. A list of its other purposes can be found <a href="https://cran.r-project.org/web/packages/lintr/readme/README.html#available-linters">in this link</a>, and most guidelines are based on the <a href="https://style.tidyverse.org/">Tidyverse R Style Guide</a>.</p>
+<section id="lintr" class="level4" data-number="8.11.1.3">
+<h4 data-number="8.11.1.3" class="anchored" data-anchor-id="lintr"><span class="header-section-number">8.11.1.3</span> <a href="https://lintr.r-lib.org/"><code>{lintr}</code></a></h4>
+<p><mark class="preview-element-added">Linters are programming tools that check adherence to a given style, syntax errors, and possible semantic issues. The R linter, called <a href="https://lintr.r-lib.org/"><code>{lintr}</code></a>, helps keep files consistent across different authors and even different organizations. For example, it notifies you if you have unused variables, global variables with no visible binding, not enough or superfluous whitespace, and improper use of parentheses or brackets. A list of its other purposes can be found <a href="https://cran.r-project.org/web/packages/lintr/readme/README.html#available-linters">in this link</a>, and most guidelines are based on the <a href="https://style.tidyverse.org/">Tidyverse R Style Guide</a>.</mark></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1105,6 +1046,10 @@ Note
 <p>The <code>lintr</code> package goes hand in hand with the <code>styler</code> package. The styler can be used to automatically fix the problems that the lintr catches.</p>
 </div>
 </div>
+</section>
+</section>
+<section id="using-lintr" class="level3" data-number="8.11.2">
+<h3 data-number="8.11.2" class="anchored" data-anchor-id="using-lintr"><span class="header-section-number"><mark class="preview-text-changed">8.11.2</mark></span> <mark class="preview-text-changed">Using Lintr</mark></h3>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1115,36 +1060,59 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added">For checking code style without modifying files:</mark></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install lintr</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"lintr"</span>)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Lint the entire package</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint_package</span>()</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Lint a specific file</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint</span>(<span class="st">"R/my_function.R"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The linter checks for:</mark></p>
+<p>For checking code style without modifying files:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install lintr</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"lintr"</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Lint the entire package</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint_package</span>()</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Lint a specific file</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint</span>(<span class="st">"R/my_function.R"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The linter checks for:</p>
 <ul>
 <li>Unused variables</li>
 <li>Improper whitespace</li>
 <li>Line length issues</li>
-<li><mark class="preview-element-added">Style guide violations</mark></li>
+<li>Style guide violations</li>
 </ul>
-<p>You can customize linting rules by creating a <code>.lintr</code> or <code>lintr.R</code> file in your project root.</p>
+<p><mark class="preview-element-added">Our lab uses <code>.lintr.R</code> files for configuration (the <code>.lintr</code> format is also supported by lintr, but we prefer <code>.lintr.R</code> for better R syntax support).</mark></p>
 </div>
 </div>
 </section>
+<section id="our-labs-lintr-configuration" class="level3" data-number="8.11.3">
+<h3 data-number="8.11.3" class="anchored" data-anchor-id="our-labs-lintr-configuration"><mark class="preview-element-added"><span class="header-section-number">8.11.3</span> Our Lab’s Lintr Configuration</mark></h3>
+<p><mark class="preview-element-added">Our lab uses a custom <code>.lintr.R</code> configuration file in each repository to enforce our style standards. You can view the lab-manual’s configuration at <a href="https://github.com/UCD-SERG/lab-manual/blob/main/.lintr.R" class="uri">https://github.com/UCD-SERG/lab-manual/blob/main/.lintr.R</a>.</mark></p>
+<p><mark class="preview-element-added"><strong>Key linters we enable:</strong></mark></p>
+<ul>
+<li><mark class="preview-element-added"><code>pipe_consistency_linter(pipe = "|&gt;")</code>: Enforces use of native pipe <code>|&gt;</code> instead of <code>%&gt;%</code></mark></li>
+<li><mark class="preview-element-added"><code>object_name_linter()</code>: Enforces <code>snake_case</code> with custom regex allowing uppercase acronyms</mark></li>
+<li><mark class="preview-element-added"><code>undesirable_function_linter()</code>: Prohibits base messaging functions and <code>library()</code> in package code</mark></li>
+<li><mark class="preview-element-added"><code>redundant_equals_linter()</code>: Catches redundant <code>= TRUE</code> when <code>TRUE</code> is the default</mark></li>
+</ul>
+<p><strong><mark class="preview-text-changed">Linters</mark> <mark class="preview-text-changed">we disable:</mark></strong></p>
+<ul>
+<li><mark class="preview-element-added"><code>return_linter(return_style = "explicit")</code>: Every function should end with <code>return(return_value)</code> rather than just <code>return_value</code>. We may sometimes disable this linter in older projects when we aren’t ready to clean this issue up, but for all new code, we require explicit returns as a lab standard, following the <a href="https://google.github.io/styleguide/Rguide.html#use-explicit-returns">Google R Style Guide</a>.</mark></li>
+<li><mark class="preview-element-added"><code>trailing_whitespace_linter</code>: Disabled (handled by <code>styler</code> instead)</mark></li>
+</ul>
+<p><mark class="preview-element-added"><strong>Exceptions:</strong></mark></p>
+<p><mark class="preview-element-added">Our configuration allows relaxed rules for certain directories:</mark></p>
+<ul>
+<li><mark class="preview-element-added"><code>data-raw/</code>: Pipe consistency and undesirable function rules relaxed (exploratory scripts)</mark></li>
+<li><mark class="preview-element-added"><code>vignettes/</code>: Undesirable function and object naming rules relaxed (tutorial code may need <code>library()</code>)</mark></li>
+<li><mark class="preview-element-added"><code>inst/examples/</code>: Undesirable function rules relaxed</mark></li>
+<li><mark class="preview-element-added"><code>tests/testthat.R</code>: Undesirable function rules relaxed</mark></li>
+</ul>
 </section>
 </section>
-<section id="sec-r-resources-style" class="level2" data-number="8.13">
-<h2 data-number="8.13" class="anchored" data-anchor-id="sec-r-resources-style"><span class="header-section-number"><mark class="preview-text-changed">8.13</mark></span> Additional Resources</h2>
+<section id="sec-r-resources-style" class="level2" data-number="8.12">
+<h2 data-number="8.12" class="anchored" data-anchor-id="sec-r-resources-style"><span class="header-section-number">8.12</span> Additional Resources</h2>
 <ul>
 <li>Tidyverse style guide <span class="citation" data-cites="wickham2023tidyverse">(<a href="references.html#ref-wickham2023tidyverse" role="doc-biblioref">Wickham 2023</a>)</span>: Detailed coding style conventions for writing clear, consistent R code. Covers naming, syntax, pipes, functions, and more.</li>
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-wickham2023tidyverse" class="csl-entry" role="listitem">
 Wickham, Hadley. 2023. <em>The Tidyverse Style Guide</em>. <a href="https://style.tidyverse.org/">https://style.tidyverse.org/</a>.
 </div>
@@ -1567,12 +1535,12 @@ Wickham, Hadley. 2023. <em>The Tidyverse Style Guide</em>. <a href="https://styl
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./continuous-integration.html" class="pagination-link" aria-label="Continuous Integration">
+      <a href="./continuous-integration.html" class="pagination-link" preview-toc-changed aria-label="Continuous Integration">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Integration</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./big-data.html" class="pagination-link" aria-label="Big data">
+      <a href="./big-data.html" class="pagination-link" preview-toc-changed aria-label="Big data">
         <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Big data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
