@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>11&nbsp; Quarto – UCD-SeRG Lab Manual</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -59,7 +62,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -89,19 +91,18 @@ div.csl-indent {
 <link href="./data-masking.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e34ecb6a0e7991f0346b0751d4a7c3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4e061325f75ba7fba053004d9d2e9411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -647,7 +648,7 @@ div.csl-indent {
 <ul>
 <li><p><strong>Installation:</strong> Quarto CLI is included with RStudio, so if you have a recent version of RStudio, you already have Quarto. Otherwise, visit <a href="https://quarto.org/docs/get-started/">https://quarto.org/docs/get-started/</a></p></li>
 <li><p><strong>Documentation:</strong> The official Quarto documentation is available at <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a></p></li>
-<li><p><strong>R4DS Chapter:</strong> For an excellent introduction to using Quarto with R, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span></p></li>
+<li><p><strong>R4DS Chapter:</strong> For an excellent introduction to using Quarto with R, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span></p></li>
 </ul>
 </section>
 </section>
@@ -760,7 +761,7 @@ div.csl-indent {
 <li><code>![alt text](image.png)</code> inserts images</li>
 </ul>
 <p><strong>Important:</strong> Always include a blank line before bullet lists and numbered lists in markdown and Quarto documents.</p>
-<p>For more details on using Quarto for writing and analysis, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span>.</p>
+<p>For more details on using Quarto for writing and analysis, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span>.</p>
 </section>
 </section>
 <section id="building-quarto-books" class="level2" data-number="11.3">
@@ -860,7 +861,7 @@ div.csl-indent {
 <ul>
 <li><a href="https://quarto.org/docs/books/">Quarto Books Guide</a> - comprehensive documentation for Quarto books</li>
 <li><a href="https://quarto.org/docs/publishing/">Quarto Publishing Guide</a> - how to publish your book online</li>
-<li><a href="https://r4ds.hadley.nz/quarto.html">R4DS Quarto chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> - excellent introduction to Quarto</li>
+<li><a href="https://r4ds.hadley.nz/quarto.html">R4DS Quarto chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span> - excellent introduction to Quarto</li>
 </ul>
 </section>
 </section>
@@ -1132,7 +1133,7 @@ div.csl-indent {
 <section id="learning-resources" class="level3" data-number="11.7.2">
 <h3 data-number="11.7.2" class="anchored" data-anchor-id="learning-resources"><span class="header-section-number">11.7.2</span> Learning Resources</h3>
 <ul>
-<li><a href="https://r4ds.hadley.nz/quarto.html">R for Data Science - Quarto Chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> - excellent introduction to using Quarto with R</li>
+<li><a href="https://r4ds.hadley.nz/quarto.html">R for Data Science - Quarto Chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span> - excellent introduction to using Quarto with R</li>
 <li><a href="https://d-morrison.github.io/rme/">Regression Models for Epidemiology</a> - example of a Quarto book with profiles for rendering chapters as slides</li>
 <li><a href="https://github.com/UCD-SERG/lab-manual">UCD-SeRG Lab Manual Source</a> - this manual’s source code provides examples of:
 <ul>
@@ -1162,12 +1163,12 @@ div.csl-indent {
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-quarto-dev-discussions-6085" class="csl-entry" role="listitem">
-Gewerd-Strauss. 2023. <span>“Mermaid Rendering to Docx Halts Indefinitely When Run Through Command Line.”</span> Quarto Development Team. 2023. <a href="https://github.com/orgs/quarto-dev/discussions/6085">https://github.com/orgs/quarto-dev/discussions/6085</a>.
+Gewerd-Strauss. 2023. <span>“Mermaid Rendering to Docx Halts Indefinitely When Run Through Command Line.”</span> Quarto Development Team. <a href="https://github.com/orgs/quarto-dev/discussions/6085">https://github.com/orgs/quarto-dev/discussions/6085</a>.
 </div>
 <div id="ref-quarto-dev-issues-3809" class="csl-entry" role="listitem">
-<span>“Quarto Cannot Render Mermaid or Dot Images to Docx and Pdf Formats.”</span> 2023. Quarto Development Team. 2023. <a href="https://github.com/quarto-dev/quarto-cli/issues/3809">https://github.com/quarto-dev/quarto-cli/issues/3809</a>.
+<span>“Quarto Cannot Render Mermaid or Dot Images to Docx and Pdf Formats.”</span> 2023. Quarto Development Team. <a href="https://github.com/quarto-dev/quarto-cli/issues/3809">https://github.com/quarto-dev/quarto-cli/issues/3809</a>.
 </div>
 <div id="ref-wickham2023r4ds" class="csl-entry" role="listitem">
 Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science</em>. 2nd ed. O’Reilly Media. <a href="https://r4ds.hadley.nz/">https://r4ds.hadley.nz/</a>.
