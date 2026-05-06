@@ -644,7 +644,7 @@
     "href": "continuous-integration.html#troubleshooting-failed-workflows",
     "title": "7  Continuous Integration",
     "section": "7.5 Troubleshooting Failed Workflows",
-    "text": "7.5 Troubleshooting Failed Workflows\nWhen workflows fail, check the “Actions” tab in your GitHub repository for detailed logs. Common issues include:\n\nTest failures: Your tests found a bug (this is good! fix the bug)\nPlatform-specific issues: Code works on your machine but not on other platforms\nMissing dependencies: System libraries needed for packages aren’t installed\nLinting errors: Code style issues detected by automated checks\n\nFor help addressing workflow failures, see Section 18.5.6.",
+    "text": "7.5 Troubleshooting Failed Workflows\nWhen workflows fail, check the “Actions” tab in your GitHub repository for detailed logs. Before spending time debugging, check GitHub Status to confirm that GitHub’s services are fully operational. If GitHub is experiencing an outage, workflows may fail through no fault of your own—wait for the outage to resolve before investigating further.\nCommon issues include:\n\nTest failures: Your tests found a bug (this is good! fix the bug)\nPlatform-specific issues: Code works on your machine but not on other platforms\nMissing dependencies: System libraries needed for packages aren’t installed\nLinting errors: Code style issues detected by automated checks\n\nFor help addressing workflow failures, see Section 18.5.6.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Continuous Integration</span>"
     ]
@@ -664,7 +664,7 @@
     "href": "continuous-integration.html#additional-resources",
     "title": "7  Continuous Integration",
     "section": "7.7 Additional Resources",
-    "text": "7.7 Additional Resources\n\nGitHub Actions features overview\nr-lib/actions repository - R-specific actions and example workflows\nR Packages book: Continuous Integration\nGitHub Actions documentation\nWhere to find help with r-lib/actions",
+    "text": "7.7 Additional Resources\n\nGitHub Actions features overview\nr-lib/actions repository - R-specific actions and example workflows\nR Packages book: Continuous Integration\nGitHub Actions documentation\nWhere to find help with r-lib/actions\nGitHub Status - real-time status of GitHub services",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Continuous Integration</span>"
     ]
@@ -1911,7 +1911,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: b5d9c6e\nFull commit hash: b5d9c6eaf01e6a5fab6f5ea5160750b26011c4d4\nCommit date: 2026-05-06 17:56:49 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: b11a36b\nFull commit hash: b11a36be784512c49dd0d215eecfac0272c762da\nCommit date: 2026-05-06 18:09:55 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"

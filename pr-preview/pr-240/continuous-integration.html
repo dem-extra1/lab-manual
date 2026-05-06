@@ -377,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./continuous-integration.html" class="sidebar-item-text sidebar-link active">
+  <a href="./continuous-integration.html" class="sidebar-item-text sidebar-link active" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Continuous Integration</span></span></a>
   </div>
 </li>
@@ -540,7 +540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="continuous-integration.html">7. &nbsp; <span class="chapter-title">Continuous Integration</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -568,6 +568,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+
+
+<div class="preview-combined-banner">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~1% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
+        <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
 
 <section id="understanding-github-actions" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="understanding-github-actions"><span class="header-section-number">7.1</span> Understanding GitHub Actions</h2>
@@ -645,7 +657,8 @@ Warning
 </section>
 <section id="troubleshooting-failed-workflows" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="troubleshooting-failed-workflows"><span class="header-section-number">7.5</span> Troubleshooting Failed Workflows</h2>
-<p>When workflows fail, check the “Actions” tab in your GitHub repository for detailed logs. Common issues include:</p>
+<p><mark class="preview-element-added">When workflows fail, check the “Actions” tab in your GitHub repository for detailed logs. Before spending time debugging, check <a href="https://www.githubstatus.com/">GitHub Status</a> to confirm that GitHub’s services are fully operational. If GitHub is experiencing an outage, workflows may fail through no fault of your own—wait for the outage to resolve before investigating further.</mark></p>
+<p><mark class="preview-element-added">Common issues include:</mark></p>
 <ul>
 <li><strong>Test failures</strong>: Your tests found a bug (this is good! fix the bug)</li>
 <li><strong>Platform-specific issues</strong>: Code works on your machine but not on other platforms</li>
@@ -857,6 +870,7 @@ Warning
 <li><a href="https://r-pkgs.org/software-development-practices.html#sec-sw-dev-practices-ci">R Packages book: Continuous Integration</a></li>
 <li><a href="https://docs.github.com/en/actions">GitHub Actions documentation</a></li>
 <li><a href="https://github.com/r-lib/actions#where-to-find-help">Where to find help with r-lib/actions</a></li>
+<li><a href="https://www.githubstatus.com/">GitHub <mark class="preview-text-changed">Status</mark></a> <mark class="preview-text-changed">-</mark> <mark class="preview-text-changed">real-time status of GitHub services</mark></li>
 </ul>
 
 
