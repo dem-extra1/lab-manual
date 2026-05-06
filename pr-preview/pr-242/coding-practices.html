@@ -419,7 +419,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./coding-practices.html" class="sidebar-item-text sidebar-link active">
+  <a href="./coding-practices.html" class="sidebar-item-text sidebar-link active" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R Coding Practices</span></span></a>
   </div>
 </li>
@@ -612,8 +612,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#lapply-and-sapply" id="toc-lapply-and-sapply" class="nav-link" data-scroll-target="#lapply-and-sapply"><span class="header-section-number">6.7.1</span> <code>lapply()</code> and <code>sapply()</code></a></li>
   <li><a href="#purrrmap-family" id="toc-purrrmap-family" class="nav-link" data-scroll-target="#purrrmap-family"><span class="header-section-number">6.7.2</span> <code>purrr::map()</code> Family</a></li>
-  <li><a href="#purrrpmap-for-multiple-arguments" id="toc-purrrpmap-for-multiple-arguments" class="nav-link" data-scroll-target="#purrrpmap-for-multiple-arguments"><span class="header-section-number">6.7.3</span> <code>purrr::pmap()</code> for Multiple Arguments</a></li>
-  <li><a href="#parallel-processing" id="toc-parallel-processing" class="nav-link" data-scroll-target="#parallel-processing"><span class="header-section-number">6.7.4</span> Parallel Processing</a></li>
+  <li><a href="#vectorize-vs-purrrmap_" id="toc-vectorize-vs-purrrmap_" class="nav-link" data-scroll-target="#vectorize-vs-purrrmap_"><span class="header-section-number">6.7.3</span> <code>Vectorize()</code> vs <code>purrr::map_*()</code></a></li>
+  <li><a href="#purrrpmap-for-multiple-arguments" id="toc-purrrpmap-for-multiple-arguments" class="nav-link" data-scroll-target="#purrrpmap-for-multiple-arguments"><span class="header-section-number">6.7.4</span> <code>purrr::pmap()</code> for Multiple Arguments</a></li>
+  <li><a href="#parallel-processing" id="toc-parallel-processing" class="nav-link" data-scroll-target="#parallel-processing"><span class="header-section-number">6.7.5</span> Parallel Processing</a></li>
   </ul></li>
   <li><a href="#sec-data-io" id="toc-sec-data-io" class="nav-link" data-scroll-target="#sec-data-io"><span class="header-section-number">6.8</span> Reading and Saving Data</a>
   <ul class="collapse">
@@ -710,7 +711,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="coding-practices.html">6. &nbsp; <span class="chapter-title">R Coding Practices</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -738,6 +739,18 @@ window.Quarto = {
 
 </header>
 
+
+
+<div class="preview-combined-banner">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~1% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
+        <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
 
 <p>Adapted by UCD-SeRG team from <a href="https://jadebc.github.io/lab-manual/coding-practices.html">original by Kunal Mishra, Jade Benjamin-Chung, Stephanie Djajadi, and Iris Tong</a></p>
 <section id="lab-protocols-for-code-and-data" class="level2" data-number="6.1">
@@ -1663,8 +1676,18 @@ Note
 <span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>means <span class="ot">&lt;-</span> <span class="fu">map_dbl</span>(data_list, mean)        <span class="co"># Returns numeric vector</span></span>
 <span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">map</span>(splits, <span class="sc">~</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> .x))  <span class="co"># Returns list of models</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="purrrpmap-for-multiple-arguments" class="level3" data-number="6.7.3">
-<h3 data-number="6.7.3" class="anchored" data-anchor-id="purrrpmap-for-multiple-arguments"><span class="header-section-number">6.7.3</span> <code>purrr::pmap()</code> for Multiple Arguments</h3>
+<section id="vectorize-vs-purrrmap_" class="level3" data-number="6.7.3">
+<h3 data-number="6.7.3" class="anchored" data-anchor-id="vectorize-vs-purrrmap_"><span class="header-section-number"><mark class="preview-text-changed">6.7.3</mark></span> <code><mark class="preview-text-changed">Ve</mark>c<mark class="preview-text-changed">to</mark>r<mark class="preview-text-changed">ize()</mark></code><mark class="preview-text-changed"> vs </mark><code><mark class="preview-text-changed">purrr</mark>::map_*()</code></h3>
+<p><mark class="preview-element-added"><code>base::Vectorize()</code> and <a href="https://purrr.tidyverse.org/"><code>{purrr}</code></a> solve different problems.</mark></p>
+<ul>
+<li><mark class="preview-element-added">Use <code>base::Vectorize()</code> when you already have a scalar function and want a quick base-R wrapper that accepts vector inputs.</mark></li>
+<li><mark class="preview-element-added">Use <code>purrr::map_*()</code> when you are iterating over lists or list-columns and want explicit, type-stable outputs (<code>map_dbl()</code>, <code>map_int()</code>, etc.) that compose naturally in tidyverse pipelines.</mark></li>
+</ul>
+<p><mark class="preview-element-added"><code>base::Vectorize()</code> is often convenient for small, local wrappers. In contrast, <a href="https://purrr.tidyverse.org/"><code>{purrr}</code></a> is usually more idiomatic for analysis workflows because output types are explicit and iteration intent is clearer.</mark></p>
+<p><mark class="preview-element-added">Also note that neither approach is parallel by default. For parallel execution, use <code>furrr::future_map()</code> as shown below.</mark></p>
+</section>
+<section id="purrrpmap-for-multiple-arguments" class="level3" data-number="6.7.4">
+<h3 data-number="6.7.4" class="anchored" data-anchor-id="purrrpmap-for-multiple-arguments"><mark class="preview-element-added"><span class="header-section-number">6.7.4</span> <code>purrr::pmap()</code> for Multiple Arguments</mark></h3>
 <p>When iterating over multiple parameter lists:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>params <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">outcome =</span> <span class="fu">c</span>(<span class="st">"outcome1"</span>, <span class="st">"outcome2"</span>, <span class="st">"outcome3"</span>),</span>
@@ -1681,8 +1704,8 @@ Note
 <span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="parallel-processing" class="level3" data-number="6.7.4">
-<h3 data-number="6.7.4" class="anchored" data-anchor-id="parallel-processing"><span class="header-section-number">6.7.4</span> Parallel Processing</h3>
+<section id="parallel-processing" class="level3" data-number="6.7.5">
+<h3 data-number="6.7.5" class="anchored" data-anchor-id="parallel-processing"><span class="header-section-number">6.7.5</span> Parallel Processing</h3>
 <p>For computationally intensive work, use <code>future</code> and <code>furrr</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(future)</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(furrr)</span>
