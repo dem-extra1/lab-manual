@@ -434,7 +434,7 @@
     "href": "coding-practices.html#function-calls",
     "title": "6  R Coding Practices",
     "section": "6.14 Function calls",
-    "text": "6.14 Function calls\nIn a function call, use “named arguments” and put each argument on a separate line to make your code more readable.\nHere’s an example of what not to do when calling the function a function calc_fluseas_mean (defined above):\nmean_Y = calc_fluseas_mean(flu_data, \"maari_yn\", FALSE)\nAnd here it is again using the best practices we’ve outlined:\nmean_Y &lt;- calc_fluseas_mean(\n  data = flu_data, \n  yname = \"maari_yn\",\n  silent = FALSE\n)",
+    "text": "6.14 Function calls\nIn a function call, use “named arguments” and put each argument on a separate line to make your code more readable.\nHere’s an example of what not to do when calling the function a function calc_fluseas_mean (defined above):\nmean_Y = calc_fluseas_mean(flu_data, \"maari_yn\", FALSE)\nAnd here it is again using the best practices we’ve outlined:\nmean_Y &lt;- calc_fluseas_mean(\n  data = flu_data, \n  yname = \"maari_yn\",\n  silent = FALSE\n)\nFunction decomposition is also an important part of readable function usage. When a function becomes too long or handles too many concerns, split it into smaller helper functions.\nKey goals of decomposition include:\n\nBreaking a big problem into smaller subproblems that are easier to reason about\nMaking code easier to read, review, and test\nPushing low-level complexity “downward” into helper functions so the main workflow stays clear\n\nFor background and related ideas, see Decomposition (computer science), Code refactoring, and Functional decomposition.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
     ]
@@ -1911,7 +1911,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 5fa0b75\nFull commit hash: 5fa0b7566bddb8f29dd460c148bd8dc631fdb711\nCommit date: 2026-05-07 00:43:52 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 470c454\nFull commit hash: 470c45460b0921a51fcf4e9b25b2ec3626923d78\nCommit date: 2026-05-07 01:01:43 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"

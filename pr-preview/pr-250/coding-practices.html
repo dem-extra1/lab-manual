@@ -419,7 +419,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./coding-practices.html" class="sidebar-item-text sidebar-link active">
+  <a href="./coding-practices.html" class="sidebar-item-text sidebar-link active" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R Coding Practices</span></span></a>
   </div>
 </li>
@@ -711,7 +711,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="coding-practices.html">6. &nbsp; <span class="chapter-title">R Coding Practices</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -739,6 +739,18 @@ window.Quarto = {
 
 </header>
 
+
+
+<div class="preview-combined-banner">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~0% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
+        <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
 
 <p>Adapted by UCD-SeRG team from <a href="https://jadebc.github.io/lab-manual/coding-practices.html">original by Kunal Mishra, Jade Benjamin-Chung, Stephanie Djajadi, and Iris Tong</a></p>
 <section id="lab-protocols-for-code-and-data" class="level2" data-number="6.1">
@@ -2028,14 +2040,22 @@ Note
 <p>Here’s an example of what not to do when calling the function a function <code>calc_fluseas_mean</code> (defined above):</p>
 <pre><code>mean_Y = calc_fluseas_mean(flu_data, "maari_yn", FALSE)</code></pre>
 <p>And here it is again using the best practices we’ve outlined:</p>
-<pre><code>mean_Y &lt;- calc_fluseas_mean(
+<pre><mark class="preview-element-added"><code>mean_Y &lt;- calc_fluseas_mean(
   data = flu_data, 
   yname = "maari_yn",
   silent = FALSE
 )</code></pre>
+<p>Function decomposition is also an important part of readable function usage. When a function becomes too long or handles too many concerns, split it into smaller helper functions.</mark></p>
+<p><mark class="preview-text-changed">Key</mark> <mark class="preview-text-changed">goals</mark> <mark class="preview-text-changed">of</mark> <mark class="preview-text-changed">decomposition include:</mark></p>
+<ul>
+<li><mark class="preview-element-added">Breaking a big problem into smaller subproblems that are easier to reason about</mark></li>
+<li><mark class="preview-element-added">Making code easier to read, review, and test</mark></li>
+<li><mark class="preview-element-added">Pushing low-level complexity “downward” into helper functions so the main workflow stays clear</mark></li>
+</ul>
+<p><mark class="preview-element-added">For background and related ideas, see <a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">Decomposition (computer science)</a>, <a href="https://en.wikipedia.org/wiki/Code_refactoring">Code refactoring</a>, and <a href="https://en.wikipedia.org/wiki/Functional_decomposition">Functional decomposition</a>.</mark></p>
 </section>
 <section id="sec-here-package-practices" class="level2" data-number="6.15">
-<h2 data-number="6.15" class="anchored" data-anchor-id="sec-here-package-practices"><span class="header-section-number">6.15</span> The here package</h2>
+<h2 data-number="6.15" class="anchored" data-anchor-id="sec-here-package-practices"><span class="header-section-number"><mark class="preview-text-changed">6.15</mark></span> <mark class="preview-text-changed">The</mark> <mark class="preview-text-changed">here package</mark></h2>
 <p>The <code>here</code> package is one great R package that helps multiple collaborators deal with the mess that is working directories within an R project structure. Let’s say we have an R project at the path <code>/home/oski/Some-R-Project</code>. My collaborator might clone the repository and work with it at some other path, such as <code>/home/bear/R-Code/Some-R-Project</code>. Dealing with working directories and paths explicitly can be a very large pain, and as you might imagine, setting up a Config with paths requires those paths to flexibly work for all contributors to a project. This is where the <code>here</code> package comes in and this a <a href="https://github.com/jennybc/here_here">great vignette describing it</a>.</p>
 <p><em>See also <a href="coding-style.html#sec-here-package-style" class="quarto-xref"><span>Section 8.9</span></a> for code style guidelines on using the here package.</em></p>
 </section>
@@ -2270,7 +2290,7 @@ drop_auth(rdstoken = "/path/to/tokenfile.RDS")
 <li><a href="https://www.brodrigues.co/blog/2016-07-18-data-frame-columns-as-arguments-to-dplyr-functions/">Data Frame Columns as Arguments to Dplyr Functions</a> (blog)</li>
 <li><a href="https://stackoverflow.com/questions/28125816/r-standard-evaluation-for-join-dplyr">Standard Evaluation for *_join</a> (stackoverflow)</li>
 </ul>
-<p>See also <a href="coding-style.html#sec-tidyverse-replacements" class="quarto-xref"><span>Section 8.8</span></a></p>
+<p>See also <a href="coding-style.html#sec-tidyverse-replacements" class="quarto-xref"><span>Section <mark class="preview-text-changed">8.8</mark></span></a></p>
 </section>
 <section id="coding-with-r-and-python" class="level2" data-number="6.22">
 <h2 data-number="6.22" class="anchored" data-anchor-id="coding-with-r-and-python"><span class="header-section-number">6.22</span> Coding with R and Python</h2>
