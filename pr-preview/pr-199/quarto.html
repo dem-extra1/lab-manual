@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>11&nbsp; Quarto – UCD-SeRG Lab Manual</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -59,7 +62,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -89,19 +91,18 @@ div.csl-indent {
 <link href="./data-masking.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e34ecb6a0e7991f0346b0751d4a7c3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4e061325f75ba7fba053004d9d2e9411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -584,12 +585,21 @@ div.csl-indent {
   <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues"><span class="header-section-number">11.6.3</span> Common Issues</a></li>
   <li><a href="#advanced-troubleshooting" id="toc-advanced-troubleshooting" class="nav-link" data-scroll-target="#advanced-troubleshooting"><span class="header-section-number">11.6.4</span> Advanced Troubleshooting</a></li>
   </ul></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">11.7</span> Additional Resources</a>
+  <li><a href="#mermaid-diagrams" id="toc-mermaid-diagrams" class="nav-link" data-scroll-target="#mermaid-diagrams"><span class="header-section-number">11.7</span> Mermaid Diagrams</a>
   <ul class="collapse">
-  <li><a href="#official-documentation" id="toc-official-documentation" class="nav-link" data-scroll-target="#official-documentation"><span class="header-section-number">11.7.1</span> Official Documentation</a></li>
-  <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources"><span class="header-section-number">11.7.2</span> Learning Resources</a></li>
-  <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates"><span class="header-section-number">11.7.3</span> Templates</a></li>
-  <li><a href="#related-lab-manual-chapters" id="toc-related-lab-manual-chapters" class="nav-link" data-scroll-target="#related-lab-manual-chapters"><span class="header-section-number">11.7.4</span> Related Lab Manual Chapters</a></li>
+  <li><a href="#creating-mermaid-diagrams" id="toc-creating-mermaid-diagrams" class="nav-link" data-scroll-target="#creating-mermaid-diagrams"><span class="header-section-number">11.7.1</span> Creating Mermaid Diagrams</a></li>
+  <li><a href="#known-issues-with-docx-and-pdf-output" id="toc-known-issues-with-docx-and-pdf-output" class="nav-link" data-scroll-target="#known-issues-with-docx-and-pdf-output"><span class="header-section-number">11.7.2</span> Known Issues with DOCX and PDF Output</a></li>
+  <li><a href="#recommended-workarounds" id="toc-recommended-workarounds" class="nav-link" data-scroll-target="#recommended-workarounds"><span class="header-section-number">11.7.3</span> Recommended Workarounds</a></li>
+  <li><a href="#real-world-example" id="toc-real-world-example" class="nav-link" data-scroll-target="#real-world-example"><span class="header-section-number">11.7.4</span> Real-World Example</a></li>
+  <li><a href="#future-outlook" id="toc-future-outlook" class="nav-link" data-scroll-target="#future-outlook"><span class="header-section-number">11.7.5</span> Future Outlook</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">11.7.6</span> Summary</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">11.8</span> Additional Resources</a>
+  <ul class="collapse">
+  <li><a href="#official-documentation" id="toc-official-documentation" class="nav-link" data-scroll-target="#official-documentation"><span class="header-section-number">11.8.1</span> Official Documentation</a></li>
+  <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link" data-scroll-target="#learning-resources"><span class="header-section-number">11.8.2</span> Learning Resources</a></li>
+  <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates"><span class="header-section-number">11.8.3</span> Templates</a></li>
+  <li><a href="#related-lab-manual-chapters" id="toc-related-lab-manual-chapters" class="nav-link" data-scroll-target="#related-lab-manual-chapters"><span class="header-section-number">11.8.4</span> Related Lab Manual Chapters</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UCD-SERG/lab-manual/edit/main/quarto.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/blob/main/quarto.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -598,7 +608,7 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>, <a href="quarto.html">11. &nbsp; <span class="chapter-title">Quarto</span></span></a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="quarto.html">11. &nbsp; <span class="chapter-title">Quarto</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -655,7 +665,7 @@ div.csl-indent {
 <ul>
 <li><p><strong>Installation:</strong> Quarto CLI is included with RStudio, so if you have a recent version of RStudio, you already have Quarto. Otherwise, visit <a href="https://quarto.org/docs/get-started/">https://quarto.org/docs/get-started/</a></p></li>
 <li><p><strong>Documentation:</strong> The official Quarto documentation is available at <a href="https://quarto.org/docs/guide/">https://quarto.org/docs/guide/</a></p></li>
-<li><p><strong>R4DS Chapter:</strong> For an excellent introduction to using Quarto with R, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span></p></li>
+<li><p><strong>R4DS Chapter:</strong> For an excellent introduction to using Quarto with R, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span></p></li>
 </ul>
 </section>
 </section>
@@ -768,7 +778,7 @@ div.csl-indent {
 <li><code>![alt text](image.png)</code> inserts images</li>
 </ul>
 <p><strong>Important:</strong> Always include a blank line before bullet lists and numbered lists in markdown and Quarto documents.</p>
-<p>For more details on using Quarto for writing and analysis, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span>.</p>
+<p>For more details on using Quarto for writing and analysis, see the <a href="https://r4ds.hadley.nz/quarto.html">Quarto chapter in R for Data Science</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span>.</p>
 </section>
 </section>
 <section id="building-quarto-books" class="level2" data-number="11.3">
@@ -868,7 +878,7 @@ div.csl-indent {
 <ul>
 <li><a href="https://quarto.org/docs/books/">Quarto Books Guide</a> - comprehensive documentation for Quarto books</li>
 <li><a href="https://quarto.org/docs/publishing/">Quarto Publishing Guide</a> - how to publish your book online</li>
-<li><a href="https://r4ds.hadley.nz/quarto.html">R4DS Quarto chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> - excellent introduction to Quarto</li>
+<li><a href="https://r4ds.hadley.nz/quarto.html">R4DS Quarto chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span> - excellent introduction to Quarto</li>
 </ul>
 </section>
 </section>
@@ -1084,10 +1094,119 @@ div.csl-indent {
 <p>When seeking help on the <a href="https://github.com/quarto-dev/quarto-cli/issues">Quarto issue tracker</a>, include diagnostic information from <code>quarto check</code> and relevant log files.</p>
 </section>
 </section>
-<section id="additional-resources" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">11.7</span> Additional Resources</h2>
-<section id="official-documentation" class="level3" data-number="11.7.1">
-<h3 data-number="11.7.1" class="anchored" data-anchor-id="official-documentation"><span class="header-section-number">11.7.1</span> Official Documentation</h3>
+<section id="mermaid-diagrams" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="mermaid-diagrams"><span class="header-section-number">11.7</span> Mermaid Diagrams</h2>
+<p>Mermaid diagrams are a powerful tool for creating flowcharts, sequence diagrams, state diagrams, and other visualizations directly in your Quarto documents using text-based syntax. While mermaid diagrams work well in HTML output, they have significant limitations when rendering to DOCX (Word) and PDF formats as of early 2026.</p>
+<section id="creating-mermaid-diagrams" class="level3" data-number="11.7.1">
+<h3 data-number="11.7.1" class="anchored" data-anchor-id="creating-mermaid-diagrams"><span class="header-section-number">11.7.1</span> Creating Mermaid Diagrams</h3>
+<p>Mermaid diagrams are created using fenced code blocks with the <code>mermaid</code> language tag:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  A[Start] --&gt; B{Decision}</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  B --&gt;|Yes| C[Result <span class="dv">1</span>]</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  B --&gt;|No| D[Result <span class="dv">2</span>]</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This creates a simple flowchart that renders beautifully in HTML output.</p>
+</section>
+<section id="known-issues-with-docx-and-pdf-output" class="level3" data-number="11.7.2">
+<h3 data-number="11.7.2" class="anchored" data-anchor-id="known-issues-with-docx-and-pdf-output"><span class="header-section-number">11.7.2</span> Known Issues with DOCX and PDF Output</h3>
+<p><strong>As of early 2026, rendering mermaid diagrams to DOCX or PDF formats in Quarto is unreliable and problematic.</strong> These issues are well-documented in the Quarto community and stem from the underlying tooling used to convert diagrams to images.</p>
+<section id="rendering-failures-and-hangs" class="level4" data-number="11.7.2.1">
+<h4 data-number="11.7.2.1" class="anchored" data-anchor-id="rendering-failures-and-hangs"><span class="header-section-number">11.7.2.1</span> Rendering Failures and Hangs</h4>
+<p>When rendering documents with mermaid diagrams to DOCX format, you may experience:</p>
+<ul>
+<li><strong>Indefinite hangs:</strong> Quarto may hang indefinitely during rendering, leaving orphaned Chrome/Edge browser processes running <span class="citation" data-cites="quarto-dev-discussions-6085">(<a href="references.html#ref-quarto-dev-discussions-6085" role="doc-biblioref">Gewerd-Strauss 2023</a>)</span></li>
+<li><strong>Complete rendering failures:</strong> The rendering process may fail entirely with errors</li>
+<li><strong>Missing diagrams:</strong> The document may render successfully but with missing diagrams <span class="citation" data-cites="quarto-dev-issues-3809">(<a href="references.html#ref-quarto-dev-issues-3809" role="doc-biblioref"><span>“Quarto Cannot Render Mermaid or Dot Images to Docx and Pdf Formats”</span> 2023</a>)</span></li>
+</ul>
+<p>These issues occur because Quarto relies on headless browser engines (Chrome or Edge via Puppeteer) to convert mermaid diagrams to images for inclusion in DOCX and PDF outputs. The browser integration can fail or hang, particularly when running in automated environments or when multiple diagrams are present.</p>
+</section>
+<section id="image-quality-issues" class="level4" data-number="11.7.2.2">
+<h4 data-number="11.7.2.2" class="anchored" data-anchor-id="image-quality-issues"><span class="header-section-number">11.7.2.2</span> Image Quality Issues</h4>
+<p>Even when rendering succeeds, mermaid diagrams in DOCX and PDF output often suffer from:</p>
+<ul>
+<li><strong>Small or blurry images:</strong> Diagrams appear rasterized at low resolution</li>
+<li><strong>Incorrect sizing:</strong> Diagrams may not respect sizing options specified in the document</li>
+</ul>
+</section>
+</section>
+<section id="recommended-workarounds" class="level3" data-number="11.7.3">
+<h3 data-number="11.7.3" class="anchored" data-anchor-id="recommended-workarounds"><span class="header-section-number">11.7.3</span> Recommended Workarounds</h3>
+<p>Given these limitations, we recommend the following approaches when you need DOCX or PDF output:</p>
+<section id="manual-export-and-embedding-most-reliable" class="level4" data-number="11.7.3.1">
+<h4 data-number="11.7.3.1" class="anchored" data-anchor-id="manual-export-and-embedding-most-reliable"><span class="header-section-number">11.7.3.1</span> 1. Manual Export and Embedding (Most Reliable)</h4>
+<p>The most robust workflow is to:</p>
+<ol type="1">
+<li>First render your mermaid diagrams to HTML</li>
+<li>Export them as PNG or SVG images manually using:
+<ul>
+<li>Browser developer tools (save rendered diagram)</li>
+<li>Online mermaid editors (e.g., <a href="https://mermaid.live/" class="uri">https://mermaid.live/</a>)</li>
+<li>Mermaid CLI tools</li>
+</ul></li>
+<li>Include the exported images in your Quarto document using standard markdown syntax</li>
+</ol>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Workflow diagram description](assets/images/workflow-diagram.png)</span>{#fig-workflow}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This approach guarantees compatibility with all output formats and gives you full control over image quality.</p>
+</section>
+<section id="conditional-content-for-different-formats" class="level4" data-number="11.7.3.2">
+<h4 data-number="11.7.3.2" class="anchored" data-anchor-id="conditional-content-for-different-formats"><span class="header-section-number">11.7.3.2</span> 2. Conditional Content for Different Formats</h4>
+<p>Use Quarto’s conditional content features to show different content based on output format:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  A[Start] --&gt; B[End]</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>::: {.content-visible unless-format="html"}</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="al">![Workflow diagram](assets/images/workflow-diagram.png)</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This shows the live mermaid diagram in HTML output and a static image in DOCX/PDF outputs.</p>
+</section>
+<section id="ensure-chromium-is-installed-partial-solution" class="level4" data-number="11.7.3.3">
+<h4 data-number="11.7.3.3" class="anchored" data-anchor-id="ensure-chromium-is-installed-partial-solution"><span class="header-section-number">11.7.3.3</span> 3. Ensure Chromium is Installed (Partial Solution)</h4>
+<p>If you want to attempt rendering mermaid diagrams to DOCX, ensure you have Chrome or Edge installed. You can install Chromium via Quarto:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> tools install chromium</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>However, this does not guarantee successful rendering and may still result in hangs or failures.</p>
+</section>
+<section id="prefer-html-output-when-possible" class="level4" data-number="11.7.3.4">
+<h4 data-number="11.7.3.4" class="anchored" data-anchor-id="prefer-html-output-when-possible"><span class="header-section-number">11.7.3.4</span> 4. Prefer HTML Output When Possible</h4>
+<p>When creating documentation that includes mermaid diagrams, prefer HTML as your primary output format. HTML rendering of mermaid diagrams is fast, reliable, and produces high-quality interactive diagrams.</p>
+<p>If DOCX output is required for collaboration or submission, use one of the workarounds above.</p>
+</section>
+</section>
+<section id="real-world-example" class="level3" data-number="11.7.4">
+<h3 data-number="11.7.4" class="anchored" data-anchor-id="real-world-example"><span class="header-section-number">11.7.4</span> Real-World Example</h3>
+<p>In <a href="https://github.com/UCD-SERG/rpt/pull/70">UCD-SERG/rpt PR #70</a>, our team removed mermaid diagrams from package vignettes specifically because they were incompatible with DOCX output. This demonstrates the practical impact of these limitations in production workflows.</p>
+</section>
+<section id="future-outlook" class="level3" data-number="11.7.5">
+<h3 data-number="11.7.5" class="anchored" data-anchor-id="future-outlook"><span class="header-section-number">11.7.5</span> Future Outlook</h3>
+<p>The Quarto development team is aware of these issues and working to improve diagram rendering support. Monitor the following resources for updates:</p>
+<ul>
+<li><a href="https://github.com/quarto-dev/quarto-cli/issues/3809">Quarto CLI Issue #3809</a> - Tracking mermaid/dot rendering to DOCX/PDF</li>
+<li><a href="https://github.com/orgs/quarto-dev/discussions/6085">Quarto Discussion #6085</a> - Mermaid rendering hangs with DOCX</li>
+<li><a href="https://quarto.org/docs/authoring/diagrams.html">Quarto Diagrams Documentation</a> - Official documentation on diagram rendering</li>
+</ul>
+<p>Check for improvements in newer Quarto versions, but as of early 2026, manual export and embedding remains the most reliable approach for DOCX and PDF outputs.</p>
+</section>
+<section id="summary" class="level3" data-number="11.7.6">
+<h3 data-number="11.7.6" class="anchored" data-anchor-id="summary"><span class="header-section-number">11.7.6</span> Summary</h3>
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li>Mermaid diagrams work well in HTML output but are problematic for DOCX and PDF</li>
+<li>Rendering failures, hangs, and quality issues are common</li>
+<li>For reliable DOCX/PDF output, export diagrams manually as images</li>
+<li>Use conditional content to show different formats based on output type</li>
+<li>Prefer HTML output when mermaid diagrams are important to your document</li>
+</ul>
+</section>
+</section>
+<section id="additional-resources" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">11.8</span> Additional Resources</h2>
+<section id="official-documentation" class="level3" data-number="11.8.1">
+<h3 data-number="11.8.1" class="anchored" data-anchor-id="official-documentation"><span class="header-section-number">11.8.1</span> Official Documentation</h3>
 <ul>
 <li><a href="https://quarto.org/docs/guide/">Quarto Official Guide</a> - comprehensive official documentation</li>
 <li><a href="https://quarto.org/docs/books/">Quarto Books Guide</a> - documentation specific to creating books</li>
@@ -1095,10 +1214,10 @@ div.csl-indent {
 <li><a href="https://quarto.org/docs/get-started/">Quarto Getting Started</a> - installation and basic usage</li>
 </ul>
 </section>
-<section id="learning-resources" class="level3" data-number="11.7.2">
-<h3 data-number="11.7.2" class="anchored" data-anchor-id="learning-resources"><span class="header-section-number">11.7.2</span> Learning Resources</h3>
+<section id="learning-resources" class="level3" data-number="11.8.2">
+<h3 data-number="11.8.2" class="anchored" data-anchor-id="learning-resources"><span class="header-section-number">11.8.2</span> Learning Resources</h3>
 <ul>
-<li><a href="https://r4ds.hadley.nz/quarto.html">R for Data Science - Quarto Chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span> - excellent introduction to using Quarto with R</li>
+<li><a href="https://r4ds.hadley.nz/quarto.html">R for Data Science - Quarto Chapter</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span> - excellent introduction to using Quarto with R</li>
 <li><a href="https://d-morrison.github.io/rme/">Regression Models for Epidemiology</a> - example of a Quarto book with profiles for rendering chapters as slides</li>
 <li><a href="https://github.com/UCD-SERG/lab-manual">UCD-SeRG Lab Manual Source</a> - this manual’s source code provides examples of:
 <ul>
@@ -1110,16 +1229,16 @@ div.csl-indent {
 </ul></li>
 </ul>
 </section>
-<section id="templates" class="level3" data-number="11.7.3">
-<h3 data-number="11.7.3" class="anchored" data-anchor-id="templates"><span class="header-section-number">11.7.3</span> Templates</h3>
+<section id="templates" class="level3" data-number="11.8.3">
+<h3 data-number="11.8.3" class="anchored" data-anchor-id="templates"><span class="header-section-number">11.8.3</span> Templates</h3>
 <ul>
 <li><a href="https://github.com/UCD-SERG/qbt">UCD-SeRG Quarto Book Template</a> - our recommended template</li>
 <li><a href="https://github.com/coatless-tutorials/quarto-book-template">Coatless Tutorials Quarto Book Template</a> - another frequently-used template with helpful examples</li>
 <li><a href="https://github.com/d-rug/datalab_template_quarto">DataLab Quarto Template</a> - template from the UC Davis DataLab and Davis R Users Group</li>
 </ul>
 </section>
-<section id="related-lab-manual-chapters" class="level3" data-number="11.7.4">
-<h3 data-number="11.7.4" class="anchored" data-anchor-id="related-lab-manual-chapters"><span class="header-section-number">11.7.4</span> Related Lab Manual Chapters</h3>
+<section id="related-lab-manual-chapters" class="level3" data-number="11.8.4">
+<h3 data-number="11.8.4" class="anchored" data-anchor-id="related-lab-manual-chapters"><span class="header-section-number">11.8.4</span> Related Lab Manual Chapters</h3>
 <p>For additional context about using Quarto in our lab:</p>
 <ul>
 <li><a href="coding-practices.html" class="quarto-xref"><span>Chapter 6</span></a> - R coding practices that apply to code in Quarto documents</li>
@@ -1128,7 +1247,13 @@ div.csl-indent {
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-quarto-dev-discussions-6085" class="csl-entry" role="listitem">
+Gewerd-Strauss. 2023. <span>“Mermaid Rendering to Docx Halts Indefinitely When Run Through Command Line.”</span> Quarto Development Team. <a href="https://github.com/orgs/quarto-dev/discussions/6085">https://github.com/orgs/quarto-dev/discussions/6085</a>.
+</div>
+<div id="ref-quarto-dev-issues-3809" class="csl-entry" role="listitem">
+<span>“Quarto Cannot Render Mermaid or Dot Images to Docx and Pdf Formats.”</span> 2023. Quarto Development Team. <a href="https://github.com/quarto-dev/quarto-cli/issues/3809">https://github.com/quarto-dev/quarto-cli/issues/3809</a>.
+</div>
 <div id="ref-wickham2023r4ds" class="csl-entry" role="listitem">
 Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science</em>. 2nd ed. O’Reilly Media. <a href="https://r4ds.hadley.nz/">https://r4ds.hadley.nz/</a>.
 </div>

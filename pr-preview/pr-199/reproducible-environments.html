@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>14&nbsp; Reproducible Environments – UCD-SeRG Lab Manual</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -69,19 +72,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="./unix.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7e34ecb6a0e7991f0346b0751d4a7c3f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0dd2bd5de344125cf763a379ddc3eb04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4e061325f75ba7fba053004d9d2e9411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -527,6 +529,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#configuring-renv-settings" id="toc-configuring-renv-settings" class="nav-link" data-scroll-target="#configuring-renv-settings"><span class="header-section-number">14.1.3</span> Configuring renv settings</a></li>
   <li><a href="#using-projects-with-renv" id="toc-using-projects-with-renv" class="nav-link" data-scroll-target="#using-projects-with-renv"><span class="header-section-number">14.1.4</span> Using projects with renv</a></li>
   </ul></li>
+  <li><a href="#fast-package-installation-on-ubuntu-with-r2u" id="toc-fast-package-installation-on-ubuntu-with-r2u" class="nav-link" data-scroll-target="#fast-package-installation-on-ubuntu-with-r2u"><span class="header-section-number">14.2</span> Fast Package Installation on Ubuntu with r2u</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UCD-SERG/lab-manual/edit/main/reproducible-environments.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/blob/main/reproducible-environments.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -534,7 +537,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>, <a href="quarto.html">11. &nbsp; <span class="chapter-title">Quarto</span></span></a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="quarto.html">11. &nbsp; <span class="chapter-title">Quarto</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -593,7 +596,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reducing-startup-messages" class="level4" data-number="14.1.3.1">
 <h4 data-number="14.1.3.1" class="anchored" data-anchor-id="reducing-startup-messages"><span class="header-section-number">14.1.3.1</span> Reducing startup messages</h4>
 <p>When working on projects, you may encounter startup messages indicating that <code>renv</code> is out of sync with the lockfile. To reduce these messages in most projects, add the following setting to <code>renv/settings.json</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">"snapshot.dev":</span> <span class="er">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"snapshot.dev"</span><span class="er">:</span> <span class="kw">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This setting (available in <code>renv</code> version 1.1.6 and later) includes development dependencies in snapshots by default, which helps keep the lockfile aligned with your actual usage and eliminates many synchronization warnings.</p>
 <p>If startup messages about being out of sync persist after enabling this setting, use <code>renv::restore()</code> to sync your local library with the lockfile, or <code>renv::snapshot()</code> to update the lockfile with your current package versions.</p>
 <p>For more details on <code>renv</code> configuration options, see the <a href="https://rstudio.github.io/renv/">official renv documentation</a>.</p>
@@ -612,9 +615,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Your R environment should now be using the same package versions as specified in the <code>renv</code> lock file. You should now be able to replicate the code.</li>
 <li>If you make edits to the code and introduce new/updated packages, see the section above for instructions on how to make updates.</li>
 </ol>
-
-
 </section>
+</section>
+<section id="fast-package-installation-on-ubuntu-with-r2u" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="fast-package-installation-on-ubuntu-with-r2u"><span class="header-section-number">14.2</span> Fast Package Installation on Ubuntu with r2u</h2>
+<p>For users working on Ubuntu Linux systems, <a href="https://eddelbuettel.github.io/r2u/">r2u</a> provides an alternative approach to package management that complements or replaces <code>renv</code> in certain workflows.</p>
+<p><strong>What is r2u?</strong></p>
+<p>r2u integrates R package installation with Ubuntu’s <code>apt</code> package manager, providing pre-compiled binary packages for all CRAN packages. This integration offers several advantages over traditional R package installation:</p>
+<ul>
+<li><strong>Fast installation</strong>: Binary packages install in seconds, not minutes</li>
+<li><strong>Automatic dependency resolution</strong>: System dependencies are handled automatically</li>
+<li><strong>System-level integration</strong>: Packages integrate with Ubuntu’s package management</li>
+<li><strong>No compilation required</strong>: Eliminates the need for build tools and compilers</li>
+</ul>
+<p><strong>Supported Ubuntu versions (as of early 2025):</strong></p>
+<ul>
+<li>Ubuntu 24.04 “noble” (amd64 and arm64)</li>
+<li>Ubuntu 22.04 “jammy” (amd64)</li>
+<li>Ubuntu 20.04 “focal” (amd64, archived - no new updates)</li>
+</ul>
+<p><strong>When to use r2u vs.&nbsp;renv:</strong></p>
+<ul>
+<li><strong>Use r2u when</strong>: You work primarily on Ubuntu systems, want fast package installation, or need system-level package management</li>
+<li><strong>Use renv when</strong>: You need cross-platform reproducibility, work on macOS/Windows, or require project-specific package libraries</li>
+<li><strong>Use both when</strong>: You want fast installation on Ubuntu while maintaining reproducibility through renv lockfiles</li>
+</ul>
+<p><strong>Basic setup:</strong></p>
+<p>r2u requires a one-time system setup. See the <a href="https://eddelbuettel.github.io/r2u/">r2u website</a> for detailed installation instructions.</p>
+<p>Once configured, R’s <code>install.packages()</code> automatically uses binary packages from r2u, making package installation much faster.</p>
+<p><strong>Docker containers:</strong></p>
+<p>The Rocker Project provides <code>rocker/r2u</code> Docker containers with r2u pre-configured, ideal for reproducible containerized workflows.</p>
+<p>For complete documentation and setup instructions, see the <a href="https://eddelbuettel.github.io/r2u/">r2u website</a>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
