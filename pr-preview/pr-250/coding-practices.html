@@ -647,9 +647,9 @@ window.Quarto = {
   <li><a href="#function-decomposition-goals" id="toc-function-decomposition-goals" class="nav-link" data-scroll-target="#function-decomposition-goals"><span class="header-section-number">6.15</span> Function decomposition goals</a></li>
   <li><a href="#when-to-decompose-a-function" id="toc-when-to-decompose-a-function" class="nav-link" data-scroll-target="#when-to-decompose-a-function"><span class="header-section-number">6.16</span> When to decompose a function</a></li>
   <li><a href="#how-to-decompose-in-practice" id="toc-how-to-decompose-in-practice" class="nav-link" data-scroll-target="#how-to-decompose-in-practice"><span class="header-section-number">6.17</span> How to decompose in practice</a></li>
-  <li><a href="#function-length-limits-consolidated-viewpoints" id="toc-function-length-limits-consolidated-viewpoints" class="nav-link" data-scroll-target="#function-length-limits-consolidated-viewpoints"><span class="header-section-number">6.18</span> Function length limits: consolidated viewpoints</a></li>
-  <li><a href="#examples-borrowed-from-lab-package-prs" id="toc-examples-borrowed-from-lab-package-prs" class="nav-link" data-scroll-target="#examples-borrowed-from-lab-package-prs"><span class="header-section-number">6.19</span> Examples borrowed from lab package PRs</a></li>
-  <li><a href="#related-references" id="toc-related-references" class="nav-link" data-scroll-target="#related-references"><span class="header-section-number">6.20</span> Related references</a></li>
+  <li><a href="#examples-borrowed-from-lab-package-prs" id="toc-examples-borrowed-from-lab-package-prs" class="nav-link" data-scroll-target="#examples-borrowed-from-lab-package-prs"><span class="header-section-number">6.18</span> Examples borrowed from lab package PRs</a></li>
+  <li><a href="#related-references" id="toc-related-references" class="nav-link" data-scroll-target="#related-references"><span class="header-section-number">6.19</span> Related references</a></li>
+  <li><a href="#function-length-limits" id="toc-function-length-limits" class="nav-link" data-scroll-target="#function-length-limits"><span class="header-section-number">6.20</span> Function length limits</a></li>
   <li><a href="#sec-here-package-practices" id="toc-sec-here-package-practices" class="nav-link" data-scroll-target="#sec-here-package-practices"><span class="header-section-number">6.21</span> The here package</a></li>
   <li><a href="#readingsaving-data" id="toc-readingsaving-data" class="nav-link" data-scroll-target="#readingsaving-data"><span class="header-section-number">6.22</span> Reading/Saving Data</a>
   <ul class="collapse">
@@ -2084,8 +2084,17 @@ Note
 <li><mark class="preview-element-added">Add or update tests around each helper and the top-level function.</mark></li>
 </ol>
 </section>
-<section id="function-length-limits-consolidated-viewpoints" class="level2" data-number="6.18">
-<h2 data-number="6.18" class="anchored" data-anchor-id="function-length-limits-consolidated-viewpoints"><mark class="preview-element-added"><span class="header-section-number">6.18</span> Function length limits: consolidated viewpoints</mark></h2>
+<section id="examples-borrowed-from-lab-package-prs" class="level2" data-number="6.18">
+<h2 data-number="6.18" class="anchored" data-anchor-id="examples-borrowed-from-lab-package-prs"><mark class="preview-element-added"><span class="header-section-number">6.18</span> Examples borrowed from lab package PRs</mark></h2>
+<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/rpt/pull/100"><code>UCD-SERG/rpt</code> PR #100</a> (see also the <a href="https://github.com/UCD-SERG/rpt/pull/100.diff">PR diff</a>), the PR diff shows <code>R/example_function.R</code> updated to call helpers, with dedicated helper files added (<code>R/validate_input.R</code>, <code>R/clean_data.R</code>, <code>R/calculate_statistic.R</code>, <code>R/format_result.R</code>). This made the top-level function easier to read, while isolating validation and formatting details in reusable units.</mark></p>
+<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/shigella/pull/11"><code>UCD-SERG/shigella</code> PR #11</a> (see also the <a href="https://github.com/UCD-SERG/shigella/pull/11.diff">PR diff</a>), the PR diff added focused analysis functions in separate files, including <code>R/compute_residual_metrics.R</code>, <code>R/fig2_overall_newperson.R</code>, <code>R/model_comparison_table.R</code>, and <code>R/fmt_mci.R</code>. The change moved away from large script-style helpers toward single-purpose, testable package functions.</mark></p>
+</section>
+<section id="related-references" class="level2" data-number="6.19">
+<h2 data-number="6.19" class="anchored" data-anchor-id="related-references"><span class="header-section-number">6.19</span> <mark class="preview-text-changed">Related</mark> <mark class="preview-text-changed">references</mark></h2>
+<p><mark class="preview-element-added">For background and related ideas, see <a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">Decomposition (computer science)</a>, <a href="https://en.wikipedia.org/wiki/Code_refactoring">Code refactoring</a>, and <a href="https://en.wikipedia.org/wiki/Functional_decomposition">Functional decomposition</a>.</mark></p>
+</section>
+<section id="function-length-limits" class="level2" data-number="6.20">
+<h2 data-number="6.20" class="anchored" data-anchor-id="function-length-limits"><span class="header-section-number"><mark class="preview-text-changed">6.20</mark></span> Function <mark class="preview-text-changed">length limits</mark></h2>
 <p><mark class="preview-element-added">The sources below combine community discussions (opinion-based) with a formal complexity reference. Use the community links for examples of practitioner viewpoints, and the complexity reference for a formal metric.</mark></p>
 <ul>
 <li><mark class="preview-element-added"><a href="https://www.reddit.com/r/learnprogramming/comments/47avb5/one_long_function_2001000_lines_of_codes_or_one/">Reddit (r/learnprogramming)</a>: February 2016 community thread asking whether one long function or many smaller functions is preferable.</mark></li>
@@ -2101,15 +2110,6 @@ Note
 <li><mark class="preview-element-added">Watch decision complexity (branching and nesting), not only length.</mark></li>
 <li><mark class="preview-element-added">Decompose when the top-level story is hard to follow or hard to test.</mark></li>
 </ol>
-</section>
-<section id="examples-borrowed-from-lab-package-prs" class="level2" data-number="6.19">
-<h2 data-number="6.19" class="anchored" data-anchor-id="examples-borrowed-from-lab-package-prs"><span class="header-section-number">6.19</span> <mark class="preview-text-changed">Examples</mark> <mark class="preview-text-changed">borrowed</mark> <mark class="preview-text-changed">from lab package PRs</mark></h2>
-<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/rpt/pull/100"><code>UCD-SERG/rpt</code> PR #100</a> (see also the <a href="https://github.com/UCD-SERG/rpt/pull/100.diff">PR diff</a>), the PR diff shows <code>R/example_function.R</code> updated to call helpers, with dedicated helper files added (<code>R/validate_input.R</code>, <code>R/clean_data.R</code>, <code>R/calculate_statistic.R</code>, <code>R/format_result.R</code>). This made the top-level function easier to read, while isolating validation and formatting details in reusable units.</mark></p>
-<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/shigella/pull/11"><code>UCD-SERG/shigella</code> PR #11</a> (see also the <a href="https://github.com/UCD-SERG/shigella/pull/11.diff">PR diff</a>), the PR diff added focused analysis functions in separate files, including <code>R/compute_residual_metrics.R</code>, <code>R/fig2_overall_newperson.R</code>, <code>R/model_comparison_table.R</code>, and <code>R/fmt_mci.R</code>. The change moved away from large script-style helpers toward single-purpose, testable package functions.</mark></p>
-</section>
-<section id="related-references" class="level2" data-number="6.20">
-<h2 data-number="6.20" class="anchored" data-anchor-id="related-references"><mark class="preview-element-added"><span class="header-section-number">6.20</span> Related references</mark></h2>
-<p><mark class="preview-element-added">For background and related ideas, see <a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">Decomposition (computer science)</a>, <a href="https://en.wikipedia.org/wiki/Code_refactoring">Code refactoring</a>, and <a href="https://en.wikipedia.org/wiki/Functional_decomposition">Functional decomposition</a>.</mark></p>
 </section>
 <section id="sec-here-package-practices" class="level2" data-number="6.21">
 <h2 data-number="6.21" class="anchored" data-anchor-id="sec-here-package-practices"><span class="header-section-number"><mark class="preview-text-changed">6.21</mark></span> <mark class="preview-text-changed">The</mark> <mark class="preview-text-changed">here package</mark></h2>

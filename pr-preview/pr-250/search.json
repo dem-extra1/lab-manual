@@ -470,21 +470,11 @@
     ]
   },
   {
-    "objectID": "coding-practices.html#function-length-limits-consolidated-viewpoints",
-    "href": "coding-practices.html#function-length-limits-consolidated-viewpoints",
-    "title": "6  R Coding Practices",
-    "section": "6.18 Function length limits: consolidated viewpoints",
-    "text": "6.18 Function length limits: consolidated viewpoints\nThe sources below combine community discussions (opinion-based) with a formal complexity reference. Use the community links for examples of practitioner viewpoints, and the complexity reference for a formal metric.\n\nReddit (r/learnprogramming): February 2016 community thread asking whether one long function or many smaller functions is preferable.\nSoloLearn discussion: commenters describe different line-count conventions (including 20-line and 100-line limits) and discuss readability and testability tradeoffs.\nStack Overflow: “When is a function too long?” and Software Engineering Stack Exchange: “What is the ideal length of a method for you?”: older Q&A threads (September 2008 and February 2012, respectively) focused on practical criteria for deciding when to split methods.\nCyclomatic complexity: defines complexity by counting independent execution paths/decision points; this reinforces that branching complexity is often a better risk indicator than raw line count alone.\n\nSynthesizing these viewpoints into lab guidance:\nFor lab code, practical rules are:\n\nTreat line count as a heuristic, not a hard constraint.\nPrefer single-purpose functions with clear names and contracts.\nWatch decision complexity (branching and nesting), not only length.\nDecompose when the top-level story is hard to follow or hard to test.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
-    ]
-  },
-  {
     "objectID": "coding-practices.html#examples-borrowed-from-lab-package-prs",
     "href": "coding-practices.html#examples-borrowed-from-lab-package-prs",
     "title": "6  R Coding Practices",
-    "section": "6.19 Examples borrowed from lab package PRs",
-    "text": "6.19 Examples borrowed from lab package PRs\nIn UCD-SERG/rpt PR #100 (see also the PR diff), the PR diff shows R/example_function.R updated to call helpers, with dedicated helper files added (R/validate_input.R, R/clean_data.R, R/calculate_statistic.R, R/format_result.R). This made the top-level function easier to read, while isolating validation and formatting details in reusable units.\nIn UCD-SERG/shigella PR #11 (see also the PR diff), the PR diff added focused analysis functions in separate files, including R/compute_residual_metrics.R, R/fig2_overall_newperson.R, R/model_comparison_table.R, and R/fmt_mci.R. The change moved away from large script-style helpers toward single-purpose, testable package functions.",
+    "section": "6.18 Examples borrowed from lab package PRs",
+    "text": "6.18 Examples borrowed from lab package PRs\nIn UCD-SERG/rpt PR #100 (see also the PR diff), the PR diff shows R/example_function.R updated to call helpers, with dedicated helper files added (R/validate_input.R, R/clean_data.R, R/calculate_statistic.R, R/format_result.R). This made the top-level function easier to read, while isolating validation and formatting details in reusable units.\nIn UCD-SERG/shigella PR #11 (see also the PR diff), the PR diff added focused analysis functions in separate files, including R/compute_residual_metrics.R, R/fig2_overall_newperson.R, R/model_comparison_table.R, and R/fmt_mci.R. The change moved away from large script-style helpers toward single-purpose, testable package functions.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
     ]
@@ -493,8 +483,18 @@
     "objectID": "coding-practices.html#related-references",
     "href": "coding-practices.html#related-references",
     "title": "6  R Coding Practices",
-    "section": "6.20 Related references",
-    "text": "6.20 Related references\nFor background and related ideas, see Decomposition (computer science), Code refactoring, and Functional decomposition.",
+    "section": "6.19 Related references",
+    "text": "6.19 Related references\nFor background and related ideas, see Decomposition (computer science), Code refactoring, and Functional decomposition.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
+    ]
+  },
+  {
+    "objectID": "coding-practices.html#function-length-limits",
+    "href": "coding-practices.html#function-length-limits",
+    "title": "6  R Coding Practices",
+    "section": "6.20 Function length limits",
+    "text": "6.20 Function length limits\nThe sources below combine community discussions (opinion-based) with a formal complexity reference. Use the community links for examples of practitioner viewpoints, and the complexity reference for a formal metric.\n\nReddit (r/learnprogramming): February 2016 community thread asking whether one long function or many smaller functions is preferable.\nSoloLearn discussion: commenters describe different line-count conventions (including 20-line and 100-line limits) and discuss readability and testability tradeoffs.\nStack Overflow: “When is a function too long?” and Software Engineering Stack Exchange: “What is the ideal length of a method for you?”: older Q&A threads (September 2008 and February 2012, respectively) focused on practical criteria for deciding when to split methods.\nCyclomatic complexity: defines complexity by counting independent execution paths/decision points; this reinforces that branching complexity is often a better risk indicator than raw line count alone.\n\nSynthesizing these viewpoints into lab guidance:\nFor lab code, practical rules are:\n\nTreat line count as a heuristic, not a hard constraint.\nPrefer single-purpose functions with clear names and contracts.\nWatch decision complexity (branching and nesting), not only length.\nDecompose when the top-level story is hard to follow or hard to test.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
     ]
@@ -1971,7 +1971,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 97d345b\nFull commit hash: 97d345b68e8dfb14570cd946b384baa83a04ab14\nCommit date: 2026-05-07 01:30:10 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: f15e589\nFull commit hash: f15e5892dcc741d307cc2579cb336345104abd51\nCommit date: 2026-05-07 01:52:29 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"
