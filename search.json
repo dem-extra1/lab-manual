@@ -140,11 +140,21 @@
     ]
   },
   {
+    "objectID": "communication.html#conference-room-booking",
+    "href": "communication.html#conference-room-booking",
+    "title": "3  Communication and coordination",
+    "section": "3.7 Conference Room Booking",
+    "text": "3.7 Conference Room Booking\nThe MS1C Conference Room can be booked through its Outlook calendar.\nTo book the room:\n\nCreate a new event in Outlook Calendar\nAdd the conference room as an attendee by typing “ms1c”\nSelect “MS1C Conference Room” from the results\nSend the meeting invitation\n\nThe room will automatically accept or decline based on its availability.\nTo view the room’s calendar:\n\nIn Outlook Calendar, click “Add Calendar”\nSelect “Add Shared Calendar…” or use “Open Calendar…”\nSearch for “ms1c”\nSelect “MS1C Conference Room” to add it to your calendar view\n\nThis allows you to check the room’s availability before scheduling.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Communication and coordination</span>"
+    ]
+  },
+  {
     "objectID": "communication.html#code-review",
     "href": "communication.html#code-review",
     "title": "3  Communication and coordination",
-    "section": "3.7 Code Review",
-    "text": "3.7 Code Review\nWhen submitting code to or reviewing code from colleagues, use best practices to provide and receive constructive feedback:\n\nTidyverse code review principles (Tidyverse Team 2023): Best practices for reviewing R code, including what to look for and how to provide constructive feedback.\n\n\n\n\n\nTidyverse Team. 2023. Tidyverse Code Review Principles. https://code-review.tidyverse.org/.",
+    "section": "3.8 Code Review",
+    "text": "3.8 Code Review\nWhen submitting code to or reviewing code from colleagues, use best practices to provide and receive constructive feedback:\n\nTidyverse code review principles (Tidyverse Team 2023): Best practices for reviewing R code, including what to look for and how to provide constructive feedback.\n\n\n\n\n\nTidyverse Team. 2023. Tidyverse Code Review Principles. https://code-review.tidyverse.org/.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Communication and coordination</span>"
     ]
@@ -1971,7 +1981,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "This document was generated from the following git commit:\n\nBranch: main\nCommit: 0b6ae88\nFull commit hash: 0b6ae880e07cebd9e9e2eb67f8046a19fd6e6664\nCommit date: 2026-05-06 23:01:23 -0700\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "This document was generated from the following git commit:\n\nBranch: main\nCommit: 7bf51a8\nFull commit hash: 7bf51a861f01f821774b37fe3cbb911b94cee0e1\nCommit date: 2026-05-06 23:01:53 -0700\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"
