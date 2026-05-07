@@ -725,16 +725,55 @@ Warning
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      ✅ Successfully deployed to preview environment</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      Preview URL: https://preview-${{ github.event.number }}.example.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><em>Best for:</em> Straightforward commenting needs without complex update logic. Good for simple status messages or one-time notifications.</p>
+<p><strong><a href="https://github.com/rossjrw/pr-preview-action">rossjrw/pr-preview-action</a></strong></p>
+<p>Specialized action for deploying pull request previews to GitHub Pages. Unlike the general-purpose comment actions above, this action handles the complete preview deployment lifecycle: building previews, deploying them to a GitHub Pages branch, and posting a comment with the preview link.</p>
+<p><em>Key features:</em></p>
+<ul>
+<li><strong>Automated preview deployment</strong>: Creates and deploys PR previews to a GitHub Pages branch (e.g., <code>gh-pages</code>)</li>
+<li><strong>Preview URLs</strong>: Generates predictable preview URLs like <code>https://[owner].github.io/[repo]/pr-preview/pr-[number]/</code></li>
+<li><strong>Sticky comments with links</strong>: Posts and updates a comment with the preview URL and optional QR code for mobile access</li>
+<li><strong>Automatic cleanup</strong>: Removes preview deployments when PRs are closed</li>
+<li><strong>Selective cleanup</strong>: Can be configured to only remove previews for unmerged PRs, preserving merged PR previews for historical reference</li>
+<li><strong>Compatibility safeguards</strong>: Designed to coexist with main branch deployments without conflicts</li>
+</ul>
+<p><em>Typical usage:</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> rossjrw/pr-preview-action@v1</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">source-dir</span><span class="kw">:</span><span class="at"> ./docs/</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">preview-branch</span><span class="kw">:</span><span class="at"> gh-pages</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">umbrella-dir</span><span class="kw">:</span><span class="at"> pr-preview</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Advanced usage - only remove unmerged PR previews:</em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Deploy preview when PR is opened/updated</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> rossjrw/pr-preview-action@v1</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">if</span><span class="kw">:</span><span class="at"> contains(['opened', 'reopened', 'synchronize'], github.event.action)</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">source-dir</span><span class="kw">:</span><span class="at"> ./docs/</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">action</span><span class="kw">:</span><span class="at"> deploy</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove preview only for unmerged PRs</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> rossjrw/pr-preview-action@v1</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">if</span><span class="kw">:</span><span class="at"> github.event.action == "closed" &amp;&amp; !github.event.pull_request.merged</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">source-dir</span><span class="kw">:</span><span class="at"> ./docs/</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">action</span><span class="kw">:</span><span class="at"> remove</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This selective cleanup pattern (from the <a href="https://github.com/rossjrw/pr-preview-action?tab=readme-ov-file#only-remove-previews-for-unmerged-prs">pr-preview-action documentation</a>) is particularly useful when you want to:</p>
+<ul>
+<li>Keep a historical record of what each merged PR changed</li>
+<li>Allow stakeholders to review merged changes after the fact</li>
+<li>Maintain preview URLs referenced in issue discussions or documentation</li>
+</ul>
+<p><em>Best for:</em> Projects using GitHub Pages for documentation, web apps, or other static sites where stakeholders benefit from previewing changes before merging. Essential when you want reviewers to see the rendered output (e.g., documentation sites, UI changes) rather than just the source code.</p>
 </section>
 <section id="tbl-pr-comment-features" class="level4" data-number="7.6.0.3">
 <h4 data-number="7.6.0.3" class="anchored" data-anchor-id="tbl-pr-comment-features"><span class="header-section-number">7.6.0.3</span> Feature Comparison</h4>
 <table class="caption-top table">
 <caption>Comparison of PR comment action features</caption>
 <colgroup>
-<col style="width: 11%">
-<col style="width: 23%">
-<col style="width: 30%">
-<col style="width: 35%">
+<col style="width: 9%">
+<col style="width: 19%">
+<col style="width: 24%">
+<col style="width: 28%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -742,6 +781,7 @@ Warning
 <th>marocchino/sticky</th>
 <th>hasura/comment-progress</th>
 <th>thollander/actions-comment</th>
+<th>rossjrw/pr-preview</th>
 </tr>
 </thead>
 <tbody>
@@ -750,17 +790,20 @@ Warning
 <td>✅ (by header)</td>
 <td>✅ (by identifier)</td>
 <td>✅ (by ID or content)</td>
+<td>✅ (automatic)</td>
 </tr>
 <tr class="even">
 <td>Multiple independent comments</td>
 <td>✅ (via headers)</td>
 <td>✅ (via identifiers)</td>
 <td>⚠️ (limited)</td>
+<td>❌ (single preview link)</td>
 </tr>
 <tr class="odd">
 <td>Append mode</td>
 <td>✅</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 </tr>
 <tr class="even">
@@ -768,10 +811,12 @@ Warning
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
+<td>✅ (on PR close)</td>
 </tr>
 <tr class="odd">
 <td>Hide comments</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 </tr>
@@ -780,16 +825,19 @@ Warning
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 </tr>
 <tr class="odd">
 <td>Emoji reactions</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
 </tr>
 <tr class="even">
 <td>Works with push events</td>
 <td>✅</td>
+<td>⚠️ (requires PR number)</td>
 <td>⚠️ (requires PR number)</td>
 <td>⚠️ (requires PR number)</td>
 </tr>
@@ -798,6 +846,28 @@ Warning
 <td>⚠️ (flexible)</td>
 <td>✅</td>
 <td>❌</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td>Deploy to GitHub Pages</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr class="odd">
+<td>QR code generation</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅ (optional)</td>
+</tr>
+<tr class="even">
+<td>Selective cleanup</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅ (merged vs unmerged)</td>
 </tr>
 </tbody>
 </table>
@@ -824,6 +894,14 @@ Warning
 <li>You want to add emoji reactions to comments</li>
 <li>You’re comfortable with the action’s simpler update mechanism</li>
 <li>Your use case doesn’t require the advanced features of the other options</li>
+</ul>
+<p><strong>Use rossjrw/pr-preview-action when:</strong></p>
+<ul>
+<li>You need to deploy preview versions of your site/app to GitHub Pages for each PR</li>
+<li>You want stakeholders to review rendered output (documentation, UI) rather than just code</li>
+<li>You need automatic cleanup of preview deployments when PRs close</li>
+<li>You want to preserve previews of merged PRs for historical reference</li>
+<li>Your project uses GitHub Pages and benefits from preview environments</li>
 </ul>
 </section>
 <section id="security-considerations" class="level4" data-number="7.6.0.5">
