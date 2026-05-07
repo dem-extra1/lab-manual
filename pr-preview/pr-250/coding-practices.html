@@ -2095,15 +2095,15 @@ Note
 </section>
 <section id="function-length-limits" class="level2" data-number="6.20">
 <h2 data-number="6.20" class="anchored" data-anchor-id="function-length-limits"><span class="header-section-number"><mark class="preview-text-changed">6.20</mark></span> Function <mark class="preview-text-changed">length limits</mark></h2>
-<p><mark class="preview-element-added">The sources below combine community discussions (opinion-based) with a formal complexity reference. Use the community links for examples of practitioner viewpoints, and the complexity reference for a formal metric.</mark></p>
+<p><mark class="preview-element-added">Function length matters because very long functions can hide workflow intent, increase maintenance burden, and make targeted testing harder. The sources below combine community discussions (opinion-based) with a formal complexity reference. Use the community links for examples of practitioner viewpoints, and the complexity reference for a formal metric.</mark></p>
+<p><mark class="preview-text-changed">Sources:</mark></p>
 <ul>
 <li><mark class="preview-element-added"><a href="https://www.reddit.com/r/learnprogramming/comments/47avb5/one_long_function_2001000_lines_of_codes_or_one/">Reddit (r/learnprogramming)</a>: February 2016 community thread asking whether one long function or many smaller functions is preferable.</mark></li>
 <li><mark class="preview-element-added"><a href="https://www.sololearn.com/en/Discuss/1278705/optimal-number-of-lines-of-code-of-functions">SoloLearn discussion</a>: commenters describe different line-count conventions (including 20-line and 100-line limits) and discuss readability and testability tradeoffs.</mark></li>
 <li><mark class="preview-element-added"><a href="https://stackoverflow.com/questions/475675/when-is-a-function-too-long">Stack Overflow: “When is a function too long?”</a> and <a href="https://softwareengineering.stackexchange.com/questions/133404/what-is-the-ideal-length-of-a-method-for-you">Software Engineering Stack Exchange: “What is the ideal length of a method for you?”</a>: older Q&amp;A threads (September 2008 and February 2012, respectively) focused on practical criteria for deciding when to split methods.</mark></li>
 <li><mark class="preview-element-added"><a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity">Cyclomatic complexity</a>: defines complexity by counting independent execution paths/decision points; this reinforces that branching complexity is often a better risk indicator than raw line count alone.</mark></li>
 </ul>
-<p><mark class="preview-element-added">Synthesizing these viewpoints into lab guidance:</mark></p>
-<p><mark class="preview-element-added">For lab code, practical rules are:</mark></p>
+<p><mark class="preview-element-added">Synthesizing these viewpoints for lab code yields the following practical rules:</mark></p>
 <ol type="1">
 <li><mark class="preview-element-added">Treat line count as a heuristic, not a hard constraint.</mark></li>
 <li><mark class="preview-text-changed">Prefer</mark> <mark class="preview-text-changed">single-purpose</mark> <mark class="preview-text-changed">functions</mark> <mark class="preview-text-changed">with</mark> <mark class="preview-text-changed">clear</mark> <mark class="preview-text-changed">names</mark> <mark class="preview-text-changed">and</mark> <mark class="preview-text-changed">contracts.</mark></li>
@@ -2666,7 +2666,7 @@ Describe how this change has been tested.
 <li>20% of the time, you’ll have a clear example that makes it easy for others to help you</li>
 <li>It respects others’ time by making your problem easy to understand and reproduce</li>
 </ul>
-<p><strong>Resources:</strong></p>
+<p><strong><mark class="preview-text-changed">Resources:</mark></strong></p>
 <ul>
 <li><a href="https://reprex.tidyverse.org/"><code>{reprex}</code></a> package: Automates creation of reproducible examples</li>
 <li><a href="https://r4ds.hadley.nz/workflow-help.html#making-a-reprex">R for Data Science: Making a reprex</a> <span class="citation" data-cites="wickham2023r4ds">(<a href="references.html#ref-wickham2023r4ds" role="doc-biblioref">Wickham et al. 2023</a>)</span>: Step-by-step guide to creating effective reproducible examples</li>
