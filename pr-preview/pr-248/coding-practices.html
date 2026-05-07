@@ -1789,7 +1789,7 @@ Note
 <p><mark class="preview-element-added">If your project uses <code>README.Rmd</code> (a README with executable R code), <strong>always edit <code>README.Rmd</code>, never <code>README.md</code> directly.</strong> <code>README.md</code> is auto-generated from <code>README.Rmd</code>.</mark></p>
 <p><mark class="preview-element-added">To regenerate <code>README.md</code> after editing <code>README.Rmd</code>, use <code>devtools::build_readme()</code> (preferred for R packages):</mark></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">build_readme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Alternatively, you can use <a href="https://rmarkdown.rstudio.com/"><code>{rmarkdown}</code></a>’s <code>rmarkdown::render("README.Rmd")</code> if <a href="https://devtools.r-lib.org/"><code>{devtools}</code></a> is not available.</mark></p>
+<p>Alternatively, you can use <code>rmarkdown::render("README.Rmd")</code> if <a href="https://devtools.r-lib.org/"><code>{devtools}</code></a> is not available.</mark></p>
 </section>
 </section>
 <section id="sec-r-qa-checklist" class="level2" data-number="6.10">
