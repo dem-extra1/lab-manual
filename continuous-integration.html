@@ -532,7 +532,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#workflow-files-and-security" id="toc-workflow-files-and-security" class="nav-link" data-scroll-target="#workflow-files-and-security"><span class="header-section-number">7.4</span> Workflow Files and Security</a></li>
   <li><a href="#troubleshooting-failed-workflows" id="toc-troubleshooting-failed-workflows" class="nav-link" data-scroll-target="#troubleshooting-failed-workflows"><span class="header-section-number">7.5</span> Troubleshooting Failed Workflows</a></li>
   <li><a href="#sec-pr-comment-automation" id="toc-sec-pr-comment-automation" class="nav-link" data-scroll-target="#sec-pr-comment-automation"><span class="header-section-number">7.6</span> Pull Request Comment Automation</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">7.7</span> Additional Resources</a></li>
+  <li><a href="#fast-package-installation-with-r2u" id="toc-fast-package-installation-with-r2u" class="nav-link" data-scroll-target="#fast-package-installation-with-r2u"><span class="header-section-number">7.7</span> Fast Package Installation with r2u</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">7.8</span> Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UCD-SERG/lab-manual/edit/main/continuous-integration.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/blob/main/continuous-integration.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -924,8 +925,34 @@ Warning
 </div>
 </section>
 </section>
-<section id="additional-resources" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">7.7</span> Additional Resources</h2>
+<section id="fast-package-installation-with-r2u" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="fast-package-installation-with-r2u"><span class="header-section-number">7.7</span> Fast Package Installation with r2u</h2>
+<p>For GitHub Actions workflows running on Ubuntu, <a href="https://eddelbuettel.github.io/r2u/">r2u</a> provides a faster alternative to installing R packages from source. r2u offers pre-compiled binary packages for all CRAN packages on Ubuntu, which can dramatically reduce CI build times.</p>
+<p><strong>Key benefits for CI workflows:</strong></p>
+<ul>
+<li><strong>Faster installation</strong>: Binary packages install in seconds rather than minutes</li>
+<li><strong>Automatic dependency resolution</strong>: All system dependencies are handled by <code>apt</code></li>
+<li><strong>Complete CRAN coverage</strong>: Over 30,000 CRAN packages available as binaries (as of early 2025)</li>
+<li><strong>GitHub Actions support</strong>: Easy integration with Ubuntu runners</li>
+</ul>
+<p><strong>Quick example:</strong></p>
+<p>Instead of waiting several minutes for <code>install.packages("tidyverse")</code> to compile from source, r2u can install it as binaries in under 20 seconds.</p>
+<p><strong>How to use r2u in GitHub Actions:</strong></p>
+<p>The r2u project provides Docker containers and setup actions. For most workflows, you can use the <a href="https://github.com/eddelbuettel/github-actions/tree/master/r2u-setup">r2u setup action</a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Setup r2u</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> eddelbuettel/github-actions/r2u-setup@master</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Alternatively, use the rocker/r2u Docker containers directly in your workflow.</p>
+<p><strong>When to consider r2u:</strong></p>
+<ul>
+<li>Your workflow installs many R packages</li>
+<li>Build times are a bottleneck in your CI pipeline</li>
+<li>You’re running on Ubuntu (focal, jammy, or noble)</li>
+<li>You want to reduce GitHub Actions minutes usage</li>
+</ul>
+<p>For complete documentation and setup instructions, see the <a href="https://eddelbuettel.github.io/r2u/">r2u website</a>.</p>
+</section>
+<section id="additional-resources" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">7.8</span> Additional Resources</h2>
 <ul>
 <li><a href="https://github.com/features/actions">GitHub Actions features overview</a></li>
 <li><a href="https://github.com/r-lib/actions">r-lib/actions repository</a> - R-specific actions and example workflows</li>

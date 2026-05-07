@@ -529,6 +529,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#configuring-renv-settings" id="toc-configuring-renv-settings" class="nav-link" data-scroll-target="#configuring-renv-settings"><span class="header-section-number">14.1.3</span> Configuring renv settings</a></li>
   <li><a href="#using-projects-with-renv" id="toc-using-projects-with-renv" class="nav-link" data-scroll-target="#using-projects-with-renv"><span class="header-section-number">14.1.4</span> Using projects with renv</a></li>
   </ul></li>
+  <li><a href="#fast-package-installation-on-ubuntu-with-r2u" id="toc-fast-package-installation-on-ubuntu-with-r2u" class="nav-link" data-scroll-target="#fast-package-installation-on-ubuntu-with-r2u"><span class="header-section-number">14.2</span> Fast Package Installation on Ubuntu with r2u</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UCD-SERG/lab-manual/edit/main/reproducible-environments.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/blob/main/reproducible-environments.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/UCD-SERG/lab-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -604,9 +605,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Your R environment should now be using the same package versions as specified in the <code>renv</code> lock file. You should now be able to replicate the code.</li>
 <li>If you make edits to the code and introduce new/updated packages, see the section above for instructions on how to make updates.</li>
 </ol>
-
-
 </section>
+</section>
+<section id="fast-package-installation-on-ubuntu-with-r2u" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="fast-package-installation-on-ubuntu-with-r2u"><span class="header-section-number">14.2</span> Fast Package Installation on Ubuntu with r2u</h2>
+<p>For users working on Ubuntu Linux systems, <a href="https://eddelbuettel.github.io/r2u/">r2u</a> provides an alternative approach to package management that complements or replaces <code>renv</code> in certain workflows.</p>
+<p><strong>What is r2u?</strong></p>
+<p>r2u integrates R package installation with Ubuntu’s <code>apt</code> package manager, providing pre-compiled binary packages for all CRAN packages. This integration offers several advantages over traditional R package installation:</p>
+<ul>
+<li><strong>Fast installation</strong>: Binary packages install in seconds, not minutes</li>
+<li><strong>Automatic dependency resolution</strong>: System dependencies are handled automatically</li>
+<li><strong>System-level integration</strong>: Packages integrate with Ubuntu’s package management</li>
+<li><strong>No compilation required</strong>: Eliminates the need for build tools and compilers</li>
+</ul>
+<p><strong>Supported Ubuntu versions (as of early 2025):</strong></p>
+<ul>
+<li>Ubuntu 24.04 “noble” (amd64 and arm64)</li>
+<li>Ubuntu 22.04 “jammy” (amd64)</li>
+<li>Ubuntu 20.04 “focal” (amd64, archived - no new updates)</li>
+</ul>
+<p><strong>When to use r2u vs.&nbsp;renv:</strong></p>
+<ul>
+<li><strong>Use r2u when</strong>: You work primarily on Ubuntu systems, want fast package installation, or need system-level package management</li>
+<li><strong>Use renv when</strong>: You need cross-platform reproducibility, work on macOS/Windows, or require project-specific package libraries</li>
+<li><strong>Use both when</strong>: You want fast installation on Ubuntu while maintaining reproducibility through renv lockfiles</li>
+</ul>
+<p><strong>Basic setup:</strong></p>
+<p>r2u requires a one-time system setup. See the <a href="https://eddelbuettel.github.io/r2u/">r2u website</a> for detailed installation instructions.</p>
+<p>Once configured, R’s <code>install.packages()</code> automatically uses binary packages from r2u, making package installation much faster.</p>
+<p><strong>Docker containers:</strong></p>
+<p>The Rocker Project provides <code>rocker/r2u</code> Docker containers with r2u pre-configured, ideal for reproducible containerized workflows.</p>
+<p>For complete documentation and setup instructions, see the <a href="https://eddelbuettel.github.io/r2u/">r2u website</a>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
