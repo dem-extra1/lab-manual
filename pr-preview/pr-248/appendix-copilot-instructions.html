@@ -556,7 +556,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="preview-combined-banner">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~8% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~4% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
@@ -778,47 +778,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Do not use <code>code-fold: true</code> when the code itself is being taught or demonstrated.</p>
 </section>
 </section>
-<section id="r-package-development" class="level2">
-<h2 class="anchored" data-anchor-id="r-package-development"><mark class="preview-element-added">R Package Development</mark></h2>
-<section id="version-management" class="level3">
-<h3 class="anchored" data-anchor-id="version-management"><mark class="preview-element-added">Version Management</mark></h3>
-<p><mark class="preview-element-added"><strong>CRITICAL</strong>: Always keep the development version ahead of the main branch version.</mark></p>
-<ul>
-<li><mark class="preview-element-added">When working on a development branch, ensure the version in <code>DESCRIPTION</code> is higher than the version on <code>main</code></mark></li>
-<li><mark class="preview-element-added">Use the fourth component for development versions (e.g., <code>0.1.0.9000</code> for development following <code>0.1.0</code> release)</mark></li>
-<li><mark class="preview-element-added">Before merging to <code>main</code>, update to a release version (e.g., <code>0.1.1</code>, <code>0.2.0</code>, etc.)</mark></li>
-<li><mark class="preview-element-added">After merging a release to <code>main</code>, immediately bump the development version on the development branch</mark></li>
-</ul>
-<p><strong><mark class="preview-text-changed">Version</mark> <mark class="preview-text-changed">numbering guidelines:</mark></strong></p>
-<ul>
-<li><mark class="preview-element-added"><strong>Major version</strong> (X.0.0): Breaking changes, major new features</mark></li>
-<li><mark class="preview-element-added"><strong>Minor version</strong> (0.X.0): New features, backward compatible</mark></li>
-<li><mark class="preview-element-added"><strong>Patch version</strong> (0.0.X): Bug fixes, backward compatible</mark></li>
-<li><mark class="preview-element-added"><strong>Development version</strong> (0.0.0.X): Development work, not released</mark></li>
-</ul>
-<p><mark class="preview-element-added">To increment the version, use:</mark></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_version</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>See <a href="https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number">R Packages - Version numbers</a> for details.</mark></p>
-</section>
-<section id="news.md-conventions" class="level3">
-<h3 class="anchored" data-anchor-id="news.md-conventions"><mark class="preview-text-changed">NEWS.md</mark> Conventions</h3>
-<p><mark class="preview-element-added">When updating <code>NEWS.md</code> for user-facing changes:</mark></p>
-<ul>
-<li><mark class="preview-element-added">Use the <code>(#issue_number)</code> notation to link to issues (e.g., <code>(#123)</code>)</mark></li>
-<li><mark class="preview-element-added">Use the <code>(#PR_number)</code> notation to link to pull requests</mark></li>
-<li><mark class="preview-element-added">Use <code>@username</code> to credit <strong>external</strong> contributors only (not internal team members)</mark></li>
-<li><mark class="preview-element-added">Always update <code>NEWS.md</code> for user-facing changes before requesting PR review</mark></li>
-</ul>
-<p><mark class="preview-element-added">See <a href="https://r-pkgs.org/other-markdown.html#sec-news">R Packages - NEWS.md</a> for details.</mark></p>
-</section>
-<section id="readme.rmd-and-readme.md" class="level3">
-<h3 class="anchored" data-anchor-id="readme.rmd-and-readme.md"><mark class="preview-element-added">README.Rmd and README.md</mark></h3>
-<p><mark class="preview-element-added"><strong>Always edit <code>README.Rmd</code>, never <code>README.md</code> directly.</strong> <code>README.md</code> is auto-generated from <code>README.Rmd</code>.</mark></p>
-<p><mark class="preview-element-added">To regenerate <code>README.md</code> after editing <code>README.Rmd</code>, use <code>devtools::build_readme()</code> (preferred for R packages):</mark></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">build_readme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Alternatively, you can use <code>rmarkdown::render("README.Rmd")</code> if <code>devtools</code> is not available.</mark></p>
-</section>
-</section>
 <section id="communication-and-documentation" class="level2">
 <h2 class="anchored" data-anchor-id="communication-and-documentation"><mark class="preview-text-changed">Communication</mark> <mark class="preview-text-changed">and</mark> <mark class="preview-text-changed">Documentation</mark></h2>
 <section id="explaining-changes-in-pull-requests" class="level3">
@@ -886,22 +845,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="required-pattern" class="level4">
 <h4 class="anchored" data-anchor-id="required-pattern">Required Pattern</h4>
 <p><strong>Always follow this pattern:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section Heading</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>{{&lt; include folder/section-name.qmd &gt;}}</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section Heading</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>{{&lt; include folder/section-name.qmd &gt;}}</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Correct example:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section heading</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>{{&lt; include folder/section-name.qmd &gt;}}</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section heading</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>{{&lt; include folder/section-name.qmd &gt;}}</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Incorrect (don’t do this):</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>{{&lt; include folder/section-name.qmd &gt;}}</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>{{&lt; include folder/section-name.qmd &gt;}}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The heading must be in the main file, followed by a blank line, then the include statement.</p>
 </section>
 <section id="file-naming-conventions" class="level4">
-<h4 class="anchored" data-anchor-id="file-naming-conventions">File <mark class="preview-text-changed">Naming Conventions</mark></h4>
+<h4 class="anchored" data-anchor-id="file-naming-conventions">File Naming Conventions</h4>
 <ul>
 <li>Main chapter files: <code>##-chapter-name.qmd</code> (e.g., <code>05-coding-practices.qmd</code>)</li>
 <li>Subdirectory: <code>##-chapter-name/</code> (matches the main file name)</li>
@@ -913,17 +872,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="git-history-benefits-example" class="level4">
 <h4 class="anchored" data-anchor-id="git-history-benefits-example">Git History Benefits Example</h4>
 <p><strong>When reordering sections:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="st">-## Object naming</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="va">+## Function calls</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="st">-{{&lt; include demo-folder/section-name.qmd &gt;}}</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="va">+{{&lt; include demo-folder/section-2.qmd &gt;}}</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="st">-## Function calls</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="va">+## Object naming</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="st">-{{&lt; include demo-folder/section-2.qmd &gt;}}</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="va">+{{&lt; include demo-folder/section-name.qmd &gt;}}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode diff code-with-copy"><code class="sourceCode diff"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="st">-## Object naming</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="va">+## Function calls</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="st">-{{&lt; include demo-folder/section-name.qmd &gt;}}</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="va">+{{&lt; include demo-folder/section-2.qmd &gt;}}</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="st">-## Function calls</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="va">+## Object naming</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="st">-{{&lt; include demo-folder/section-2.qmd &gt;}}</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="va">+{{&lt; include demo-folder/section-name.qmd &gt;}}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This diff clearly shows a reordering (swapping two sections) with no content changes—only the main chapter file changes.</p>
 <p><strong>When editing content:</strong> Only the specific include file (e.g., <code>05-coding-practices/function-calls.qmd</code>) appears in the git diff, making it easy to review the actual content changes without distraction.</p>
 </section>
@@ -984,11 +943,11 @@ Important
 </ul>
 <p><strong>For including code files:</strong></p>
 <p>Use the include shortcode inside a code fence with the appropriate language. For example, to include a YAML workflow file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{.yaml filename="demo-folder/yml.yml"}</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span><span class="at">{&lt; include demo-folder/yml.yml &gt;</span><span class="kw">}</span>}</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{.yaml filename="demo-folder/yml.yml"}</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span><span class="at">{&lt; include demo-folder/yml.yml &gt;</span><span class="kw">}</span>}</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>When you need to show the include shortcode syntax itself in documentation (without it being processed), add an extra pair of curly braces: <code>{{&lt; include path/to/file &gt;}}</code>. This prevents Quarto from recognizing it as a shortcode, allowing the literal syntax to appear in the rendered output.</p>
 <p><strong>When to copy-paste instead:</strong></p>
 <p>Only copy-paste when:</p>
@@ -1028,7 +987,7 @@ Important
 <p>This workflow enables a hybrid editing process where collaborators can make edits in familiar Word format, and Copilot can translate those edits back to the Quarto source files.</p>
 </section>
 <section id="additional-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="additional-guidelines"><mark class="preview-text-changed">Additional Guidelines</mark></h2>
+<h2 class="anchored" data-anchor-id="additional-guidelines">Additional Guidelines</h2>
 <ul>
 <li>Maintain consistency with existing code style</li>
 <li>Preserve all existing content when refactoring</li>
@@ -1037,6 +996,13 @@ Important
 <li><strong>When discussing current world conditions or technology capabilities</strong>: Always mention the date or time period to provide temporal context and prevent content from becoming misleading as time passes</li>
 <li><strong>Determining the current date</strong>: Do not assume you know what the current date is. Instead, use the Unix command line to determine the actual date (e.g., <code>date +"%Y-%m-%d"</code> or <code>date +"%B %Y"</code>), and use that when discussing current conditions, recent events, or the state of technology “as of” a particular time period</li>
 </ul>
+<section id="readme.rmd-and-readme.md" class="level3">
+<h3 class="anchored" data-anchor-id="readme.rmd-and-readme.md"><mark class="preview-element-added">README.Rmd and README.md</mark></h3>
+<p><mark class="preview-element-added">If a repository contains both <code>README.Rmd</code> and <code>README.md</code>, <strong>always edit <code>README.Rmd</code>, never <code>README.md</code> directly.</strong> <code>README.md</code> is auto-generated from <code>README.Rmd</code>.</mark></p>
+<p><mark class="preview-element-added">To regenerate <code>README.md</code> after editing <code>README.Rmd</code>, use <code>devtools::build_readme()</code> (preferred for R packages):</mark></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">build_readme</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Alternatively, you can use <code>rmarkdown::render("README.Rmd")</code> if <code>devtools</code> is not available.</mark></p>
+</section>
 <section id="citations-and-evidence-for-claims" class="level3">
 <h3 class="anchored" data-anchor-id="citations-and-evidence-for-claims">Citations and Evidence for Claims</h3>
 <p><strong>All factual claims should be backed by either citations or direct evidence.</strong></p>
