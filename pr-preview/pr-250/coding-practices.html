@@ -644,7 +644,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#object-naming" id="toc-object-naming" class="nav-link" data-scroll-target="#object-naming"><span class="header-section-number">6.13</span> Object naming</a></li>
   <li><a href="#function-calls" id="toc-function-calls" class="nav-link" data-scroll-target="#function-calls"><span class="header-section-number">6.14</span> Function calls</a></li>
-  <li><a href="#function-decomposition-goals" id="toc-function-decomposition-goals" class="nav-link" data-scroll-target="#function-decomposition-goals"><span class="header-section-number">6.15</span> Function decomposition goals</a></li>
+  <li><a href="#function-decomposition" id="toc-function-decomposition" class="nav-link" data-scroll-target="#function-decomposition"><span class="header-section-number">6.15</span> Function decomposition</a></li>
   <li><a href="#when-to-decompose-a-function" id="toc-when-to-decompose-a-function" class="nav-link" data-scroll-target="#when-to-decompose-a-function"><span class="header-section-number">6.16</span> When to decompose a function</a></li>
   <li><a href="#how-to-decompose-in-practice" id="toc-how-to-decompose-in-practice" class="nav-link" data-scroll-target="#how-to-decompose-in-practice"><span class="header-section-number">6.17</span> How to decompose in practice</a></li>
   <li><a href="#examples-borrowed-from-lab-package-prs" id="toc-examples-borrowed-from-lab-package-prs" class="nav-link" data-scroll-target="#examples-borrowed-from-lab-package-prs"><span class="header-section-number">6.18</span> Examples borrowed from lab package PRs</a></li>
@@ -2052,9 +2052,9 @@ Note
   silent = FALSE
 )</code></pre>
 </section>
-<section id="function-decomposition-goals" class="level2" data-number="6.15">
-<h2 data-number="6.15" class="anchored" data-anchor-id="function-decomposition-goals"><span class="header-section-number">6.<mark class="preview-text-changed">15</mark></span><mark class="preview-text-changed"> Funct</mark>i<mark class="preview-text-changed">on decomposit</mark>i<mark class="preview-text-changed">on go</mark>als</h2>
-<p><mark class="preview-element-added">Function decomposition is also an important part of readable function usage. When a function becomes too long or handles too many concerns, split it into smaller helper functions with clear responsibilities.</mark></p>
+<section id="function-decomposition" class="level2" data-number="6.15">
+<h2 data-number="6.15" class="anchored" data-anchor-id="function-decomposition"><span class="header-section-number">6.<mark class="preview-text-changed">15</mark></span><mark class="preview-text-changed"> Funct</mark>i<mark class="preview-text-changed">on decomposit</mark>ion</h2>
+<p><mark class="preview-element-added">Function decomposition improves code readability and maintainability by breaking complex logic into focused, reusable units. When a function becomes too long or handles too many concerns, split it into smaller helper functions with clear responsibilities.</mark></p>
 <p><mark class="preview-text-changed">Key</mark> <mark class="preview-text-changed">goals</mark> <mark class="preview-text-changed">of</mark> <mark class="preview-text-changed">decomposition include:</mark></p>
 <ul>
 <li><mark class="preview-element-added">Breaking a big problem into smaller subproblems that are easier to reason about</mark></li>
@@ -2086,8 +2086,8 @@ Note
 </section>
 <section id="examples-borrowed-from-lab-package-prs" class="level2" data-number="6.18">
 <h2 data-number="6.18" class="anchored" data-anchor-id="examples-borrowed-from-lab-package-prs"><mark class="preview-element-added"><span class="header-section-number">6.18</span> Examples borrowed from lab package PRs</mark></h2>
-<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/rpt/pull/100"><code>UCD-SERG/rpt</code> PR #100</a> (see also the <a href="https://github.com/UCD-SERG/rpt/pull/100.diff">PR diff</a>), the PR diff shows <code>R/example_function.R</code> updated to call helpers, with dedicated helper files added (<code>R/validate_input.R</code>, <code>R/clean_data.R</code>, <code>R/calculate_statistic.R</code>, <code>R/format_result.R</code>). This made the top-level function easier to read, while isolating validation and formatting details in reusable units.</mark></p>
-<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/shigella/pull/11"><code>UCD-SERG/shigella</code> PR #11</a> (see also the <a href="https://github.com/UCD-SERG/shigella/pull/11.diff">PR diff</a>), the PR diff added focused analysis functions in separate files, including <code>R/compute_residual_metrics.R</code>, <code>R/fig2_overall_newperson.R</code>, <code>R/model_comparison_table.R</code>, and <code>R/fmt_mci.R</code>. The change moved away from large script-style helpers toward single-purpose, testable package functions.</mark></p>
+<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/rpt/pull/100"><code>UCD-SERG/rpt</code> PR #100</a>, a top-level function was updated to call dedicated helpers, with helper logic split into separate files. The workflow moved from “do everything in one function” toward a clearer sequence of validation, cleaning, calculation, and formatting steps. This made the top-level function easier to read, while isolating validation and formatting details in reusable units.</mark></p>
+<p><mark class="preview-element-added">In <a href="https://github.com/UCD-SERG/shigella/pull/11"><code>UCD-SERG/shigella</code> PR #11</a>, focused analysis functions were added in separate files, moving away from larger script-style helpers toward single-purpose, testable package functions.</mark></p>
 </section>
 <section id="related-references" class="level2" data-number="6.19">
 <h2 data-number="6.19" class="anchored" data-anchor-id="related-references"><span class="header-section-number">6.19</span> <mark class="preview-text-changed">Related</mark> <mark class="preview-text-changed">references</mark></h2>
@@ -2105,7 +2105,7 @@ Note
 </ul>
 <p><mark class="preview-element-added">Synthesizing these viewpoints for lab code yields the following practical rules:</mark></p>
 <ol type="1">
-<li><mark class="preview-element-added">Treat line count as a heuristic, not a hard constraint.</mark></li>
+<li><mark class="preview-element-added">Use <code>&lt;150</code> lines as a provisional heuristic trigger to reassess decomposition, not a hard constraint.</mark></li>
 <li><mark class="preview-text-changed">Prefer</mark> <mark class="preview-text-changed">single-purpose</mark> <mark class="preview-text-changed">functions</mark> <mark class="preview-text-changed">with</mark> <mark class="preview-text-changed">clear</mark> <mark class="preview-text-changed">names</mark> <mark class="preview-text-changed">and</mark> <mark class="preview-text-changed">contracts.</mark></li>
 <li><mark class="preview-element-added">Watch decision complexity (branching and nesting), not only length.</mark></li>
 <li><mark class="preview-element-added">Decompose when the top-level story is hard to follow or hard to test.</mark></li>

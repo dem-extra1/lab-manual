@@ -440,11 +440,11 @@
     ]
   },
   {
-    "objectID": "coding-practices.html#function-decomposition-goals",
-    "href": "coding-practices.html#function-decomposition-goals",
+    "objectID": "coding-practices.html#function-decomposition",
+    "href": "coding-practices.html#function-decomposition",
     "title": "6  R Coding Practices",
-    "section": "6.15 Function decomposition goals",
-    "text": "6.15 Function decomposition goals\nFunction decomposition is also an important part of readable function usage. When a function becomes too long or handles too many concerns, split it into smaller helper functions with clear responsibilities.\nKey goals of decomposition include:\n\nBreaking a big problem into smaller subproblems that are easier to reason about\nMaking code easier to read, review, and test\nPushing low-level complexity “downward” into helper functions so the main workflow stays clear",
+    "section": "6.15 Function decomposition",
+    "text": "6.15 Function decomposition\nFunction decomposition improves code readability and maintainability by breaking complex logic into focused, reusable units. When a function becomes too long or handles too many concerns, split it into smaller helper functions with clear responsibilities.\nKey goals of decomposition include:\n\nBreaking a big problem into smaller subproblems that are easier to reason about\nMaking code easier to read, review, and test\nPushing low-level complexity “downward” into helper functions so the main workflow stays clear",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
     ]
@@ -474,7 +474,7 @@
     "href": "coding-practices.html#examples-borrowed-from-lab-package-prs",
     "title": "6  R Coding Practices",
     "section": "6.18 Examples borrowed from lab package PRs",
-    "text": "6.18 Examples borrowed from lab package PRs\nIn UCD-SERG/rpt PR #100 (see also the PR diff), the PR diff shows R/example_function.R updated to call helpers, with dedicated helper files added (R/validate_input.R, R/clean_data.R, R/calculate_statistic.R, R/format_result.R). This made the top-level function easier to read, while isolating validation and formatting details in reusable units.\nIn UCD-SERG/shigella PR #11 (see also the PR diff), the PR diff added focused analysis functions in separate files, including R/compute_residual_metrics.R, R/fig2_overall_newperson.R, R/model_comparison_table.R, and R/fmt_mci.R. The change moved away from large script-style helpers toward single-purpose, testable package functions.",
+    "text": "6.18 Examples borrowed from lab package PRs\nIn UCD-SERG/rpt PR #100, a top-level function was updated to call dedicated helpers, with helper logic split into separate files. The workflow moved from “do everything in one function” toward a clearer sequence of validation, cleaning, calculation, and formatting steps. This made the top-level function easier to read, while isolating validation and formatting details in reusable units.\nIn UCD-SERG/shigella PR #11, focused analysis functions were added in separate files, moving away from larger script-style helpers toward single-purpose, testable package functions.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
     ]
@@ -494,7 +494,7 @@
     "href": "coding-practices.html#function-length-limits",
     "title": "6  R Coding Practices",
     "section": "6.20 Function length limits",
-    "text": "6.20 Function length limits\nFunction length matters because very long functions can hide workflow intent, increase maintenance burden, and make targeted testing harder. The sources below combine community discussions (opinion-based) with a formal complexity reference. Use the community links for examples of practitioner viewpoints, and the complexity reference for a formal metric.\nSources:\n\nReddit (r/learnprogramming): February 2016 community thread asking whether one long function or many smaller functions is preferable.\nSoloLearn discussion: commenters describe different line-count conventions (including 20-line and 100-line limits) and discuss readability and testability tradeoffs.\nStack Overflow: “When is a function too long?” and Software Engineering Stack Exchange: “What is the ideal length of a method for you?”: older Q&A threads (September 2008 and February 2012, respectively) focused on practical criteria for deciding when to split methods.\nCyclomatic complexity: defines complexity by counting independent execution paths/decision points; this reinforces that branching complexity is often a better risk indicator than raw line count alone.\n\nSynthesizing these viewpoints for lab code yields the following practical rules:\n\nTreat line count as a heuristic, not a hard constraint.\nPrefer single-purpose functions with clear names and contracts.\nWatch decision complexity (branching and nesting), not only length.\nDecompose when the top-level story is hard to follow or hard to test.",
+    "text": "6.20 Function length limits\nFunction length matters because very long functions can hide workflow intent, increase maintenance burden, and make targeted testing harder. The sources below combine community discussions (opinion-based) with a formal complexity reference. Use the community links for examples of practitioner viewpoints, and the complexity reference for a formal metric.\nSources:\n\nReddit (r/learnprogramming): February 2016 community thread asking whether one long function or many smaller functions is preferable.\nSoloLearn discussion: commenters describe different line-count conventions (including 20-line and 100-line limits) and discuss readability and testability tradeoffs.\nStack Overflow: “When is a function too long?” and Software Engineering Stack Exchange: “What is the ideal length of a method for you?”: older Q&A threads (September 2008 and February 2012, respectively) focused on practical criteria for deciding when to split methods.\nCyclomatic complexity: defines complexity by counting independent execution paths/decision points; this reinforces that branching complexity is often a better risk indicator than raw line count alone.\n\nSynthesizing these viewpoints for lab code yields the following practical rules:\n\nUse &lt;150 lines as a provisional heuristic trigger to reassess decomposition, not a hard constraint.\nPrefer single-purpose functions with clear names and contracts.\nWatch decision complexity (branching and nesting), not only length.\nDecompose when the top-level story is hard to follow or hard to test.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
     ]
@@ -1971,7 +1971,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 6f2c8b0\nFull commit hash: 6f2c8b018ce7e06d44da299ae0dde5fa0fbb2e42\nCommit date: 2026-05-07 01:57:19 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: a408db9\nFull commit hash: a408db98447d26c7a9df7dde8a33904478635283\nCommit date: 2026-05-07 02:16:49 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"
