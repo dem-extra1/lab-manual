@@ -612,8 +612,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#lapply-and-sapply" id="toc-lapply-and-sapply" class="nav-link" data-scroll-target="#lapply-and-sapply"><span class="header-section-number">6.7.1</span> <code>lapply()</code> and <code>sapply()</code></a></li>
   <li><a href="#purrrmap-family" id="toc-purrrmap-family" class="nav-link" data-scroll-target="#purrrmap-family"><span class="header-section-number">6.7.2</span> <code>purrr::map()</code> Family</a></li>
-  <li><a href="#purrrpmap-for-multiple-arguments" id="toc-purrrpmap-for-multiple-arguments" class="nav-link" data-scroll-target="#purrrpmap-for-multiple-arguments"><span class="header-section-number">6.7.3</span> <code>purrr::pmap()</code> for Multiple Arguments</a></li>
-  <li><a href="#parallel-processing" id="toc-parallel-processing" class="nav-link" data-scroll-target="#parallel-processing"><span class="header-section-number">6.7.4</span> Parallel Processing</a></li>
+  <li><a href="#basevectorize-vs-purrrmap_" id="toc-basevectorize-vs-purrrmap_" class="nav-link" data-scroll-target="#basevectorize-vs-purrrmap_"><span class="header-section-number">6.7.3</span> <code>base::Vectorize()</code> vs <code>purrr::map_*()</code></a></li>
+  <li><a href="#purrrpmap-for-multiple-arguments" id="toc-purrrpmap-for-multiple-arguments" class="nav-link" data-scroll-target="#purrrpmap-for-multiple-arguments"><span class="header-section-number">6.7.4</span> <code>purrr::pmap()</code> for Multiple Arguments</a></li>
+  <li><a href="#parallel-processing" id="toc-parallel-processing" class="nav-link" data-scroll-target="#parallel-processing"><span class="header-section-number">6.7.5</span> Parallel Processing</a></li>
   </ul></li>
   <li><a href="#sec-data-io" id="toc-sec-data-io" class="nav-link" data-scroll-target="#sec-data-io"><span class="header-section-number">6.8</span> Reading and Saving Data</a>
   <ul class="collapse">
@@ -1653,8 +1654,18 @@ Note
 <span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>means <span class="ot">&lt;-</span> <span class="fu">map_dbl</span>(data_list, mean)        <span class="co"># Returns numeric vector</span></span>
 <span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">map</span>(splits, <span class="sc">~</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> .x))  <span class="co"># Returns list of models</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="purrrpmap-for-multiple-arguments" class="level3" data-number="6.7.3">
-<h3 data-number="6.7.3" class="anchored" data-anchor-id="purrrpmap-for-multiple-arguments"><span class="header-section-number">6.7.3</span> <code>purrr::pmap()</code> for Multiple Arguments</h3>
+<section id="basevectorize-vs-purrrmap_" class="level3" data-number="6.7.3">
+<h3 data-number="6.7.3" class="anchored" data-anchor-id="basevectorize-vs-purrrmap_"><span class="header-section-number">6.7.3</span> <code>base::Vectorize()</code> vs <code>purrr::map_*()</code></h3>
+<p><code>base::Vectorize()</code> and <a href="https://purrr.tidyverse.org/"><code>{purrr}</code></a> solve different problems.</p>
+<ul>
+<li>Use <code>base::Vectorize()</code> when you already have a scalar function and want a quick base-R wrapper that accepts vector inputs.</li>
+<li>Use <code>purrr::map_*()</code> when you are iterating over lists or list-columns and want explicit, type-stable outputs (<code>map_dbl()</code>, <code>map_int()</code>, etc.) that compose naturally in tidyverse pipelines.</li>
+</ul>
+<p><code>base::Vectorize()</code> is often convenient for small, local wrappers. In contrast, <a href="https://purrr.tidyverse.org/"><code>{purrr}</code></a> is usually more idiomatic for analysis workflows because output types are explicit and iteration intent is clearer.</p>
+<p>Also note that neither approach is parallel by default. For parallel execution, use <code>furrr::future_map()</code> from <a href="https://furrr.futureverse.org/"><code>{furrr}</code></a>.</p>
+</section>
+<section id="purrrpmap-for-multiple-arguments" class="level3" data-number="6.7.4">
+<h3 data-number="6.7.4" class="anchored" data-anchor-id="purrrpmap-for-multiple-arguments"><span class="header-section-number">6.7.4</span> <code>purrr::pmap()</code> for Multiple Arguments</h3>
 <p>When iterating over multiple parameter lists:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>params <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">outcome =</span> <span class="fu">c</span>(<span class="st">"outcome1"</span>, <span class="st">"outcome2"</span>, <span class="st">"outcome3"</span>),</span>
@@ -1671,8 +1682,8 @@ Note
 <span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="parallel-processing" class="level3" data-number="6.7.4">
-<h3 data-number="6.7.4" class="anchored" data-anchor-id="parallel-processing"><span class="header-section-number">6.7.4</span> Parallel Processing</h3>
+<section id="parallel-processing" class="level3" data-number="6.7.5">
+<h3 data-number="6.7.5" class="anchored" data-anchor-id="parallel-processing"><span class="header-section-number">6.7.5</span> Parallel Processing</h3>
 <p>For computationally intensive work, use <code>future</code> and <code>furrr</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(future)</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(furrr)</span>
