@@ -1767,8 +1767,7 @@ Note
 <p>Document all user-facing changes in <code><mark class="preview-text-changed">NEWS.md</mark></code><mark class="preview-text-changed">.</mark></p>
 <p><strong><mark class="preview-text-changed">Formatting</mark> <mark class="preview-text-changed">conventions:</mark></strong></p>
 <ul>
-<li><mark class="preview-text-changed">Use </mark><code><mark class="preview-text-changed">(#issue_number)</mark></code><mark class="preview-text-changed"> notation to link</mark> to related issues (e.g., <code><mark class="preview-text-changed">(#123)</mark></code><mark class="preview-text-changed">)</mark></li>
-<li><mark class="preview-element-added">Use <code>(#PR_number)</code> notation to link to related pull requests</mark></li>
+<li><mark class="preview-element-added">Use <code>(#123)</code> notation to link to related issues and pull requests (GitHub uses a shared number space for both)</mark></li>
 <li><mark class="preview-element-added">Use <code>@username</code> to credit <strong>external</strong> contributors only (not internal team members)</mark></li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># myproject 0.2.0</span></span>
@@ -2436,7 +2435,7 @@ future_lapply(x = mylist, FUN = func)</code></pre>
 <p><strong>PR Description Body</strong>: The description should provide context that helps the reviewer understand your PR. Consider including:</p>
 <ul>
 <li>A brief description of the problem being solved</li>
-<li><mark class="preview-element-added">Links to related issues (e.g., “Closes #123” or “Related to #456”)</mark></li>
+<li>Links to related issues (e.g., “Closes #123” or “Related to #456”)</li>
 <li>A before/after example showing changed behavior</li>
 <li>Possible shortcomings of the approach being used</li>
 <li>For complex PRs, a suggested reading order for the reviewer</li>
@@ -2448,7 +2447,7 @@ future_lapply(x = mylist, FUN = func)</code></pre>
 <p><mark class="preview-element-added">For non-obvious technical decisions, <strong>proactively explain your reasoning</strong> in commit messages and PR descriptions. Don’t make reviewers ask why you made a particular choice.</mark></p>
 <p><mark class="preview-element-added">Common situations that require explanation:</mark></p>
 <ul>
-<li><mark class="preview-element-added"><strong>Version pinning</strong>: Explain whether you’re using floating tags (e.g., <code>@v2</code>) vs.&nbsp;pinned versions (e.g., <code>@v2.9.4</code>) and why. For example: “Using <code>@v2</code> (moving tag) to automatically receive bug fixes within the major version while maintaining stability.”</mark></li>
+<li><mark class="preview-element-added"><strong>Version pinning</strong>: Explain whether you’re using floating tags (e.g., <code>@v2</code>), version tags (e.g., <code>@v2.9.4</code>), or commit SHA pins (e.g., <code>@abc1234...</code> — most secure, since tags can be retargeted) and why. For example: “Using <code>@v2</code> (moving tag) to automatically receive bug fixes within the major version while maintaining stability.”</mark></li>
 <li><mark class="preview-element-added"><strong>Configuration changes</strong>: Explain the rationale behind non-obvious choices (e.g., why a boolean is set to a particular value).</mark></li>
 <li><mark class="preview-element-added"><strong>Dependency updates</strong>: Explain why you’re updating and what benefits or fixes it brings.</mark></li>
 <li><mark class="preview-element-added"><strong>Workflow modifications</strong>: Describe what problem you’re solving and why your approach is preferred.</mark></li>

@@ -556,7 +556,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="preview-combined-banner">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~9% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~10% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
@@ -811,7 +811,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><mark class="preview-element-added">When referencing GitHub Actions in workflow files, choose between floating tags and pinned versions deliberately:</mark></p>
 <ul>
 <li><mark class="preview-element-added"><strong>Floating tags</strong> (e.g., <code>@v2</code>): Automatically receive minor updates and bug fixes within the major version. Use when stability within a major version is acceptable.</mark></li>
-<li><mark class="preview-element-added"><strong>Pinned versions</strong> (e.g., <code>@v2.9.4</code>): Lock to a specific release for maximum reproducibility. Use when exact behavior must be preserved.</mark></li>
+<li><mark class="preview-element-added"><strong>Version tags</strong> (e.g., <code>@v2.9.4</code>): Lock to a specific release for reproducibility. Note: tags can be retargeted, so this is a convenience tradeoff, not a strong security guarantee.</mark></li>
+<li><mark class="preview-element-added"><strong>Commit SHA pins</strong> (e.g., <code>uses: actions/checkout@abc1234...</code>): The most secure option — immutably locks the action to a specific commit. Use when supply-chain security is a priority.</mark></li>
 </ul>
 <p><mark class="preview-element-added">Always document your choice in the PR description or commit message.</mark></p>
 </section>
