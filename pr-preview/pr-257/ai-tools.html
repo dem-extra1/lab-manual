@@ -603,7 +603,7 @@ div.csl-indent {
 
 <div class="preview-combined-banner">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~7% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~0% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
@@ -1403,6 +1403,21 @@ Warning
 <li><em>When to use</em>: Specific scenarios where variant optimizations matter</li>
 </ul></li>
 </ul>
+</section>
+<section id="connecting-positron-assistant-to-openai" class="level4" data-number="18.5.10.2">
+<h4 data-number="18.5.10.2" class="anchored" data-anchor-id="connecting-positron-assistant-to-openai"><span class="header-section-number">18.5.10.2</span> Connecting Positron Assistant to OpenAI</h4>
+<p>If you are using Positron Assistant with OpenAI models, set up an OpenAI API key first.</p>
+<p>Follow these steps:</p>
+<ol type="1">
+<li>Go to the <a href="https://platform.openai.com/api-keys">OpenAI API keys page</a>.</li>
+<li>Sign in, choose or create the OpenAI project you want to use, and select <strong>Create new secret key</strong>.</li>
+<li>Copy the key immediately and store it in a secure password manager.</li>
+<li>In Positron, open the Command Palette with <code>Cmd+Shift+P</code> (or <code>Ctrl+Shift+P</code> on Windows/Linux).</li>
+<li>Run <code>Positron Assistant: Configure Language Model Providers</code>.</li>
+<li>Select <strong>OpenAI</strong>, paste your API key, and complete sign-in.</li>
+</ol>
+<p>The <a href="https://positron.posit.co/assistant-getting-started.html">Positron Assistant getting started guide</a> states that OpenAI is enabled by default. If OpenAI does not appear as a provider, update Positron and confirm <code>positron.assistant.provider.openAI.enable</code> is not disabled.</p>
+<p>Sources: <a href="https://positron.posit.co/assistant-getting-started.html">Positron Assistant setup</a>, <a href="https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key">OpenAI API key help</a>, <a href="https://developers.openai.com/api/docs/quickstart">OpenAI quickstart</a>.</p>
 <p><strong>Google Gemini Models:</strong></p>
 <ul>
 <li><strong>Gemini 2.5 Pro</strong>: High-capability model
@@ -1420,8 +1435,8 @@ Warning
 </ul>
 <p><strong>Lab Recommendation:</strong> For most lab work, enable <strong>Claude Sonnet 4.5</strong> as your default model. It provides excellent balance of capability and speed. Consider switching to <strong>Claude Opus 4.5</strong> for complex architectural decisions or difficult debugging sessions. Keep <strong>Claude Haiku 4.5</strong> enabled for quick inline completions.</p>
 </section>
-<section id="feature-settings" class="level4" data-number="18.5.10.2">
-<h4 data-number="18.5.10.2" class="anchored" data-anchor-id="feature-settings"><span class="header-section-number"><mark class="preview-text-changed">18.5.10.2</mark></span> Feature Settings</h4>
+<section id="feature-settings" class="level4" data-number="18.5.10.3">
+<h4 data-number="18.5.10.3" class="anchored" data-anchor-id="feature-settings"><span class="header-section-number">18.5.10.3</span> Feature Settings</h4>
 <p>These settings control where and how Copilot integrates into your development environment:</p>
 <p><strong>Editor preview features:</strong></p>
 <ul>
@@ -1473,8 +1488,8 @@ Warning
 <li><em>Recommendation</em>: <strong>Enable</strong> for access to current information</li>
 </ul>
 </section>
-<section id="advanced-settings" class="level4" data-number="18.5.10.3">
-<h4 data-number="18.5.10.3" class="anchored" data-anchor-id="advanced-settings"><span class="header-section-number"><mark class="preview-text-changed">18.5.10.3</mark></span> Advanced Settings</h4>
+<section id="advanced-settings" class="level4" data-number="18.5.10.4">
+<h4 data-number="18.5.10.4" class="anchored" data-anchor-id="advanced-settings"><span class="header-section-number">18.5.10.4</span> Advanced Settings</h4>
 <p><strong>Dashboard Entry Point:</strong></p>
 <ul>
 <li><em>What it does</em>: Allows instant chatting when landing on GitHub.com</li>
@@ -1546,8 +1561,8 @@ Warning
 <li><em>Recommendation</em>: <strong>Enable</strong> for sharing capability</li>
 </ul>
 </section>
-<section id="summary-of-recommended-settings" class="level4" data-number="18.5.10.4">
-<h4 data-number="18.5.10.4" class="anchored" data-anchor-id="summary-of-recommended-settings"><span class="header-section-number"><mark class="preview-text-changed">18.5.10.4</mark></span> Summary of Recommended Settings</h4>
+<section id="summary-of-recommended-settings" class="level4" data-number="18.5.10.5">
+<h4 data-number="18.5.10.5" class="anchored" data-anchor-id="summary-of-recommended-settings"><span class="header-section-number">18.5.10.5</span> Summary of Recommended Settings</h4>
 <p>For lab members, we recommend the following configuration:</p>
 <p><strong>Enable these features:</strong></p>
 <ul>
