@@ -419,7 +419,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./coding-practices.html" class="sidebar-item-text sidebar-link active">
+  <a href="./coding-practices.html" class="sidebar-item-text sidebar-link active" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R Coding Practices</span></span></a>
   </div>
 </li>
@@ -719,7 +719,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="coding-practices.html">6. &nbsp; <span class="chapter-title">R Coding Practices</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -747,6 +747,18 @@ window.Quarto = {
 
 </header>
 
+
+
+<div class="preview-combined-banner">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~0% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
+        <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
 
 <p>Adapted by UCD-SeRG team from <a href="https://jadebc.github.io/lab-manual/coding-practices.html">original by Kunal Mishra, Jade Benjamin-Chung, Stephanie Djajadi, and Iris Tong</a></p>
 <section id="lab-protocols-for-code-and-data" class="level2" data-number="6.1">
@@ -2072,6 +2084,7 @@ Note
 <p>Consider decomposition when one or more of these are true:</p>
 <ul>
 <li>A function is doing multiple jobs (validation, transformation, modeling, and formatting)</li>
+<li><mark class="preview-text-changed">Most</mark> <mark class="preview-text-changed">of the function body is a single </mark><code><mark class="preview-text-changed">if</mark></code><mark class="preview-text-changed">-</mark><code><mark class="preview-text-changed">else</mark></code><mark class="preview-text-changed">; split the two cases into separate</mark> functions <mark class="preview-text-changed">so each path has a</mark> clear <mark class="preview-text-changed">name</mark> and <mark class="preview-text-changed">contract</mark></li>
 <li>You need comments to explain every few lines just to follow the logic</li>
 <li>You are repeating the same block in multiple places</li>
 <li>You want to test one part of a workflow independently of the rest</li>
@@ -2111,7 +2124,7 @@ Note
 <p>Synthesizing these viewpoints for lab code yields the following practical rules:</p>
 <ol type="1">
 <li>Use <code>&lt;150</code> lines as a provisional heuristic trigger to reassess decomposition, not a hard constraint.</li>
-<li>Prefer single-purpose functions with clear names and contracts.</li>
+<li><mark class="preview-text-changed">Prefer</mark> <mark class="preview-text-changed">single-purpose</mark> <mark class="preview-text-changed">functions</mark> <mark class="preview-text-changed">with</mark> <mark class="preview-text-changed">clear</mark> <mark class="preview-text-changed">names</mark> <mark class="preview-text-changed">and</mark> <mark class="preview-text-changed">contracts.</mark></li>
 <li>Watch decision complexity (branching and nesting), not only length.</li>
 <li>Decompose when the top-level story is hard to follow or hard to test.</li>
 </ol>

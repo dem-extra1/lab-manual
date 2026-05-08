@@ -484,7 +484,7 @@
     "href": "coding-practices.html#when-to-decompose-a-function",
     "title": "6  R Coding Practices",
     "section": "6.16 When to decompose a function",
-    "text": "6.16 When to decompose a function\nConsider decomposition when one or more of these are true:\n\nA function is doing multiple jobs (validation, transformation, modeling, and formatting)\nYou need comments to explain every few lines just to follow the logic\nYou are repeating the same block in multiple places\nYou want to test one part of a workflow independently of the rest\nThe top-level function is hard to scan because implementation details hide the main idea",
+    "text": "6.16 When to decompose a function\nConsider decomposition when one or more of these are true:\n\nA function is doing multiple jobs (validation, transformation, modeling, and formatting)\nMost of the function body is a single if-else; split the two cases into separate functions so each path has a clear name and contract\nYou need comments to explain every few lines just to follow the logic\nYou are repeating the same block in multiple places\nYou want to test one part of a workflow independently of the rest\nThe top-level function is hard to scan because implementation details hide the main idea",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>R Coding Practices</span>"
     ]
@@ -2032,7 +2032,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: f211f4a\nFull commit hash: f211f4ab4a7e7170ccbbbc8528e331e2ae86081e\nCommit date: 2026-05-08 17:38:42 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 8c16d4f\nFull commit hash: 8c16d4f0bdcb11369f6abb858a92d023a3bc75ff\nCommit date: 2026-05-08 17:44:40 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"
