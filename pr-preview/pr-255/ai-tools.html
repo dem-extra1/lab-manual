@@ -462,7 +462,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ai-tools.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ai-tools.html" class="sidebar-item-text sidebar-link active" preview-toc-changed>
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Working with AI</span></span></a>
   </div>
 </li>
@@ -571,7 +571,7 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="ai-tools.html">18. &nbsp; <span class="chapter-title">Working with AI</span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -599,6 +599,18 @@ div.csl-indent {
 
 </header>
 
+
+
+<div class="preview-combined-banner">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~7% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
+        <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
 
 <p><a href="https://en.wikipedia.org/wiki/AI-assisted_software_development">AI-powered coding assistants</a> can dramatically accelerate and improve your work, but they require careful and responsible use. Lab members who use AI tools must adhere to the following guidelines:</p>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -1390,6 +1402,20 @@ Warning
 <li><em>When to use</em>: Specific scenarios where variant optimizations matter</li>
 </ul></li>
 </ul>
+</section>
+<section id="connecting-positron-assistant-to-openai" class="level4" data-number="18.5.10.2">
+<h4 data-number="18.5.10.2" class="anchored" data-anchor-id="connecting-positron-assistant-to-openai"><span class="header-section-number"><mark class="preview-text-changed">18.5.10.2</mark></span> <mark class="preview-text-changed">Connecting</mark> <mark class="preview-text-changed">Positron</mark> <mark class="preview-text-changed">Assistant to OpenAI</mark></h4>
+<p><mark class="preview-element-added">If you are using Positron Assistant with OpenAI models, set up an OpenAI API key first.</mark></p>
+<ol type="1">
+<li><mark class="preview-element-added">Go to the <a href="https://platform.openai.com/api-keys">OpenAI API keys page</a>.</mark></li>
+<li><mark class="preview-element-added">Sign in, choose or create the correct project, and select <strong>Create new secret key</strong>.</mark></li>
+<li><mark class="preview-element-added">Copy the key immediately and store it in a secure password manager.</mark></li>
+<li><mark class="preview-element-added">In Positron, open the Command Palette with <code>Cmd+Shift+P</code> (or <code>Ctrl+Shift+P</code> on Windows/Linux).</mark></li>
+<li><mark class="preview-element-added">Run <code>Positron Assistant: Configure Language Model Providers</code>.</mark></li>
+<li><mark class="preview-element-added">Select <strong>OpenAI</strong>, paste your API key, and complete sign-in.</mark></li>
+</ol>
+<p><mark class="preview-element-added">Positron documentation states that OpenAI is enabled by default. If OpenAI does not appear as a provider, update Positron and confirm <code>positron.assistant.provider.openAI.enable</code> is not disabled.</mark></p>
+<p><mark class="preview-element-added">Sources: <a href="https://positron.posit.co/assistant-getting-started.html">Positron Assistant setup</a>, <a href="https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key">OpenAI API key help</a>, <a href="https://developers.openai.com/api/docs/quickstart">OpenAI quickstart</a>.</mark></p>
 <p><strong>Google Gemini Models:</strong></p>
 <ul>
 <li><strong>Gemini 2.5 Pro</strong>: High-capability model
@@ -1407,8 +1433,8 @@ Warning
 </ul>
 <p><strong>Lab Recommendation:</strong> For most lab work, enable <strong>Claude Sonnet 4.5</strong> as your default model. It provides excellent balance of capability and speed. Consider switching to <strong>Claude Opus 4.5</strong> for complex architectural decisions or difficult debugging sessions. Keep <strong>Claude Haiku 4.5</strong> enabled for quick inline completions.</p>
 </section>
-<section id="feature-settings" class="level4" data-number="18.5.10.2">
-<h4 data-number="18.5.10.2" class="anchored" data-anchor-id="feature-settings"><span class="header-section-number">18.5.10.2</span> Feature Settings</h4>
+<section id="feature-settings" class="level4" data-number="18.5.10.3">
+<h4 data-number="18.5.10.3" class="anchored" data-anchor-id="feature-settings"><span class="header-section-number"><mark class="preview-text-changed">18.5.10.3</mark></span> Feature Settings</h4>
 <p>These settings control where and how Copilot integrates into your development environment:</p>
 <p><strong>Editor preview features:</strong></p>
 <ul>
@@ -1460,8 +1486,8 @@ Warning
 <li><em>Recommendation</em>: <strong>Enable</strong> for access to current information</li>
 </ul>
 </section>
-<section id="advanced-settings" class="level4" data-number="18.5.10.3">
-<h4 data-number="18.5.10.3" class="anchored" data-anchor-id="advanced-settings"><span class="header-section-number">18.5.10.3</span> Advanced Settings</h4>
+<section id="advanced-settings" class="level4" data-number="18.5.10.4">
+<h4 data-number="18.5.10.4" class="anchored" data-anchor-id="advanced-settings"><span class="header-section-number"><mark class="preview-text-changed">18.5.10.4</mark></span> Advanced Settings</h4>
 <p><strong>Dashboard Entry Point:</strong></p>
 <ul>
 <li><em>What it does</em>: Allows instant chatting when landing on GitHub.com</li>
@@ -1533,8 +1559,8 @@ Warning
 <li><em>Recommendation</em>: <strong>Enable</strong> for sharing capability</li>
 </ul>
 </section>
-<section id="summary-of-recommended-settings" class="level4" data-number="18.5.10.4">
-<h4 data-number="18.5.10.4" class="anchored" data-anchor-id="summary-of-recommended-settings"><span class="header-section-number">18.5.10.4</span> Summary of Recommended Settings</h4>
+<section id="summary-of-recommended-settings" class="level4" data-number="18.5.10.5">
+<h4 data-number="18.5.10.5" class="anchored" data-anchor-id="summary-of-recommended-settings"><span class="header-section-number"><mark class="preview-text-changed">18.5.10.5</mark></span> Summary of Recommended Settings</h4>
 <p>For lab members, we recommend the following configuration:</p>
 <p><strong>Enable these features:</strong></p>
 <ul>
@@ -1654,12 +1680,12 @@ Warning
 <p>Use secrets for sensitive values like API keys or passwords.</p>
 </section>
 <section id="testing-your-configuration" class="level4" data-number="18.5.11.8">
-<h4 data-number="18.5.11.8" class="anchored" data-anchor-id="testing-your-configuration"><span class="header-section-number">18.5.11.8</span> Testing Your Configuration</h4>
+<h4 data-number="18.5.11.8" class="anchored" data-anchor-id="testing-your-configuration"><span class="header-section-number"><mark class="preview-text-changed">18.5.11.8</mark></span> <mark class="preview-text-changed">Testing Your</mark> Configuration</h4>
 <p>The workflow runs automatically when you modify <code>copilot-setup-steps.yml</code>, allowing you to validate changes in pull requests. You can also manually trigger the workflow from the repository’s <strong>Actions</strong> tab.</p>
 <p>Setup logs appear in the agent session logs when Copilot starts working. If a step fails, Copilot will skip remaining steps and begin working with the current environment state.</p>
 </section>
 <section id="advanced-configuration" class="level4" data-number="18.5.11.9">
-<h4 data-number="18.5.11.9" class="anchored" data-anchor-id="advanced-configuration"><span class="header-section-number">18.5.11.9</span> Advanced Configuration</h4>
+<h4 data-number="18.5.11.9" class="anchored" data-anchor-id="advanced-configuration"><span class="header-section-number"><mark class="preview-text-changed">18.5.11.9</mark></span> <mark class="preview-text-changed">Advanced</mark> Configuration</h4>
 <p><strong>Larger runners:</strong> For projects requiring more resources, you can use larger GitHub-hosted runners:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">copilot-setup-steps</span><span class="kw">:</span></span>
