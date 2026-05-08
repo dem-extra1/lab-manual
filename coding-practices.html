@@ -2062,6 +2062,7 @@ Note
 <p>Consider decomposition when one or more of these are true:</p>
 <ul>
 <li>A function is doing multiple jobs (validation, transformation, modeling, and formatting)</li>
+<li>Most of the function body is a single <code>if</code>-<code>else</code>; split the two cases into separate functions so each path has a clear name and contract</li>
 <li>You need comments to explain every few lines just to follow the logic</li>
 <li>You are repeating the same block in multiple places</li>
 <li>You want to test one part of a workflow independently of the rest</li>
