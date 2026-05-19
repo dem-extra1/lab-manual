@@ -100,9 +100,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4e061325f75ba7fba053004d9d2e9411.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-36bf55b16c7cb4b1420f41495cb5446a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-87b7f55de2e0c9887283481eb31a794c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b8948fbc8f68ee5b654fb0853b40965b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-87b7f55de2e0c9887283481eb31a794c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -571,7 +571,7 @@ div.csl-indent {
 <main class="content" id="quarto-document-content">
 <div class="preview-home-changes-banner">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="quarto.html">10. &nbsp; <span class="chapter-title">Quarto</span></span></a>, <a href="appendix-document-metadata.html">appendix-document-metadata</a>
+        <strong>📋 Changes in this PR:</strong> The following chapters have been modified: <a href="appendix-document-metadata.html">appendix-document-metadata</a>, <a href="quarto.html">10. &nbsp; <span class="chapter-title">Quarto</span></span></a>
         <br>
         <strong>📄 DOCX with tracked changes:</strong> <a href="UCD-SeRG-Lab-Manual-tracked-changes.docx" download>Download UCD-SeRG-Lab-Manual-tracked-changes.docx</a>
         <br>
@@ -1192,6 +1192,19 @@ Warning
 <li><p><strong>Iterate and refine</strong>: Use coding agents as a starting point, not an endpoint. Refine and improve the generated code.</p></li>
 <li><p><strong>Maintain coding practice</strong>: Regularly write code yourself to maintain and develop your skills. Don’t let the agent do everything.</p></li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>UC Davis campus guidance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>UC Davis Student Affairs also provides guidance on the <a href="https://studentaffairs.ucdavis.edu/news/responsible-use-artificial-intelligence-ai">Responsible Use of Artificial Intelligence (AI)</a>. That page provides UC Davis-specific guidance on AI tool selection, campus training, and careful handling of sensitive data. Their recommendations, like ours, include careful validation, active supervision, and protection of confidential information.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1370,6 +1383,7 @@ Warning
 </ul></li>
 </ul>
 <p><strong>OpenAI GPT Models:</strong></p>
+<p>As of 2026-05-08, OpenAI points users to ChatGPT Codex at <a href="https://chatgpt.com/codex/"><code>chatgpt.com/codex</code></a>. The OpenAI quickstart describes Codex as an AI coding assistant available through the Codex IDE extension that can read files, run commands, and write changes. This quickstart guide also links to a dedicated Codex app for working with local projects: <a href="https://developers.openai.com/codex/quickstart">OpenAI Codex quickstart guide</a>. For additional background and platform context, Wikipedia describes Codex as an AI coding agent by OpenAI with desktop app availability on Windows and macOS as an additional access path: <a href="https://en.wikipedia.org/wiki/Codex_(AI_agent)">Codex (AI agent)</a>. In the GitHub Copilot model names shown below, the <code>-Codex</code> suffix identifies code-specialized variants (for example, <code>GPT-5.2-Codex</code> and <code>GPT-5-Codex</code>).</p>
 <ul>
 <li><strong>GPT-5.2-Codex</strong>: Specialized for code generation
 <ul>
@@ -1390,6 +1404,21 @@ Warning
 <li><em>When to use</em>: Specific scenarios where variant optimizations matter</li>
 </ul></li>
 </ul>
+</section>
+<section id="connecting-positron-assistant-to-openai" class="level4" data-number="18.5.10.2">
+<h4 data-number="18.5.10.2" class="anchored" data-anchor-id="connecting-positron-assistant-to-openai"><span class="header-section-number">18.5.10.2</span> Connecting Positron Assistant to OpenAI</h4>
+<p>If you are using Positron Assistant with OpenAI models, set up an OpenAI API key first.</p>
+<p>Follow these steps:</p>
+<ol type="1">
+<li>Go to the <a href="https://platform.openai.com/api-keys">OpenAI API keys page</a>.</li>
+<li>Sign in, choose or create the OpenAI project you want to use, and select <strong>Create new secret key</strong>.</li>
+<li>Copy the key immediately and store it in a secure password manager.</li>
+<li>In Positron, open the Command Palette with <code>Cmd+Shift+P</code> (or <code>Ctrl+Shift+P</code> on Windows/Linux).</li>
+<li>Run <code>Positron Assistant: Configure Language Model Providers</code>.</li>
+<li>Select <strong>OpenAI</strong>, paste your API key, and complete sign-in.</li>
+</ol>
+<p>The <a href="https://positron.posit.co/assistant-getting-started.html">Positron Assistant getting started guide</a> states that OpenAI is enabled by default. If OpenAI does not appear as a provider, update Positron and confirm <code>positron.assistant.provider.openAI.enable</code> is not disabled.</p>
+<p>Sources: <a href="https://positron.posit.co/assistant-getting-started.html">Positron Assistant setup</a>, <a href="https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key">OpenAI API key help</a>, <a href="https://developers.openai.com/api/docs/quickstart">OpenAI quickstart</a>.</p>
 <p><strong>Google Gemini Models:</strong></p>
 <ul>
 <li><strong>Gemini 2.5 Pro</strong>: High-capability model
@@ -1407,8 +1436,8 @@ Warning
 </ul>
 <p><strong>Lab Recommendation:</strong> For most lab work, enable <strong>Claude Sonnet 4.5</strong> as your default model. It provides excellent balance of capability and speed. Consider switching to <strong>Claude Opus 4.5</strong> for complex architectural decisions or difficult debugging sessions. Keep <strong>Claude Haiku 4.5</strong> enabled for quick inline completions.</p>
 </section>
-<section id="feature-settings" class="level4" data-number="18.5.10.2">
-<h4 data-number="18.5.10.2" class="anchored" data-anchor-id="feature-settings"><span class="header-section-number">18.5.10.2</span> Feature Settings</h4>
+<section id="feature-settings" class="level4" data-number="18.5.10.3">
+<h4 data-number="18.5.10.3" class="anchored" data-anchor-id="feature-settings"><span class="header-section-number">18.5.10.3</span> Feature Settings</h4>
 <p>These settings control where and how Copilot integrates into your development environment:</p>
 <p><strong>Editor preview features:</strong></p>
 <ul>
@@ -1460,8 +1489,8 @@ Warning
 <li><em>Recommendation</em>: <strong>Enable</strong> for access to current information</li>
 </ul>
 </section>
-<section id="advanced-settings" class="level4" data-number="18.5.10.3">
-<h4 data-number="18.5.10.3" class="anchored" data-anchor-id="advanced-settings"><span class="header-section-number">18.5.10.3</span> Advanced Settings</h4>
+<section id="advanced-settings" class="level4" data-number="18.5.10.4">
+<h4 data-number="18.5.10.4" class="anchored" data-anchor-id="advanced-settings"><span class="header-section-number">18.5.10.4</span> Advanced Settings</h4>
 <p><strong>Dashboard Entry Point:</strong></p>
 <ul>
 <li><em>What it does</em>: Allows instant chatting when landing on GitHub.com</li>
@@ -1533,8 +1562,8 @@ Warning
 <li><em>Recommendation</em>: <strong>Enable</strong> for sharing capability</li>
 </ul>
 </section>
-<section id="summary-of-recommended-settings" class="level4" data-number="18.5.10.4">
-<h4 data-number="18.5.10.4" class="anchored" data-anchor-id="summary-of-recommended-settings"><span class="header-section-number">18.5.10.4</span> Summary of Recommended Settings</h4>
+<section id="summary-of-recommended-settings" class="level4" data-number="18.5.10.5">
+<h4 data-number="18.5.10.5" class="anchored" data-anchor-id="summary-of-recommended-settings"><span class="header-section-number">18.5.10.5</span> Summary of Recommended Settings</h4>
 <p>For lab members, we recommend the following configuration:</p>
 <p><strong>Enable these features:</strong></p>
 <ul>
@@ -1727,6 +1756,7 @@ Warning
 <li>R code style guidelines (e.g., using native pipe <code>|&gt;</code>, following tidyverse style)</li>
 <li>File organization patterns (e.g., using Quarto includes for modular content)</li>
 <li>How to work with DOCX files for hybrid editing workflows</li>
+<li>Version control best practices (e.g., do not commit rendered artifacts that are generated only for preview/review)</li>
 <li>Repository-specific best practices</li>
 </ul>
 <p>By having these instructions in <code>.github/copilot-instructions.md</code>, we ensure that coding agents produce consistent, high-quality contributions that align with the lab’s established practices. This reduces the review burden and helps maintain consistency across all contributions to the lab manual, whether made by humans or AI assistants.</p>
