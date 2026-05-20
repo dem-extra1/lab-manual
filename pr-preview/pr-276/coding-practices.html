@@ -1966,7 +1966,7 @@ Note
 <section id="documenting-internal-helpers-keywords-internal-over-nord" class="level3" data-number="6.12.3">
 <h3 data-number="6.12.3" class="anchored" data-anchor-id="documenting-internal-helpers-keywords-internal-over-nord"><span class="header-section-number">6.12.3</span> Documenting internal helpers: <code>@keywords internal</code> over <code>@noRd</code></h3>
 <p><mark class="preview-element-added">Document every function you write, including internal helpers that only your other package functions call. The question is <em>how</em> the documentation is exposed, not whether it exists.</mark></p>
-<p><mark class="preview-element-added">Two roxygen tags hide a function from the package’s public surface, and they behave differently:</mark></p>
+<p><mark class="preview-element-added">A helper is kept internal by omitting <code>@export</code> (which keeps it out of <code>NAMESPACE</code>). Once the function is non-exported, two roxygen tags control how its documentation is generated and indexed, and they behave differently:</mark></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 18%">
