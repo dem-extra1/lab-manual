@@ -603,7 +603,7 @@ div.csl-indent {
 
 <div class="preview-combined-banner">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~4% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~5% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
@@ -918,7 +918,7 @@ Table&nbsp;18.2: Relative advantages of humans and Agents
 </section>
 <section id="how-to-work-with-coding-agents" class="level3" data-number="18.5.4">
 <h3 data-number="18.5.4" class="anchored" data-anchor-id="how-to-work-with-coding-agents"><span class="header-section-number">18.5.4</span> How to Work with Coding Agents</h3>
-<p>GitHub Copilot coding agents can be used in several ways to automate development tasks:</p>
+<p><mark class="preview-element-added">Coding agents can be accessed through several interfaces, each with different trade-offs for task size, feedback speed, and collaboration style.</mark></p>
 <section id="ways-to-interact-with-coding-agents" class="level4" data-number="18.5.4.1">
 <h4 data-number="18.5.4.1" class="anchored" data-anchor-id="ways-to-interact-with-coding-agents"><span class="header-section-number"><mark class="preview-text-changed">18.5.4.1</mark></span> <mark class="preview-text-changed">Ways</mark> to <mark class="preview-text-changed">interact</mark> with <mark class="preview-text-changed">coding</mark> <mark class="preview-text-changed">agents</mark></h4>
 <p><mark class="preview-element-added">You can ask for similar coding work through different interfaces, but the trade-offs are different. The main differences are where the agent runs, how much repository context it can access, and how directly it can apply changes.</mark></p>
@@ -926,9 +926,10 @@ Table&nbsp;18.2: Relative advantages of humans and Agents
 <li><mark class="preview-element-added"><strong>Cloud coding agents (GitHub Issues/PR workflow)</strong>: Best for larger, asynchronous tasks (for example, multi-file refactoring, dependency updates, or documentation changes spanning several chapters). The agent runs in a managed cloud environment, works through an issue, and proposes changes in a pull request for review.</mark></li>
 <li><mark class="preview-element-added"><strong>CLI agents (terminal-first workflows)</strong>: Best for rapid, local iteration. You stay close to shell tools and local files, with faster back-and-forth for debugging, refactoring, and test-driven edits.</mark></li>
 <li><mark class="preview-element-added"><strong>Chat/app agents (for example Claude or Codex-style chat interfaces)</strong>: Best for planning, design discussion, and drafting code ideas. They can be very strong thought partners, but often need more manual copy/edit/execute steps unless tightly integrated with your repository tools.</mark></li>
-<li><mark class="preview-element-added"><strong>IDE-integrated agents</strong>: Best for mixed human+agent editing. They combine conversational help with direct file edits, code navigation, and in-editor testing loops.</mark></li>
+<li><mark class="preview-element-added"><strong>IDE-integrated agents</strong>: Best for mixed human and agent editing. They combine conversational help with direct file edits, code navigation, and in-editor testing loops.</mark></li>
 </ul>
-<p><mark class="preview-element-added">In practice, teams often combine these modes: use app or IDE chat to refine requirements, then hand implementation to a cloud or CLI agent, and finish with human review in a pull request.</mark></p>
+<p><mark class="preview-element-added">In practice, teams often combine these modes: use app or IDE chat to refine requirements, then hand implementation to a cloud or CLI agent, and finish with human review.</mark></p>
+<p><mark class="preview-element-added">The following sections focus on GitHub Copilot’s specific workflow for assigning and managing coding tasks.</mark></p>
 </section>
 <section id="assigning-issues-to-copilot" class="level4" data-number="18.5.4.2">
 <h4 data-number="18.5.4.2" class="anchored" data-anchor-id="assigning-issues-to-copilot"><span class="header-section-number"><mark class="preview-text-changed">18.5.4.2</mark></span> Assigning Issues to Copilot</h4>
