@@ -959,7 +959,7 @@ Table&nbsp;18.2: Relative advantages of humans and Agents
 <li><p><strong>Agent assigned</strong>: The issue was assigned to <code>@copilot</code></p></li>
 <li><p><strong>Work completed</strong>: The agent analyzed the requirements, reviewed the repository structure, and implemented the changes across multiple files</p></li>
 <li><p><strong>Pull request</strong>: <a href="https://github.com/UCD-SERG/lab-manual/pull/50">PR #50</a> was created with comprehensive content about coding agents, including this “How to Work with Coding Agents” section, benefits and hazards discussion, best practices, and firewall configuration details</p></li>
-<li><p><strong>Iteration</strong>: The PR received feedback comments requesting additional links, improved wording, and this example section—all of which the agent addressed through follow-up commits</p></li>
+<li><p><strong>Iteration</strong>: The PR received feedback comments requesting additional links, improved wording, and this example <mark class="preview-text-changed">section - all</mark> of which the agent addressed through follow-up commits</p></li>
 </ol>
 <p>This demonstrates the full lifecycle of working with a coding agent on a real documentation task.</p>
 </section>
@@ -998,7 +998,7 @@ Table&nbsp;18.2: Relative advantages of humans and Agents
 <section id="workflow-approval-requirements" class="level4" data-number="18.5.4.8">
 <h4 data-number="18.5.4.8" class="anchored" data-anchor-id="workflow-approval-requirements"><span class="header-section-number"><mark class="preview-text-changed">18.5.4.8</mark></span> Workflow Approval Requirements</h4>
 <p>When GitHub Copilot creates or updates a pull request, it cannot automatically trigger GitHub Actions workflows. <strong>You must manually approve each workflow run</strong> by clicking the approval button in the Actions tab or on the PR.</p>
-<p>This manual approval requirement is a security measure that prevents potentially malicious or unintended code execution. Because Copilot can modify any file in the repository—including workflow files themselves or scripts called by workflows—allowing automatic workflow execution could create security vulnerabilities.</p>
+<p>This manual approval requirement is a security measure that prevents potentially malicious or unintended code execution. Because Copilot can modify any file in the <mark class="preview-text-changed">repository - including</mark> workflow files themselves or scripts called by <mark class="preview-text-changed">workflows - allowing</mark> automatic workflow execution could create security vulnerabilities.</p>
 <p><strong>Key points:</strong></p>
 <ul>
 <li><strong>No automatic approval</strong>: There is currently no way to bypass manual workflow approval for Copilot PRs, even if you are the repository owner</li>
