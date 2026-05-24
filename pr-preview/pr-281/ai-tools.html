@@ -604,7 +604,7 @@ div.csl-indent {
 
 <div class="preview-combined-banner">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~35% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~36% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
@@ -1374,8 +1374,21 @@ Warning
 </div>
 <section id="running-a-local-model-with-ollama" class="level4" data-number="18.5.10.1">
 <h4 data-number="18.5.10.1" class="anchored" data-anchor-id="running-a-local-model-with-ollama"><span class="header-section-number">18.5.10.1</span> Running a Local Model with Ollama</h4>
-<p><mark class="preview-element-added"><a href="https://ollama.com">Ollama</a> is the most common way to run open-weight AI models locally. It packages models and a simple API server into a single tool and is available for macOS, Linux, and Windows.</mark></p>
+<p><mark class="preview-element-added"><a href="https://ollama.com">Ollama</a> is a common way to run open-weight AI models locally. It packages models and a simple API server into a single tool and is available for macOS, Linux, and Windows.</mark></p>
 <p><mark class="preview-element-added"><strong>Install Ollama:</strong></mark></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><mark class="preview-element-added">Before running any remote install script, review it first: <code>curl -fsSL https://ollama.com/install.sh | less</code>. Alternatively, use your system package manager (e.g., <code>brew install ollama</code> on macOS) or follow the manual installation steps on the <a href="https://github.com/ollama/ollama/releases">Ollama releases page</a>.</mark></p>
+</div>
+</div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><mark class="preview-element-added"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS / Linux (one-liner from ollama.com)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>On Windows, download the installer from <a href="https://ollama.com/download" class="uri">https://ollama.com/download</a>.</mark></p>
@@ -1424,8 +1437,9 @@ Warning
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ollama stores models in ~/.ollama/models by default</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-a</span> ~/.ollama/ user@cluster.example.edu:~/.ollama/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></mark></li>
 <li><mark class="preview-element-added"><p><strong>Start Ollama on a compute node</strong> (or an interactive session) using the pre-downloaded model files—no internet required.</mark></p></li>
-<li><mark class="preview-element-added"><p><strong>Forward the port</strong> to your local machine to use your editor’s Ollama integration:</mark></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><mark class="preview-element-added"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> 11434:localhost:11434 user@cluster.example.edu</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<li><mark class="preview-element-added"><p><strong>Forward the port</strong> to your local machine to use your editor’s Ollama integration. Because Ollama is running on a compute node (e.g., <code>gpu-node-01</code>), forward through the login node to that specific host:</mark></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><mark class="preview-element-added"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace gpu-node-01 with your actual compute node hostname</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> 11434:gpu-node-01:11434 user@cluster.example.edu</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then configure your editor to use <code>http://localhost:11434/v1</code> as the base URL.</mark></p></li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -1438,7 +1452,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added">If running Ollama on a SLURM-managed cluster, request a GPU node with enough VRAM for your chosen model and load any required CUDA modules before starting <code>ollama serve</code>. See the <a href="./slurm.html">SLURM chapter</a> for guidance on requesting GPU resources.</mark></p>
+<p><mark class="preview-element-added">If running Ollama on a SLURM-managed cluster, request a GPU node with enough VRAM for your chosen model and load any required CUDA modules before starting <code>ollama serve</code>. See <a href="slurm.html" class="quarto-xref"><span>Chapter 17</span></a> for guidance on requesting GPU resources.</mark></p>
 </div>
 </div>
 </section>
