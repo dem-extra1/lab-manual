@@ -2032,7 +2032,7 @@
     "href": "appendix-document-metadata.html",
     "title": "Document Generation Metadata",
     "section": "",
-    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: d24e647\nFull commit hash: d24e6478df4ecf32fc22d6d8415b2f9082ea57c9\nCommit date: 2026-05-27 04:51:28 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
+    "text": "PREVIEW_BANNER_PLACEHOLDER\n\nThis document was generated from the following git commit:\n\nBranch: HEAD\nCommit: 7300af9\nFull commit hash: 7300af955b4e8b3bda8dea988f53a27a3efc0840\nCommit date: 2026-05-27 04:59:10 +0000\n\nWhen transferring edits from this DOCX file back to the Quarto source files, use this commit information to set up the PR correctly and account for any commits that have been added since this document was generated.",
     "crumbs": [
       "Appendices",
       "Document Generation Metadata"
