@@ -1369,7 +1369,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added">Local models require significant hardware (typically a GPU with ≥8 GB VRAM), are generally less capable than frontier cloud models, and may produce lower-quality results on complex tasks. For routine work in fully connected environments, cloud-based agents remain the better choice. Use local models when network access or data-privacy policies require it.</mark></p>
+<p><mark class="preview-element-added">Local models work best with a GPU (≥8 GB VRAM for smaller models); CPU-only inference is possible but significantly slower, and hardware needs vary with model size and quantization. They are generally less capable than frontier cloud models, and may produce lower-quality results on complex tasks. For routine work in fully connected environments, cloud-based agents remain the better choice. Use local models when network access or data-privacy policies require it.</mark></p>
 </div>
 </div>
 <section id="running-a-local-model-with-ollama" class="level4" data-number="18.5.10.1">
@@ -1389,8 +1389,8 @@ Caution
 <p><mark class="preview-element-added">Before running any remote install script, review it first. Instead of piping directly into <code>less</code> (which can behave oddly in some terminal emulators), save it first and then page it: <code>curl -fsSL https://ollama.com/install.sh -o install.sh &amp;&amp; less install.sh</code>. Alternatively, use your system package manager (e.g., <code>brew install ollama</code> on macOS) or follow the manual installation steps on the <a href="https://github.com/ollama/ollama/releases">Ollama releases page</a>.</mark></p>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><mark class="preview-element-added"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS / Linux (one-liner from ollama.com)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><mark class="preview-element-added"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS / Linux: download first, review it (see caution above), then run</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://ollama.com/install.sh <span class="at">-o</span> install.sh <span class="kw">&amp;&amp;</span> <span class="fu">sh</span> install.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>On Windows, download the installer from <a href="https://ollama.com/download" class="uri">https://ollama.com/download</a>.</mark></p>
 <p><mark class="preview-element-added"><strong>Pull a code-focused model:</strong></mark></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><mark class="preview-element-added"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Smaller, faster; requires ~8 GB VRAM; works on most machines with a modern GPU or Apple Silicon</span></span>
@@ -1475,7 +1475,7 @@ Caution
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-L</span> 11434:gpu-node-01:11434 user@cluster.example.edu</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This terminal must stay open for as long as you use the editor’s Ollama integration—closing it tears down the tunnel and silently drops the connection. Alternatively, start the tunnel in the background (non-interactive) so it does not occupy a terminal:</mark></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><mark class="preview-element-added"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-N</span> <span class="at">-f</span> <span class="at">-L</span> 11434:gpu-node-01:11434 user@cluster.example.edu</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(<code>-N</code> runs no remote command, <code>-f</code> backgrounds ssh after authenticating; stop it later with <code>kill</code> or <code>pkill -f 11434:gpu-node-01</code>.)</mark></p>
+<p>(<code>-N</code> runs no remote command, <code>-f</code> backgrounds ssh after authenticating.) To stop the tunnel later, match the full SSH command rather than a bare port string—<code>pkill -f "ssh.*-N.*11434:gpu-node-01"</code>—so you don’t accidentally kill unrelated processes whose command line happens to contain that port. Safer still, note the PID when you start it (<code>pgrep -f "11434:gpu-node-01"</code>) and <code>kill</code> that PID directly.</mark></p>
 <p><mark class="preview-element-added">Then configure your editor to use <code>http://localhost:11434/v1</code> as the base URL.</mark></p></li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
