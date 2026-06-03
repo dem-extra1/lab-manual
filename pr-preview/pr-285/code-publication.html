@@ -704,7 +704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><mark class="preview-element-added"><p><strong>Test on multiple platforms</strong>: CRAN requires packages to work across operating systems and R versions. Use the following to test on additional platforms:</mark></p>
 <ul>
 <li><mark class="preview-element-added"><code>devtools::check_win_devel()</code> - tests on Windows with the development version of R</mark></li>
-<li><mark class="preview-element-added"><a href="https://github.com/r-hub/rhub">R-hub</a> - tests on a wide range of platforms. As of rhub v2 this runs via GitHub Actions: run <code>rhub::rhub_setup()</code> once to add the workflow to your repository, then <code>rhub::rc_submit()</code> to trigger a check run. (The older <code>rhub::check_for_cran()</code> function was removed in the v2 rewrite.)</mark></li>
+<li><mark class="preview-element-added"><a href="https://github.com/r-hub/rhub">R-hub</a> - tests on a wide range of platforms. As of rhub v2 this runs via GitHub Actions: run <code>rhub::rhub_setup()</code> once to add the workflow to your repository, then <code>rhub::rhub_check()</code> to trigger a check run. (The older <code>rhub::check_for_cran()</code> function was removed in the v2 rewrite.)</mark></li>
 </ul></li>
 <li><mark class="preview-element-added"><p><strong>Review CRAN policies</strong>: Ensure your package complies with the <a href="https://cran.r-project.org/web/packages/policies.html">CRAN Repository Policy</a>.</mark></p></li>
 </ol>
