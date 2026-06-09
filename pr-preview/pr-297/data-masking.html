@@ -618,9 +618,9 @@ Figure&nbsp;9.1: Data masking in tidyverse operations
 </section>
 <section id="sec-data-masking-vs-tidy-selection" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="sec-data-masking-vs-tidy-selection"><span class="header-section-number"><mark class="preview-text-changed">9.2</mark></span><mark class="preview-text-changed"> </mark>Data masking<mark class="preview-text-added"> vs.&nbsp;tidy sele</mark>ction</h2>
-<p><mark class="preview-element-added">Many <code>tidyverse</code> verbs use <em>two</em> different flavors of tidy evaluation, and the way you refer to a column stored in a string variable depends on which one you are in.</mark></p>
+<p><mark class="preview-element-added">Many <a href="https://www.tidyverse.org/"><code>{tidyverse}</code></a> verbs use <em>two</em> different flavors of tidy evaluation, and the way you refer to a column stored in a string variable depends on which one you are in.</mark></p>
 <ul>
-<li><mark class="preview-element-added"><strong>Data-masking</strong> contexts treat column names as values you compute <em>with</em>: <code>mutate()</code>, <code>filter()</code>, <code>summarize()</code>/<code>summarise()</code> (the summary expressions), <code>group_by()</code>, <code>arrange()</code>, and <code>aes()</code> in <code>ggplot2</code>.</mark></li>
+<li><mark class="preview-element-added"><strong>Data-masking</strong> contexts treat column names as values you compute <em>with</em>: <code>mutate()</code>, <code>filter()</code>, <code>summarize()</code>/<code>summarise()</code> (the summary expressions), <code>group_by()</code>, <code>arrange()</code>, and <code>aes()</code> in <a href="https://ggplot2.tidyverse.org/"><code>{ggplot2}</code></a>.</mark></li>
 <li><mark class="preview-element-added"><strong>Tidy-selection</strong> contexts treat column names as columns you <em>choose</em>: <code>select()</code>, <code>rename()</code>, <code>relocate()</code>, <code>pull()</code>, the <code>.cols</code> argument of <code>across()</code>, the <code>.by</code> argument of <code>mutate()</code>/<code>summarize()</code>, and the <code>cols</code>, <code>names_from</code>, <code>values_from</code>, and <code>id_cols</code> arguments of <code>tidyr::pivot_*()</code>.</mark></li>
 </ul>
 <p><mark class="preview-element-added">To refer to a column named by a string variable, use the tool that matches the context:</mark></p>
@@ -641,7 +641,7 @@ Figure&nbsp;9.1: Data masking in tidyverse operations
 <tr class="odd">
 <td>Data-masking</td>
 <td><code>!!sym(var)</code> or <code>.data[[var]]</code></td>
-<td>bare <code>var</code> (looks up an environment variable, not the column)</td>
+<td>bare <code>var</code> (uses the string value itself, not the column it names)</td>
 </tr>
 <tr class="even">
 <td>Tidy-selection</td>
@@ -658,7 +658,7 @@ Figure&nbsp;9.1: Data masking in tidyverse operations
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> <span class="fu">select</span>(.data<span class="sc">$</span>Subject, .data[[var]])</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="at">.by =</span> <span class="fu">c</span>(.data<span class="sc">$</span>group), <span class="at">med =</span> <span class="fu">median</span>(value))</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> .data<span class="sc">$</span>Parameter)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>.data</code> pronoun is a <em>data-masking</em> tool, not a selection tool. Using it in a selection context was deprecated in <code>tidyselect</code> 1.2.0, but it is a <strong>soft</strong> deprecation: in installed-package code it usually emits <em>no warning at all</em>, so it slips past interactive use, CI, and code review unnoticed. Rewrite these with <code>all_of()</code>/<code>any_of()</code> and plain strings:</mark></p>
+<p>The <code>.data</code> pronoun is a <em>data-masking</em> tool, not a selection tool. Using it in a selection context was deprecated in <a href="https://tidyselect.r-lib.org/"><code>{tidyselect}</code></a> 1.2.0, but it is a <strong>soft</strong> deprecation: in installed-package code it usually emits <em>no warning at all</em>, so it slips past interactive use, CI, and code review unnoticed. Rewrite these with <code>all_of()</code>/<code>any_of()</code> and plain strings:</mark></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Idiomatic tidy selection</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">all_of</span>(<span class="fu">c</span>(<span class="st">"Subject"</span>, var)))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="at">.by =</span> <span class="fu">all_of</span>(<span class="st">"group"</span>), <span class="at">med =</span> <span class="fu">median</span>(value))</span>
