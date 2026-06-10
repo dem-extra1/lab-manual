@@ -530,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ensure-project-runs-via-bash" id="toc-ensure-project-runs-via-bash" class="nav-link" data-scroll-target="#ensure-project-runs-via-bash"><span class="header-section-number">15.6</span> Ensure project runs via bash</a></li>
   <li><a href="#complete-the-readme" id="toc-complete-the-readme" class="nav-link" data-scroll-target="#complete-the-readme"><span class="header-section-number">15.7</span> Complete the README</a></li>
   <li><a href="#clean-up-feature-branches" id="toc-clean-up-feature-branches" class="nav-link" data-scroll-target="#clean-up-feature-branches"><span class="header-section-number">15.8</span> Clean up feature branches</a></li>
-  <li><a href="#create-github-release" id="toc-create-github-release" class="nav-link" data-scroll-target="#create-github-release"><span class="header-section-number">15.9</span> Create Github release</a></li>
+  <li><a href="#sec-create-github-release" id="toc-sec-create-github-release" class="nav-link" data-scroll-target="#sec-create-github-release"><span class="header-section-number">15.9</span> Create GitHub release</a></li>
   <li><a href="#sec-cran-release" id="toc-sec-cran-release" class="nav-link" data-scroll-target="#sec-cran-release"><span class="header-section-number">15.10</span> Releasing to CRAN</a>
   <ul class="collapse">
   <li><a href="#versioning" id="toc-versioning" class="nav-link" data-scroll-target="#versioning"><span class="header-section-number">15.10.1</span> Versioning</a></li>
@@ -597,7 +597,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#ensure-project-runs-via-bash">Ensure project runs via bash</a></li>
 <li><a href="#complete-the-readme">Complete the README</a></li>
 <li><a href="#clean-up-feature-branches">Clean up feature branches</a></li>
-<li><a href="#create-github-release">Create Github release</a></li>
+<li><a href="#sec-create-github-release">Create <mark class="preview-text-changed">GitHub</mark> release</a></li>
 </ol>
 </section>
 <section id="fill-out-file-headers" class="level2" data-number="15.2">
@@ -669,11 +669,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="clean-up-feature-branches" class="level2" data-number="15.8">
 <h2 data-number="15.8" class="anchored" data-anchor-id="clean-up-feature-branches"><span class="header-section-number">15.8</span> Clean up feature branches</h2>
-<p>In the remote repository on Github, all feature branches aside from master should be merged in and deleted. All outstanding PRs should be closed.</p>
+<p>In the remote repository on GitHub, all feature branches aside from master should be merged in and deleted. All outstanding PRs should be closed.</p>
 </section>
-<section id="create-github-release" class="level2" data-number="15.9">
-<h2 data-number="15.9" class="anchored" data-anchor-id="create-github-release"><span class="header-section-number">15.9</span> Create Github release</h2>
-<p>Once all of these items are verified, create a tag to make a Github release, which will tag the repository, creating a marker at this specific point in time.</p>
+<section id="sec-create-github-release" class="level2" data-number="15.9">
+<h2 data-number="15.9" class="anchored" data-anchor-id="sec-create-github-release"><span class="header-section-number">15.9</span> Create <mark class="preview-text-changed">GitHub</mark> release</h2>
+<p>Once all of these items are verified, create a tag to make a GitHub release, which will tag the repository, creating a marker at this specific point in time.</p>
 <p>Detailed instructions <a href="https://docs.github.com/en/enterprise/2.13/user/articles/creating-releases">here.</a></p>
 </section>
 <section id="sec-cran-release" class="level2" data-number="15.10">
@@ -704,7 +704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><mark class="preview-element-added"><p><strong>Test on multiple platforms</strong>: CRAN requires packages to work across operating systems and R versions. Use the following to test on additional platforms:</mark></p>
 <ul>
 <li><mark class="preview-element-added"><code>devtools::check_win_devel()</code> - tests on Windows with the development version of R</mark></li>
-<li><mark class="preview-element-added"><a href="https://github.com/r-hub/rhub">R-hub</a> - tests on a wide range of platforms. As of rhub v2 this runs via GitHub Actions: run <code>rhub::rhub_setup()</code> once to add the workflow to your repository, then <code>rhub::rhub_check()</code> to trigger a check run. (The older <code>rhub::check_for_cran()</code> function was removed in the v2 rewrite.)</mark></li>
+<li><mark class="preview-element-added"><a href="https://github.com/r-hub/rhub">R-hub</a> - tests on a wide range of platforms. In rhub v2, this runs via GitHub Actions: run <code>rhub::rhub_setup()</code> once to add the workflow to your repository, then <code>rhub::rhub_check()</code> to trigger a check run. (The older <code>rhub::check_for_cran()</code> function was removed in the v2 rewrite.)</mark></li>
 </ul></li>
 <li><mark class="preview-element-added"><p><strong>Review CRAN policies</strong>: Ensure your package complies with the <a href="https://cran.r-project.org/web/packages/policies.html">CRAN Repository Policy</a>.</mark></p></li>
 </ol>
@@ -721,8 +721,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="15.10.4" class="anchored" data-anchor-id="after-cran-acceptance"><mark class="preview-element-added"><span class="header-section-number">15.10.4</span> After CRAN Acceptance</mark></h3>
 <p><mark class="preview-element-added">Once CRAN accepts your package:</mark></p>
 <ol type="1">
-<li><mark class="preview-element-added"><p><strong>Tag the release and create a GitHub release</strong>: Follow the steps in the <a href="#create-github-release">Create Github release</a> section above, using an annotated tag named <code>v</code> followed by the version number (e.g., <code>v1.2.0</code>). Copy the relevant section of <code>NEWS.md</code> as the release notes. Tags permanently mark the exact commit that was released, making it easy to return to or compare against any released version.</mark></p></li>
-<li><mark class="preview-element-added"><p><strong>Bump the development version</strong>: After releasing, increment the patch version and add the <code>.9000</code> development suffix in <code>DESCRIPTION</code>:</mark></p>
+<li><mark class="preview-element-added"><p><strong>Tag the release and create a GitHub release</strong>: Follow the steps in <a href="#sec-create-github-release" class="quarto-xref"><span>Section 15.9</span></a>, using an annotated tag named <code>v</code> followed by the version number (e.g., <code>v1.2.0</code>). Copy the relevant section of <code>NEWS.md</code> as the release notes. Tags permanently mark the exact commit that was released, making it easy to return to or compare against any released version.</mark></p></li>
+<li><mark class="preview-element-added"><p><strong>Bump the development version</strong>: After releasing, append the <code>.9000</code> development suffix to the current version in <code>DESCRIPTION</code>:</mark></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><mark class="preview-element-added"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_version</span>(<span class="st">"dev"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For example, after releasing <code>1.2.0</code>, the <code>DESCRIPTION</code> version becomes <code>1.2.0.9000</code>. This signals to contributors that the repository reflects development work toward the next release.</mark></p></li>
 <li><mark class="preview-element-added"><p><strong>Commit the version bump</strong>: Stage and commit the updated <code>DESCRIPTION</code> (and <code>NEWS.md</code> if you added a <code># mypackage (development version)</code> header):</mark></p>
